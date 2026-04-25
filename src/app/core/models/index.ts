@@ -84,3 +84,11 @@ export interface Categoria {
 export interface SupuestosData {
   categorias: Categoria[];
 }
+
+export interface Consejo {
+  id: string;
+  title: string;
+  description: string;
+  icon: string;
+  file: string;
+}

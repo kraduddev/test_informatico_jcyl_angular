@@ -1,7 +1,7 @@
 import { Injectable, inject } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { firstValueFrom } from 'rxjs';
-import { SupuestosData } from '../models';
+import { SupuestosData, Consejo } from '../models';
 
 const ORIGEN_A_FICHERO: Record<string, string> = {
   'JCyL 2022':      'assets/supuestos/jcyl-2022.md',
@@ -32,5 +32,16 @@ export class SupuestosService {
 
   hasFichero(origen: string): boolean {
     return !!ORIGEN_A_FICHERO[origen];
+  }
+
+  async loadConsejos(): Promise<Consejo[]> {
+    return await firstValueFrom(this.http.get<Consejo[]>('assets/supuestos/tips/tips.json'));
+  }
+
+  async loadConsejoMarkdown(file: string): Promise<string> {
+    if (this.mdCache[file]) return this.mdCache[file];
+    const text = await firstValueFrom(this.http.get(file, { responseType: 'text' }));
+    this.mdCache[file] = text;
+    return text;
   }
 }

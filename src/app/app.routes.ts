@@ -12,5 +12,7 @@ export const routes: Routes = [
   { path: 'supuestos', loadComponent: () => import('./features/supuestos/supuestos-menu/supuestos-menu.component').then(m => m.SupuestosMenuComponent) },
   { path: 'supuestos/examenes', loadComponent: () => import('./features/supuestos/supuestos-examenes/supuestos-examenes.component').then(m => m.SupuestosExamenesComponent) },
   { path: 'supuestos/categorias', loadComponent: () => import('./features/supuestos/supuestos-categorias/supuestos-categorias.component').then(m => m.SupuestosCategoriasComponent) },
+  { path: 'supuestos/consejos', loadComponent: () => import('./features/supuestos/supuestos-consejos/supuestos-consejos.component').then(m => m.SupuestosConsejosComponent) },
+  { path: 'supuestos/consejos/:id', loadComponent: () => import('./features/supuestos/supuestos-consejos-detail/supuestos-consejos-detail.component').then(m => m.SupuestosConsejosDetailComponent) },
   { path: '**', redirectTo: '' }
 ];

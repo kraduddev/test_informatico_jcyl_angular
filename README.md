@@ -32,7 +32,9 @@ Aplicación web SPA construida con **Angular 17** para practicar los exámenes d
   - **Por Examen** (`/supuestos/examenes`): preguntas agrupadas por convocatoria. Cada grupo muestra el número de preguntas y permite expandir/colapsar.
     - Botón "Ver plantilla de examen": carga y renderiza el fichero Markdown de la convocatoria con formato completo (encabezados, tablas, código, blockquotes, **diagramas Mermaid** y **fórmulas matemáticas LaTeX**).
   - **Por Categoría** (`/supuestos/categorias`): preguntas agrupadas por bloque temático.
-- Los supuestos se cargan desde `assets/supuestos/categorias.json` y los ficheros `.md` asociados a cada convocatoria.
+  - **Consejos** (`/supuestos/consejos`): listado de consejos y recomendaciones técnicas mostrados en formato tarjetas.
+    - Al abrir una tarjeta, se muestra el contenido formateado del fichero Markdown correspondiente (con soporte para tablas, Mermaid y LaTeX).
+- Los supuestos se cargan desde `assets/supuestos/categorias.json` y los ficheros `.md` asociados a cada convocatoria. Los consejos se cargan desde `assets/supuestos/tips/tips.json` y sus respectivos ficheros Markdown.
 
 ---
 
@@ -55,6 +57,9 @@ Cada fichero de test (`assets/tests/*.json`) contiene un array de preguntas con 
 
 ### Supuestos — `assets/supuestos/categorias.json`
 Array de categorías, cada una con nombre y array de preguntas (`enunciado`, `origen`, y datos de respuesta). Los ficheros Markdown de plantillas se ubican en `assets/supuestos/*.md`.
+
+### Consejos — `assets/supuestos/tips/tips.json`
+Índice de consejos con campos: `id`, `title`, `description`, `icon` y `file`. Los contenidos se redactan en ficheros Markdown dentro de `assets/supuestos/tips/*.md`.
 
 ---
 
@@ -128,6 +133,8 @@ docker run -p 8080:80 quiz-jcyl
 | `/supuestos` | `SupuestosMenuComponent` | Menú de supuestos prácticos |
 | `/supuestos/examenes` | `SupuestosExamenesComponent` | Supuestos agrupados por convocatoria |
 | `/supuestos/categorias` | `SupuestosCategoriasComponent` | Supuestos agrupados por categoría temática |
+| `/supuestos/consejos` | `SupuestosConsejosComponent` | Listado de tarjetas con consejos y tips |
+| `/supuestos/consejos/:id` | `SupuestosConsejosDetailComponent` | Contenido detallado de un consejo (Markdown) |
 
 ---
 

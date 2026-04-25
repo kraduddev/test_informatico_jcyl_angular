@@ -24,6 +24,12 @@ import { Router } from '@angular/router';
           <p>Explora los supuestos por bloque temático.</p>
           <span class="dashboard-card-cta">Ver por categoría →</span>
         </button>
+        <button class="dashboard-card" (click)="router.navigate(['/supuestos/consejos'])">
+          <div class="dashboard-card-icon">💡</div>
+          <h2>Consejos</h2>
+          <p>Tips y recomendaciones para aplicar legislación y buenas prácticas.</p>
+          <span class="dashboard-card-cta">Ver consejos →</span>
+        </button>
       </div>
     </section>
   `
