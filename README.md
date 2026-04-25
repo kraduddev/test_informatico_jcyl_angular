@@ -63,6 +63,107 @@ Array de categorías, cada una con nombre y array de preguntas (`enunciado`, `or
 
 ---
 
+## 🖋️ Renderizado de Markdown, Mermaid y LaTeX
+
+La aplicación renderiza ficheros `.md` enriquecidos en varios puntos (plantillas de examen en supuestos y contenido de consejos/tips). Todo el pipeline de renderizado está centralizado en la utilidad **`src/app/core/utils/markdown-render.util.ts`** y la configuración global de **`app.config.ts`**.
+
+### Pipeline de renderizado
+
+El orden de las transformaciones es crítico para evitar que un paso corrompa la salida del siguiente:
+
+```
+Texto Markdown (.md)
+       │
+       ▼
+ 1. Extracción de LaTeX → placeholders opacos  (renderMarkdown util)
+       │
+       ▼
+ 2. marked.parse()  →  HTML con <div class="mermaid">…</div>  (marked renderer en app.config)
+       │
+       ▼
+ 3. Restauración de placeholders → HTML de KaTeX             (renderMarkdown util)
+       │
+       ▼
+ 4. DomSanitizer.bypassSecurityTrustHtml()  →  [innerHTML]   (componente Angular)
+       │
+       ▼
+ 5. mermaid.run()  tras setTimeout(150ms)                    (componente Angular)
+       │
+       ▼
+     DOM final con diagramas SVG + fórmulas KaTeX
+```
+
+### 1. LaTeX — fórmulas matemáticas
+
+Se usa **KaTeX** para renderizar notación matemática. Se soportan dos modalidades:
+
+| Sintaxis en Markdown | Tipo | Ejemplo |
+|---|---|---|
+| `$expresión$` | Inline (en línea con el texto) | `$2^n \ge N$` |
+| `$$expresión$$` | Display (bloque centrado) | `$$\sum_{i=0}^{n} i = \frac{n(n+1)}{2}$$` |
+
+**Por qué se usan placeholders**: `marked` v18 procesa el Markdown antes de que KaTeX actúe, y escaparía los caracteres especiales de LaTeX (`_`, `^`, `\`, `{`, `}`), corrompiendo las fórmulas. La estrategia de placeholders extrae las fórmulas **antes** de `marked.parse()`, renderiza con KaTeX y luego restaura el HTML resultante, de forma que `marked` nunca ve el contenido LaTeX.
+
+> ⚠️ Las fórmulas en los ficheros `.md` **no deben estar envueltas en backticks** (`` ` ``), ya que eso haría que `marked` las tratara como bloques de código antes de cualquier procesamiento.
+
+### 2. Mermaid — diagramas
+
+Se usa **Mermaid** para renderizar diagramas definidos como bloques de código fenced con el lenguaje `mermaid`:
+
+````markdown
+```mermaid
+graph TD
+    A[Cliente] --> B[Servidor]
+    B --> C[(Base de datos)]
+```
+````
+
+**Flujo**:
+1. El renderer personalizado de `marked` (configurado en `app.config.ts`) intercepta los bloques ` ```mermaid ``` ` y los convierte en `<div class="mermaid">…</div>` con el código fuente en texto plano.
+2. `marked` v18 HTML-codifica el contenido de los bloques de código; el renderer incluye una función `decodeHtmlEntities()` para revertir esa codificación antes de pasársela a Mermaid.
+3. Tras insertar el HTML en el DOM con `[innerHTML]`, se llama a `mermaid.run()` con un `setTimeout(150ms)` para asegurar que Angular ha volcado el binding al DOM real antes de que Mermaid intente procesar los `<div class="mermaid">`.
+
+Tipos de diagrama soportados (los que incluye Mermaid 11): `graph`/`flowchart`, `sequenceDiagram`, `erDiagram`, `stateDiagram-v2`, `gantt`, `gitGraph`, `pie`, `mindmap`, `block`, etc.
+
+### 3. Tablas y resto de Markdown
+
+`marked` v18 con configuración por defecto renderiza:
+
+- Encabezados (`#`, `##`, `###`)
+- **Negrita**, *cursiva*, ~~tachado~~
+- Listas ordenadas y desordenadas
+- Tablas GFM (GitHub Flavored Markdown)
+- Bloques de código con resaltado de lenguaje
+- Blockquotes (`>`)
+- Líneas horizontales, enlaces e imágenes
+
+### 4. Configuración global (`app.config.ts`)
+
+Para evitar efectos secundarios por múltiples llamadas a `marked.use()` o `mermaid.initialize()`, ambas configuraciones se realizan **una única vez** al arrancar la aplicación:
+
+```typescript
+// Renderer personalizado: bloques ```mermaid``` → <div class="mermaid">
+marked.use({ renderer: { code({ text, lang }) { … } } });
+
+// Mermaid sin auto-arranque
+mermaid.initialize({ startOnLoad: false, theme: 'default' });
+```
+
+### 5. CSS necesario
+
+El CSS de KaTeX se incluye como hoja de estilos global en `angular.json`:
+
+```json
+"styles": [
+  "node_modules/katex/dist/katex.min.css",
+  "src/styles.css"
+]
+```
+
+Los estilos de la zona de contenido Markdown (`.md-body`) se definen con `::ng-deep` en cada componente que renderiza contenido enriquecido.
+
+---
+
 ## 🚀 Desarrollo local
 
 ```bash

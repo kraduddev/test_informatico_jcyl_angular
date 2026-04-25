@@ -6,48 +6,8 @@ import { SupuestosService } from '../../../core/services/supuestos.service';
 import { AccordionGroupComponent } from '../../../shared/components/accordion-group/accordion-group.component';
 import { PreguntaCardComponent } from '../../../shared/components/pregunta-card/pregunta-card.component';
 import { PreguntaSupuesto, Categoria } from '../../../core/models';
-import { marked } from 'marked';
 import mermaid from 'mermaid';
-import katex from 'katex';
-
-// ── Configure marked once at module level ─────────────────────────────────────
-// marked v18: renderer methods receive a token object, not positional args
-marked.use({
-  renderer: {
-    code({ text, lang }: { text: string; lang?: string }) {
-      if (lang === 'mermaid') {
-        return `<div class="mermaid">${text}</div>`;
-      }
-      return false; // fall back to default renderer
-    }
-  }
-});
-
-// ── LaTeX helpers ─────────────────────────────────────────────────────────────
-function renderLatex(src: string): string {
-  // Display math:  $$...$$
-  src = src.replace(/\$\$([\s\S]+?)\$\$/g, (_, math) => {
-    try {
-      return katex.renderToString(math.trim(), { displayMode: true, throwOnError: false });
-    } catch { return _; }
-  });
-  // Inline math:  $...$  (avoid matching $$ already replaced above)
-  src = src.replace(/\$([^\n$]+?)\$/g, (_, math) => {
-    try {
-      return katex.renderToString(math.trim(), { displayMode: false, throwOnError: false });
-    } catch { return _; }
-  });
-  return src;
-}
-
-// ── Mermaid initialised once ───────────────────────────────────────────────────
-let mermaidReady = false;
-function ensureMermaid() {
-  if (!mermaidReady) {
-    mermaid.initialize({ startOnLoad: false, theme: 'default' });
-    mermaidReady = true;
-  }
-}
+import { renderMarkdown } from '../../../core/utils/markdown-render.util';
 
 interface GrupoExamen {
   origen: string;
@@ -193,10 +153,7 @@ export class SupuestosExamenesComponent implements OnInit {
       this.grupos.update(g => [...g]);
       try {
         const text = await this.supuestos.loadMarkdown(grupo.origen);
-        // 1. Pre-process LaTeX before marked (prevents marked from escaping $ signs)
-        const withMath = renderLatex(text);
-        // 2. Parse Markdown → HTML (mermaid blocks become <div class="mermaid">)
-        const html = await marked.parse(withMath);
+        const html = await renderMarkdown(text);
         grupo.mdContent = this.sanitizer.bypassSecurityTrustHtml(html);
       } catch (e: any) {
         grupo.mdContent = this.sanitizer.bypassSecurityTrustHtml(
@@ -210,8 +167,9 @@ export class SupuestosExamenesComponent implements OnInit {
 
     // Run mermaid after Angular has flushed [innerHTML] to the real DOM
     if (grupo.mdOpen) {
-      ensureMermaid();
-      setTimeout(() => mermaid.run({ querySelector: '.mermaid:not([data-processed])' }), 50);
+      setTimeout(() => {
+        mermaid.run({ querySelector: '.mermaid:not([data-processed])' });
+      }, 150);
     }
   }
 }

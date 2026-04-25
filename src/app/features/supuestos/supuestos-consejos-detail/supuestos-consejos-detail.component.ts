@@ -4,45 +4,8 @@ import { CommonModule } from '@angular/common';
 import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
 import { SupuestosService } from '../../../core/services/supuestos.service';
 import { Consejo } from '../../../core/models';
-import { marked } from 'marked';
 import mermaid from 'mermaid';
-import katex from 'katex';
-
-// ── Configure marked once at module level ─────────────────────────────────────
-marked.use({
-  renderer: {
-    code({ text, lang }: { text: string; lang?: string }) {
-      if (lang === 'mermaid') {
-        return `<div class="mermaid">${text}</div>`;
-      }
-      return false; // fall back to default renderer
-    }
-  }
-});
-
-// ── LaTeX helpers ─────────────────────────────────────────────────────────────
-function renderLatex(src: string): string {
-  src = src.replace(/\$\$([\s\S]+?)\$\$/g, (_, math) => {
-    try {
-      return katex.renderToString(math.trim(), { displayMode: true, throwOnError: false });
-    } catch { return _; }
-  });
-  src = src.replace(/\$([^\n$]+?)\$/g, (_, math) => {
-    try {
-      return katex.renderToString(math.trim(), { displayMode: false, throwOnError: false });
-    } catch { return _; }
-  });
-  return src;
-}
-
-// ── Mermaid initialised once ───────────────────────────────────────────────────
-let mermaidReady = false;
-function ensureMermaid() {
-  if (!mermaidReady) {
-    mermaid.initialize({ startOnLoad: false, theme: 'default' });
-    mermaidReady = true;
-  }
-}
+import { renderMarkdown } from '../../../core/utils/markdown-render.util';
 
 @Component({
   selector: 'app-supuestos-consejos-detail',
@@ -104,6 +67,7 @@ export class SupuestosConsejosDetailComponent implements OnInit {
   mdContent = signal<SafeHtml | null>(null);
   title = signal<string>('Consejo');
 
+
   async ngOnInit(): Promise<void> {
     const id = this.route.snapshot.paramMap.get('id');
     if (!id) {
@@ -122,20 +86,19 @@ export class SupuestosConsejosDetailComponent implements OnInit {
       this.title.set(consejo.title);
 
       const text = await this.supuestos.loadConsejoMarkdown(consejo.file);
-      const withMath = renderLatex(text);
-      const html = await marked.parse(withMath);
-      
-      this.mdContent.set(this.sanitizer.bypassSecurityTrustHtml(html));
+      const html = await renderMarkdown(text);
 
-      setTimeout(() => {
-        ensureMermaid();
-        mermaid.run({ querySelector: '.mermaid:not([data-processed])' });
-      }, 50);
+      this.mdContent.set(this.sanitizer.bypassSecurityTrustHtml(html));
 
     } catch (e: any) {
       this.error.set(e.message || 'Error al cargar el consejo.');
     } finally {
       this.loading.set(false);
+      // Run mermaid AFTER Angular has flushed [innerHTML] to the real DOM
+      // (loading.set(false) triggers CD which renders the md-body div first)
+      setTimeout(() => {
+        mermaid.run({ querySelector: '.mermaid:not([data-processed])' });
+      }, 150);
     }
   }
 }

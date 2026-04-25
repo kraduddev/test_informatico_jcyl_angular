@@ -8,7 +8,7 @@ Cuando veas un problema de cálculo de subredes en el examen, redacta tu respues
 
 ## **Paso 2: Determinación de los bits de host**
 
-* *"Buscamos la potencia de 2 más pequeña que sea mayor o igual al número total de IPs calculadas en el Paso 1. Es decir, buscamos `$2^n \ge Total\_IPs`, donde 'n' serán los bits destinados a hosts en la dirección IP."*
+* *"Buscamos la potencia de 2 más pequeña que sea mayor o igual al número total de IPs calculadas en el Paso 1. Es decir, buscamos $2^n \ge Total\_IPs$, donde 'n' serán los bits destinados a hosts en la dirección IP."*
 
 ## **Paso 3: Cálculo de la máscara de subred**
 
@@ -36,7 +36,7 @@ Esta sería tu respuesta textual para sacar la máxima puntuación en menos de 5
 
 ## **Paso 2: Determinación de los bits de host**
 
-* *"Buscamos la potencia de 2 más pequeña que sea mayor o igual al número total de IPs calculadas en el Paso 1. Es decir, buscamos `$2^n \ge Total\_IPs$`, donde 'n' serán los bits destinados a hosts en la dirección IP."*
+* *"Buscamos la potencia de 2 más pequeña que sea mayor o igual al número total de IPs calculadas en el Paso 1. Es decir, buscamos $2^n \ge Total\_IPs$, donde 'n' serán los bits destinados a hosts en la dirección IP."*
 
 ## **Paso 3: Cálculo de la máscara de subred**
 
@@ -59,7 +59,7 @@ Vamos a aplicar la plantilla con los datos del examen de Salamanca: te piden asi
 Esta sería tu respuesta textual para sacar la máxima puntuación en menos de 5 minutos:
 
 1. **Cálculo de IPs necesarias:** Partimos de 40 equipos por departamento. Aplicando un crecimiento del 25% (10 equipos más), necesitamos 50 IPs útiles para hosts. A esto hay que sumar la IP de Red y la IP de Broadcast. Total necesario: **52 direcciones IP**.
-2. **Determinación de bits de host:** Buscamos la potencia de 2 inmediatamente superior a 52. Dado que `$2^5 = 32$` (insuficiente) y `$2^6 = 64$` (suficiente), determinamos que necesitamos **6 bits para los hosts**.
+2. **Determinación de bits de host:** Buscamos la potencia de 2 inmediatamente superior a 52. Dado que $2^5 = 32$ (insuficiente) y $2^6 = 64$ (suficiente), determinamos que necesitamos **6 bits para los hosts**.
 3. **Máscara de Subred:** Si de 32 bits totales destinamos 6 a hosts, nos quedan 26 bits para la red (32 - 6 = 26). La máscara es **/26**. Su representación decimal se obtiene de restar al máximo (256) nuestro bloque (64), lo que nos da 192. Por tanto, la máscara es **255.255.255.192**.
 4. **Desglose de la Subred para el primer departamento:** A partir de la red base 192.168.4.0 suministrada, la asignación queda así:
     * **Dirección de Red:** 192.168.4.0
