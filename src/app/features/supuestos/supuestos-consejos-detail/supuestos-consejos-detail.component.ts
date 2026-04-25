@@ -1,9 +1,8 @@
-import { Component, OnInit, inject, signal } from '@angular/core';
+import { Component, OnInit, OnDestroy, inject, signal } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
 import { SupuestosService } from '../../../core/services/supuestos.service';
-import { Consejo } from '../../../core/models';
 import mermaid from 'mermaid';
 import { renderMarkdown } from '../../../core/utils/markdown-render.util';
 
@@ -11,30 +10,6 @@ import { renderMarkdown } from '../../../core/utils/markdown-render.util';
   selector: 'app-supuestos-consejos-detail',
   standalone: true,
   imports: [CommonModule],
-  styles: [`
-    :host ::ng-deep .md-body { font-size: 0.95rem; line-height: 1.7; padding: 1rem 0; }
-    :host ::ng-deep .md-body h1,
-    :host ::ng-deep .md-body h2,
-    :host ::ng-deep .md-body h3 { margin: 1.2em 0 0.5em; font-weight: 700; }
-    :host ::ng-deep .md-body h2 { font-size: 1.2rem; border-bottom: 2px solid var(--primary-color, #4361ee); padding-bottom: 4px; }
-    :host ::ng-deep .md-body h3 { font-size: 1.05rem; }
-    :host ::ng-deep .md-body p  { margin: 0.5em 0; }
-    :host ::ng-deep .md-body ul,
-    :host ::ng-deep .md-body ol { padding-left: 1.5em; margin: 0.5em 0; }
-    :host ::ng-deep .md-body code { background: #f0f0f0; padding: 2px 5px; border-radius: 4px; font-size: 0.88em; }
-    :host ::ng-deep .md-body pre  { background: #f8f8f8; border-radius: 8px; padding: 1em; overflow: auto; }
-    :host ::ng-deep .md-body table { border-collapse: collapse; width: 100%; margin: 0.8em 0; font-size: 0.88rem; }
-    :host ::ng-deep .md-body th,
-    :host ::ng-deep .md-body td  { border: 1px solid #ddd; padding: 6px 10px; text-align: left; }
-    :host ::ng-deep .md-body th  { background: var(--primary-color, #4361ee); color: #fff; }
-    :host ::ng-deep .md-body strong { font-weight: 700; }
-    :host ::ng-deep .md-body blockquote {
-      border-left: 4px solid var(--primary-color, #4361ee); margin: 0.8em 0;
-      padding: 0.5em 1em; background: #f5f7ff; border-radius: 0 6px 6px 0;
-    }
-    :host ::ng-deep .md-body .mermaid { margin: 1em 0; overflow: auto; }
-    :host ::ng-deep .md-body .katex-display { overflow-x: auto; margin: 0.8em 0; }
-  `],
   template: `
     <section class="screen active" aria-label="Detalle de Consejo">
       <div class="selector-header">
@@ -47,28 +22,34 @@ import { renderMarkdown } from '../../../core/utils/markdown-render.util';
       } @else if (error()) {
         <p class="supuestos-error">{{ error() }}</p>
       } @else if (mdContent()) {
-        <div class="examen-plantilla-panel" style="display: block; border: none; padding: 0;">
-          <div class="examen-plantilla-content">
-            <div class="md-body" [innerHTML]="mdContent()"></div>
-          </div>
-        </div>
+        <article class="md-reader">
+          <div class="md-body" [innerHTML]="mdContent()"></div>
+        </article>
       }
     </section>
   `
 })
-export class SupuestosConsejosDetailComponent implements OnInit {
-  router = inject(Router);
-  route = inject(ActivatedRoute);
+export class SupuestosConsejosDetailComponent implements OnInit, OnDestroy {
+  router    = inject(Router);
+  route     = inject(ActivatedRoute);
   supuestos = inject(SupuestosService);
   sanitizer = inject(DomSanitizer);
 
-  loading = signal(true);
-  error = signal<string | null>(null);
+  loading   = signal(true);
+  error     = signal<string | null>(null);
   mdContent = signal<SafeHtml | null>(null);
-  title = signal<string>('Consejo');
+  title     = signal<string>('Consejo');
 
+  ngOnInit(): void {
+    document.body.classList.add('page-reading');
+    this.load();
+  }
 
-  async ngOnInit(): Promise<void> {
+  ngOnDestroy(): void {
+    document.body.classList.remove('page-reading');
+  }
+
+  private async load(): Promise<void> {
     const id = this.route.snapshot.paramMap.get('id');
     if (!id) {
       this.error.set('No se especificó ningún consejo.');
@@ -78,24 +59,22 @@ export class SupuestosConsejosDetailComponent implements OnInit {
 
     try {
       const consejos = await this.supuestos.loadConsejos();
-      const consejo = consejos.find(c => c.id === id);
+      const consejo  = consejos.find(c => c.id === id);
       if (!consejo) {
-        throw new Error('Consejo no encontrado.');
+        this.error.set('Consejo no encontrado.');
+        return;
       }
 
       this.title.set(consejo.title);
-
       const text = await this.supuestos.loadConsejoMarkdown(consejo.file);
       const html = await renderMarkdown(text);
-
       this.mdContent.set(this.sanitizer.bypassSecurityTrustHtml(html));
 
     } catch (e: any) {
       this.error.set(e.message || 'Error al cargar el consejo.');
     } finally {
       this.loading.set(false);
-      // Run mermaid AFTER Angular has flushed [innerHTML] to the real DOM
-      // (loading.set(false) triggers CD which renders the md-body div first)
+      // mermaid.run() after Angular has flushed [innerHTML] to the real DOM
       setTimeout(() => {
         mermaid.run({ querySelector: '.mermaid:not([data-processed])' });
       }, 150);
