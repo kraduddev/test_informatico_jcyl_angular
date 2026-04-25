@@ -121,5 +121,3 @@ Para que el Tribunal vea que no se te escapa una, al terminar los 4 pasos yo añ
 > *"**Nota de diseño:** El cálculo de una máscara /27 asume que los terminales de Voz IP mencionados en el enunciado comparten infraestructura de red con los PC. Si el diseño exigiera direcciones IP independientes para los 16 teléfonos de los empleados, el requisito subiría a 41 dispositivos. En ese escenario, la máscara mínima pasaría a ser **/26** (255.255.255.192), permitiendo hasta 64 direcciones y situando la IP de broadcast en la 10.10.100.127."*
 
 Con esta respuesta demuestras que sabes hacer el cálculo matemático perfecto para lo que te piden, pero que además tienes visión de arquitecto de sistemas reales.
-
-¿Qué te parece? Si quieres podemos revisar el cálculo conceptual que pidieron para el diseño de Bases de Datos en ambos exámenes para terminar de rematar los patrones principales.
