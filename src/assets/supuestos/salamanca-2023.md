@@ -1,71 +1,146 @@
-## EJERCICIO 1: INFRAESTRUCTURA Y REDES
-
-### [cite_start]a) Cableado Estructurado (Norma EN 50173) [cite: 96]
-* **Topología:** Jerárquica en estrella. [cite_start]Dado que se busca reducir repartidores, instalaremos un **Repartidor de Edificio (BD)** en la planta baja que actúe también como **Repartidor de Planta (FD)** de dicha planta, y un FD en cada una de las otras 3 plantas[cite: 95].
-* **Cálculo de tomas:** Superficie por planta: $25m \times 40m = 1000 m^2$. A 2 puntos/$10 m^2$, resultan **200 tomas por planta** (800 total).
-* **Subsistemas:**
-    * **Horizontal:** Cable de par trenzado Categoría 6A o superior para soportar 10Gbps.
-    * [cite_start]**Vertical (Backbone):** Fibra óptica multimultimodo (OM4) entre el BD y los FD para garantizar ancho de banda y evitar interferencias[cite: 95].
-* [cite_start]**Interconexión:** Enlace de fibra monomodo (OS2) desde el BD hacia el anillo de fibra municipal o Red SARA[cite: 48].
-
-### b) Elementos Activos
-* **Necesidades:** 40 equipos + 25% crecimiento = **50 puertos por planta**.
-* **Propuesta:**
-    * **Planta 0 (Core):** 1 Switch de Core modular de Nivel 3 para gestionar el routing inter-VLAN.
-    * **Plantas 1-3 (Acceso):** 2 Switches de 48 puertos en "stack" (apilados) por planta para minimizar costes y simplificar gestión.
-    * [cite_start]**Características:** Puertos Gigabit Ethernet con soporte **PoE+ (802.3at)** para alimentar los teléfonos IP sin fuentes externas[cite: 95].
-
-### [cite_start]c) Direccionamiento IP [cite: 93]
-Rango: **192.168.4.0/22** (Máscara: 255.255.252.0). Dividimos en 4 subredes /24 (una por planta/departamento):
-
-| Subred (Planta) | Rango de IPs (Hosts) | Máscara | Puerta de Enlace |
-| :--- | :--- | :--- | :--- |
-| Planta 0 | 192.168.4.1 - 192.168.4.254 | /24 | 192.168.4.1 |
-| Planta 1 | 192.168.5.1 - 192.168.5.254 | /24 | 192.168.5.1 |
-| Planta 2 | 192.168.6.1 - 192.168.6.254 | /24 | 192.168.6.1 |
-| Planta 3 | 192.168.7.1 - 192.168.7.254 | /24 | 192.168.7.1 |
-
-### [cite_start]d) VLANs [cite: 107]
-[cite_start]Se implementarán VLANs etiquetadas bajo el estándar **802.1Q**[cite: 118].
-* **VLAN de Datos:** Una por planta para segmentar el tráfico de difusión y mejorar el rendimiento.
-* **VLAN de Voz:** Priorizada mediante QoS para asegurar la calidad de las llamadas de telefonía IP.
-* **Justificación:** Seguridad (aislamiento entre departamentos) y optimización del tráfico.
-
-### e) Análisis de Tráfico (Figura 1)
-* [cite_start]**Descripción:** Se observa un proceso de **resolución DNS iterativa/recursiva**[cite: 76, 89].
-    * [cite_start]**Trama 4:** El host `20.1.0.30` pregunta a su servidor local `20.1.0.10` por la IP de `www.cisco.com`[cite: 74, 75, 77].
-    * [cite_start]**Tramas 5-10:** El servidor local consulta a servidores raíz, de TLD (.com) y autoritativos de Cisco hasta obtener la respuesta[cite: 80, 84, 92, 100].
-    * [cite_start]**Trama 11:** El servidor local responde al host con las IPs finales (30.1.0.10)[cite: 111].
-* [cite_start]**Encapsulación:** Los datos DNS (Aplicación) se encapsulan en un segmento UDP (puerto 53), este en un paquete IP (Red) y finalmente en una trama Ethernet con etiqueta 802.1Q (Enlace)[cite: 112, 118, 128, 135].
+# Examen de Oposición: Analista Programador
+**Institución:** Excmo. Ayuntamiento de Salamanca
+**Fecha:** 28 de abril de 2023
+**Prueba:** Segunda prueba - Oposición libre para la provisión de dos plazas.
 
 ---
 
-## EJERCICIO 2: PORTAL WEB DEL PROVEEDOR
+## Instrucciones
+* Cualquier marca que pueda desvirtuar el anonimato del examen está completamente prohibida e invalidará la prueba.
+* Esta prueba consta de dos ejercicios. Deberá responder en las hojas suministradas a tal efecto.
+* El tiempo de realización de este ejercicio es de 100 minutos.
+* No es necesario devolver el cuadernillo. Al finalizar la prueba y una vez entregados todos los exámenes, se solicitarán dos personas voluntarias para que presencien el precintado de los mismos y garantizar la corrección anónima de los exámenes.
 
-### [cite_start]a) Casos de Uso [cite: 114]
-1.  **CU-01 Consultar Facturas:** El proveedor visualiza el estado (pagada/pendiente) de sus facturas tras autenticarse.
-2.  **CU-02 Descargar Certificado Contable:** Generación de documentos en PDF con sello electrónico.
-3.  [cite_start]**Interacciones Externas:** Conexión con **Cl@ve** para identificación [cite: 31] [cite_start]y con el **Punto General de Entrada de Facturas Electrónicas (FACe)** para la recepción de facturas[cite: 61].
+---
 
-### [cite_start]b) Modelo de Dominio [cite: 117]
-* **Proveedor:** CIF (id), Razón Social, Email.
-* **Contrato:** Número_Expediente, Objeto, Importe, Fecha_Firma.
-* **Factura:** Numero_Factura, Fecha_Emisión, Importe_Total, Estado.
-* **Documento:** Tipo, Hash, Fecha_Generación.
-* *Relación:* Un Proveedor puede tener N Contratos, y cada Contrato tiene N Facturas asociadas.
+## Modelo de Dominio (Boceto Inicial)
 
-### [cite_start]c) Arquitectura [cite: 122]
-* [cite_start]**Lógica:** Multicapa (Presentación en Angular/React, Aplicación en Microservicios Java/Python, Datos en PostgreSQL/Oracle)[cite: 122, 127, 130, 151].
-* **Física:** Híbrida. [cite_start]La Sede (Cloud) actúa como front-end seguro, comunicándose mediante una **VPN/Red SARA** con el Data Center propio (Back-end contable)[cite: 48, 108].
-* [cite_start]**ENS:** Clasificación de sistema **Categoría Media** debido a la importancia de la integridad y disponibilidad de datos contables[cite: 152].
+```mermaid
+classDiagram
+    class Representante
+    class Proveedor
+    class Contrato
+    class Documento
+    class Factura
+    class Ayuntamiento
+    class PersonalFuncionario["Personal Funcionario"]
 
-### [cite_start]d) Seguridad [cite: 153, 158]
-1.  [cite_start]**Uso de HTTPS (TLS 1.3):** Cifrado de las comunicaciones extremo a extremo[cite: 107].
-2.  [cite_start]**Autenticación Multifactor (MFA):** Certificados electrónicos o Cl@ve[cite: 31, 105].
-3.  [cite_start]**Validación y Saneamiento de Entradas:** Para evitar ataques de Inyección SQL y XSS[cite: 131].
-4.  **Auditoría de Accesos:** Registro (logs) inalterable de cada acceso y descarga de documentos.
-5.  [cite_start]**Cortafuegos de Aplicación Web (WAF):** Para proteger la sede electrónica frente a ataques comunes[cite: 107].
+    Representante "1" -- "1..*" Proveedor
+    Proveedor "1" -- "0..*" Contrato
+    Contrato "1" -- "0..*" Documento
+    Contrato "1" *-- "0..*" Factura
+    Contrato "1" -- "1" Ayuntamiento
+    Ayuntamiento "1" o-- "0..*" PersonalFuncionario
+```
 
-### [cite_start]e) Tecnologías Emergentes [cite: 136]
-1.  [cite_start]**Inteligencia Artificial (NLP/OCR):** Extracción automática de datos de facturas escaneadas para reducir errores de registro[cite: 137].
-2.  [cite_start]**Chatbot de Asistencia:** Basado en un **LLM** para resolver dudas de los proveedores sobre la tramitación de expedientes 24/7[cite: 137].
+---
+
+## EJERCICIO 1 (50 puntos)
+
+El Ayuntamiento de una ciudad de 75.000 habitantes ha encargado la construcción de un edificio para el fomento y creación de proyectos de Inteligencia Artificial y Tecnologías Emergentes.
+
+El edificio consta de: planta baja, primera, segunda y tercera. Cada planta tiene unas dimensiones de $25\\,metros$ de ancho por $40\\,metros$ de largo y una altura de $4\\,metros$.
+
+### Cuestiones:
+
+**a) [20 puntos] Sistema de cableado estructurado**
+Se desea elaborar una propuesta de un sistema de cableado estructurado para el edificio. Describa todos los subsistemas y justifique todos los elementos necesarios conforme a la norma **CENELEC EN 50173** teniendo en cuenta que:
+* Se desea reducir el número de repartidores en el edificio.
+* Se deberá considerar 2 puntos de red por cada $10\\,m^2$ de superficie utilizable como trabajo.
+* Se desea interconectar este edificio con el resto de los edificios municipales.
+
+**b) [15 puntos] Elementos activos**
+Describa y justifique los elementos activos necesarios para dar servicio en cada planta a un departamento.
+* Cada departamento cuenta actualmente con 40 equipos (ordenadores y teléfonos IP), con posibilidad de crecimiento del 25%.
+* Se deberán minimizar los costes económicos asociados.
+
+**c) [8 puntos] Direccionamiento IP**
+Se desea asignar una subred diferente para cada departamento, teniendo en cuenta que se dispone del direccionamiento privado $192.168.4.0/22$.
+Indique de forma motivada para cada subred el rango de direcciones IP disponibles para los hosts, máscara de subred y puerta de enlace predeterminada de cada una de estas subredes.
+
+**d) [5 puntos] VLANs**
+Describa y justifique una implementación de VLAN sobre esta infraestructura de red.
+
+**e) [12 puntos] Captura de tráfico (Figura 1)**
+En relación con la captura de tráfico de red:
+* Describa y contextualice el diálogo de las tramas que aparecen en la captura identificando las máquinas implicadas.
+* Comente los campos más relevantes de cada uno de los protocolos de la trama seleccionada en cada nivel.
+* Explique la encapsulación y desencapsulación de dichos niveles.
+
+*NOTA: Puede realizar las suposiciones que considere oportunas siempre que estén suficientemente motivadas.*
+
+---
+
+## EJERCICIO 2 (50 puntos)
+
+El Ayuntamiento desea incorporar a su Sede electrónica un nuevo espacio para facilitar las gestiones con sus proveedores, en adelante **PORTAL WEB DEL PROVEEDOR**. Este nuevo espacio personalizado contará con los siguientes módulos:
+
+1.  **Módulo de identificación:** permitirá la identificación y acceso de las personas autorizadas conforme con los sistemas de identificación de que disponen las administraciones públicas para este perfil de usuarios.
+2.  **Módulo de datos de contacto y representación:** permitirá gestionar la información de contacto del proveedor, así como sus representantes.
+3.  **Módulo de contratos:** permitirá visualizar el histórico de contratos con este Ayuntamiento.
+4.  **Módulo de facturas:** permitirá registrar las facturas, así como visualizar el histórico y detalle de estas.
+5.  **Módulo de analítica y gestión documental:** permitirá la generación de certificados y documentos contables a presentar en otras administraciones públicas, así como otros informes.
+6.  **Módulo de comunicaciones y avisos:** permitirá la recepción de avisos y otros comunicados del Ayuntamiento relativos al Portal Web del Proveedor.
+
+Deberá tenerse en cuenta que el Ayuntamiento dispone de un programa informático de gestión contable instalado en un Data Center propio y que la Sede electrónica está alojada en un Data Center Cloud.
+
+### Cuestiones:
+
+**a) [10 puntos] Descripción funcional**
+Realice una descripción funcional detallada del sistema propuesto a través de Diagramas de Casos de Uso incluyendo cualquier interacción que suponga con sistemas externos al Portal Web del Proveedor.
+
+**b) [10 puntos] Modelo de dominio**
+Represente el modelo de dominio del sistema a través de un Diagrama de Clases, indicando los principales atributos.
+
+**c) [15 puntos] Arquitectura**
+Describa y justifique de la forma más detallada posible la arquitectura lógica y la arquitectura física del sistema a implantar teniendo en cuenta las dimensiones de la seguridad según el **ENS**.
+
+**d) [10 puntos] Seguridad**
+Describa y justifique una propuesta de, al menos cinco medidas, que permitan identificar y/o evitar vulnerabilidades en la seguridad del sistema propuesto.
+
+**e) [5 puntos] Inteligencia Artificial**
+Describa y justifique al menos dos puntos del sistema propuesto a los que sea susceptible de aplicarse la inteligencia artificial y otras tecnologías emergentes identificándolas en cada caso.
+
+*NOTA: En todo lo no definido explícitamente en este ejercicio, podrá realizar las suposiciones que estime oportunas. Tenga en cuenta que no existe una única solución correcta por lo que será necesario razonar y argumentar todas las decisiones tomadas.*
+
+---
+
+## Figura 1. Captura de tráfico de red
+
+### Listado de Tramas
+
+| No. | Time | Source | Destination | Protocol | Length | Info |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| 4 | 4.465642 | 20.1.0.30 | 20.1.0.10 | DNS | 73 | Standard query 0x84f1 A www.cisco.com |
+| 5 | 4.467532 | 20.1.0.10 | 192.228.79.201 | DNS | 112 | Standard query 0x5757 A www.cisco.com OPT |
+| 6 | 4.500558 | 192.228.79.201 | 20.1.0.10 | DNS | 149 | Standard query response 0x5757 A www.cisco.com NS dnscom.com A 30.0.0.10 OPT |
+| 7 | 4.501999 | 20.1.0.10 | 30.0.0.10 | DNS | 96 | Standard query 0x562f A www.cisco.com OPT |
+| 8 | 4.561168 | 30.0.0.10 | 20.1.0.10 | DNS | 151 | Standard query response 0x562f A www.cisco.com NS dnscisco.cisco.com A 30.0.0.2 OPT |
+| 9 | 4.562412 | 20.1.0.10 | 30.0.0.2 | DNS | 96 | Standard query 0x696e A www.cisco.com OPT |
+| 10 | 4.621876 | 30.0.0.2 | 20.1.0.10 | DNS | 105 | Standard query response 0x690e A www.cisco.com A 30.1.0.10 A 30.1.0.20 |
+| 11 | 4.623669 | 20.1.0.10 | 20.1.0.30 | DNS | 144 | Standard query response 0x84f1 A www.cisco.com A 30.1.0.10 A 30.1.0.20 NS dnscisco.cisco.com A 30.0.0.2 |
+
+### Detalle de Trama Seleccionada (Frame 4)
+
+* **Ethernet II:**
+  * Source: `00:50:79:66:68:00` (Private_66:68:00)
+  * Destination: `0c:77:5d:6b:be:00`
+  * Type: IPv4 (0x0800)
+* **Internet Protocol Version 4:**
+  * Source: `20.1.0.30`
+  * Destination: `20.1.0.10`
+  * Version: 4
+  * Header Length: 20 bytes
+  * Total Length: 59
+  * Identification: `0x4e63` (20067)
+  * Time to Live: 64
+  * Protocol: UDP (17)
+* **User Datagram Protocol:**
+  * Source Port: 35384
+  * Destination Port: 53
+  * Length: 39
+* **Domain Name System (query):**
+  * Transaction ID: `0x84f1`
+  * Flags: `0x0100` Standard query
+  * Questions: 1
+  * Queries: `www.cisco.com`: type A, class IN
