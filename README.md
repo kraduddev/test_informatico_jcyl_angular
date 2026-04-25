@@ -1,27 +1,135 @@
-# QuizAngular
+# Quiz JCyL — Técnico Superior de Informática
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.17.
+Aplicación web SPA construida con **Angular 17** para practicar los exámenes de oposición de **Técnico Superior de Informática de la Junta de Castilla y León (JCyL)** y otras convocatorias relacionadas.
 
-## Development server
+---
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## ✨ Funcionalidades
 
-## Code scaffolding
+### 📝 Tests tipo test
+- **Selección de examen**: listado de convocatorias disponibles cargado desde `assets/tests/index.json`.
+- **Configuración antes de empezar**:
+  - Activar/desactivar mezcla aleatoria de preguntas y respuestas.
+  - Filtrar por bloques temáticos mediante chips seleccionables.
+  - Resumen dinámico del número de preguntas seleccionadas.
+- **Sesión en curso**: si se abandona un test a mitad, la sesión se guarda en `localStorage` y se puede retomar o descartar desde la pantalla de selección.
+- **Realización del quiz**:
+  - Navegación pregunta a pregunta con indicador de progreso.
+  - Opción de dejar la pregunta en blanco.
+  - Feedback inmediato al responder (respuesta correcta/incorrecta con explicación).
+- **Resultados**:
+  - Puntuación global con círculo de color (verde/naranja/rojo según nota).
+  - Desglose por bloques temáticos (aciertos, fallos y porcentaje por tema).
+  - Listado de preguntas falladas con la respuesta correcta y su explicación.
+  - Opciones para repetir el test o volver al inicio.
+- **Estadísticas históricas** (`/stats`):
+  - KPIs globales: sesiones completadas, preguntas respondidas, porcentaje de acierto global y mejor sesión.
+  - Historial agrupado por convocatoria con detalle de cada sesión.
+  - Botón para borrar todo el historial.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+### 📋 Supuestos Prácticos
+- **Menú de navegación** con dos modos de exploración:
+  - **Por Examen** (`/supuestos/examenes`): preguntas agrupadas por convocatoria. Cada grupo muestra el número de preguntas y permite expandir/colapsar.
+    - Botón "Ver plantilla de examen": carga y renderiza el fichero Markdown de la convocatoria con formato completo (encabezados, tablas, código, blockquotes y **diagramas Mermaid**).
+  - **Por Categoría** (`/supuestos/categorias`): preguntas agrupadas por bloque temático.
+- Los supuestos se cargan desde `assets/supuestos/categorias.json` y los ficheros `.md` asociados a cada convocatoria.
 
-## Build
+---
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## 🗂️ Estructura de datos
 
-## Running unit tests
+### Tests — `assets/tests/index.json`
+```json
+[
+  {
+    "id": "test-2024",
+    "nombre": "Técnico Superior de Informática — JCyL",
+    "ejercicio": "Primer Ejercicio",
+    "fecha": "26 de octubre de 2024",
+    "fichero": "tests/test-2024.json"
+  }
+]
+```
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Cada fichero de test (`assets/tests/*.json`) contiene un array de preguntas con campos: `enunciado`, `opciones`, `correcta`, `tema` y `explicacion`.
 
-## Running end-to-end tests
+### Supuestos — `assets/supuestos/categorias.json`
+Array de categorías, cada una con nombre y array de preguntas (`enunciado`, `origen`, y datos de respuesta). Los ficheros Markdown de plantillas se ubican en `assets/supuestos/*.md`.
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+---
 
-## Further help
+## 🚀 Desarrollo local
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+```bash
+npm install
+npm start        # http://localhost:4200
+```
+
+### Build de producción
+```bash
+npm run build    # Genera dist/quiz-angular/
+```
+
+### Tests unitarios
+```bash
+npm test
+```
+
+---
+
+## 🐳 Despliegue con Docker
+
+La aplicación incluye un `Dockerfile` multi-stage:
+
+1. **Stage `build`** — Node 18: instala dependencias y compila con `ng build`.
+2. **Stage final** — Nginx Alpine: sirve los estáticos del build en el puerto `80` con la configuración incluida en `nginx.conf`.
+
+```bash
+docker build -t quiz-jcyl .
+docker run -p 8080:80 quiz-jcyl
+```
+
+---
+
+## 📦 Dependencias
+
+### Runtime
+| Paquete | Versión | Uso |
+|---|---|---|
+| `@angular/core` + ecosystem | `^17.3` | Framework principal (standalone components, signals, lazy routing) |
+| `marked` | `^18.0` | Parseo de Markdown a HTML para las plantillas de supuestos |
+| `mermaid` | `^11.14` | Renderizado de diagramas en los ficheros Markdown |
+| `rxjs` | `~7.8` | Utilidades reactivas (usado internamente por Angular) |
+| `zone.js` | `~0.14` | Change detection de Angular |
+| `tslib` | `^2.3` | Helpers de TypeScript en runtime |
+
+### Desarrollo
+| Paquete | Versión | Uso |
+|---|---|---|
+| `@angular/cli` | `^17.3` | CLI de Angular (`ng serve`, `ng build`, `ng test`) |
+| `@angular-devkit/build-angular` | `^17.3` | Builder de webpack/esbuild para Angular |
+| `typescript` | `~5.4` | Compilador TypeScript |
+| `karma` + plugins | `~6.4` | Test runner para pruebas unitarias |
+| `jasmine-core` | `~5.1` | Framework de tests unitarios |
+
+---
+
+## 🧭 Rutas
+
+| Ruta | Componente | Descripción |
+|---|---|---|
+| `/` | `DashboardComponent` | Pantalla de inicio con acceso a Tests y Supuestos |
+| `/tests` | `TestsComponent` | Listado de convocatorias disponibles |
+| `/tests/:id/config` | `ConfigComponent` | Configuración del test (filtros y opciones) |
+| `/quiz` | `QuizComponent` | Realización del test pregunta a pregunta |
+| `/results` | `ResultsComponent` | Resultados tras completar el test |
+| `/stats` | `StatsComponent` | Historial y estadísticas globales |
+| `/supuestos` | `SupuestosMenuComponent` | Menú de supuestos prácticos |
+| `/supuestos/examenes` | `SupuestosExamenesComponent` | Supuestos agrupados por convocatoria |
+| `/supuestos/categorias` | `SupuestosCategoriasComponent` | Supuestos agrupados por categoría temática |
+
+---
+
+## 💾 Persistencia
+
+Los datos de sesión e historial se almacenan en **`localStorage`** del navegador mediante `StorageService`. No requiere backend ni base de datos.

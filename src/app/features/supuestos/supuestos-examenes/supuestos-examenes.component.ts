@@ -1,16 +1,19 @@
-import { Component, OnInit, inject, signal } from '@angular/core';
+import { Component, OnInit, AfterViewChecked, inject, signal } from '@angular/core';
 import { Router } from '@angular/router';
 import { CommonModule } from '@angular/common';
+import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
 import { SupuestosService } from '../../../core/services/supuestos.service';
 import { AccordionGroupComponent } from '../../../shared/components/accordion-group/accordion-group.component';
 import { PreguntaCardComponent } from '../../../shared/components/pregunta-card/pregunta-card.component';
 import { PreguntaSupuesto, Categoria } from '../../../core/models';
+import { marked } from 'marked';
+import mermaid from 'mermaid';
 
 interface GrupoExamen {
   origen: string;
   preguntas: Array<PreguntaSupuesto & { categoria: Categoria }>;
   tieneFichero: boolean;
-  mdContent: string | null;
+  mdContent: SafeHtml | null;
   mdLoading: boolean;
   mdOpen: boolean;
 }
@@ -19,6 +22,21 @@ interface GrupoExamen {
   selector: 'app-supuestos-examenes',
   standalone: true,
   imports: [CommonModule, AccordionGroupComponent, PreguntaCardComponent],
+  styles: [`
+    :host ::ng-deep .md-body { font-size: 0.95rem; line-height: 1.7; }
+    :host ::ng-deep .md-body h1, :host ::ng-deep .md-body h2, :host ::ng-deep .md-body h3 { margin: 1.2em 0 0.5em; font-weight: 700; }
+    :host ::ng-deep .md-body h2 { font-size: 1.2rem; border-bottom: 2px solid #4361ee; padding-bottom: 4px; }
+    :host ::ng-deep .md-body h3 { font-size: 1.05rem; }
+    :host ::ng-deep .md-body p { margin: 0.5em 0; }
+    :host ::ng-deep .md-body ul, :host ::ng-deep .md-body ol { padding-left: 1.5em; margin: 0.5em 0; }
+    :host ::ng-deep .md-body code { background: #f0f0f0; padding: 2px 5px; border-radius: 4px; font-size: 0.88em; }
+    :host ::ng-deep .md-body pre { background: #f8f8f8; border-radius: 8px; padding: 1em; overflow: auto; }
+    :host ::ng-deep .md-body table { border-collapse: collapse; width: 100%; margin: 0.8em 0; font-size: 0.88rem; }
+    :host ::ng-deep .md-body th, :host ::ng-deep .md-body td { border: 1px solid #ddd; padding: 6px 10px; text-align: left; }
+    :host ::ng-deep .md-body th { background: #4361ee; color: #fff; }
+    :host ::ng-deep .md-body strong { font-weight: 700; }
+    :host ::ng-deep .md-body blockquote { border-left: 4px solid #4361ee; margin: 0.8em 0; padding: 0.5em 1em; background: #f5f7ff; border-radius: 0 6px 6px 0; }
+  `],
   template: `
     <section class="screen active" aria-label="Supuestos por examen">
       <div class="selector-header">
@@ -59,7 +77,7 @@ interface GrupoExamen {
                       @if (grupo.mdLoading) {
                         <div class="loader-wrap"><div class="loader"></div></div>
                       } @else if (grupo.mdContent) {
-                        <div [innerHTML]="grupo.mdContent"></div>
+                        <div class="md-body" [innerHTML]="grupo.mdContent"></div>
                       }
                     </div>
                   </div>
@@ -76,13 +94,24 @@ interface GrupoExamen {
     </section>
   `
 })
-export class SupuestosExamenesComponent implements OnInit {
+export class SupuestosExamenesComponent implements OnInit, AfterViewChecked {
   router    = inject(Router);
   supuestos = inject(SupuestosService);
+  sanitizer = inject(DomSanitizer);
 
   loading = signal(true);
   error   = signal<string | null>(null);
   grupos  = signal<GrupoExamen[]>([]);
+
+  private mermaidInit = false;
+  private pendingMermaid = false;
+
+  ngAfterViewChecked(): void {
+    if (this.pendingMermaid) {
+      this.pendingMermaid = false;
+      mermaid.run({ querySelector: '.mermaid:not([data-processed])' });
+    }
+  }
 
   async ngOnInit(): Promise<void> {
     try {
@@ -116,20 +145,37 @@ export class SupuestosExamenesComponent implements OnInit {
 
   async togglePlantilla(grupo: GrupoExamen): Promise<void> {
     grupo.mdOpen = !grupo.mdOpen;
-    this.grupos.update(g => [...g]); // trigger change detection
+    this.grupos.update(g => [...g]);
     if (grupo.mdOpen && grupo.mdContent === null) {
       grupo.mdLoading = true;
       this.grupos.update(g => [...g]);
       try {
         const text = await this.supuestos.loadMarkdown(grupo.origen);
-        const win = window as any;
-        grupo.mdContent = win.marked?.parse ? win.marked.parse(text) : `<pre>${text.replace(/</g, '&lt;')}</pre>`;
+        // Configure marked to wrap mermaid code blocks in .mermaid divs
+        const renderer = new (marked as any).Renderer();
+        const origCode = renderer.code.bind(renderer);
+        renderer.code = (code: string, lang: string) => {
+          if (lang === 'mermaid') {
+            return `<div class="mermaid">${code}</div>`;
+          }
+          return origCode(code, lang);
+        };
+        const html = await marked(text, { renderer });
+        grupo.mdContent = this.sanitizer.bypassSecurityTrustHtml(html);
+        this.pendingMermaid = true;
+        if (!this.mermaidInit) {
+          mermaid.initialize({ startOnLoad: false, theme: 'default' });
+          this.mermaidInit = true;
+        }
       } catch (e: any) {
         grupo.mdContent = `<p class="supuestos-error">${e.message}</p>`;
       } finally {
         grupo.mdLoading = false;
         this.grupos.update(g => [...g]);
       }
+    } else if (grupo.mdOpen) {
+      // Panel re-opened, re-render mermaid diagrams
+      this.pendingMermaid = true;
     }
   }
 }
