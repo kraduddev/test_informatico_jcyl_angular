@@ -26,5 +26,12 @@
     "description": "Modelos de respuesta para preguntas sobre el Esquema Nacional de Seguridad y Planes de Continuidad.",
     "icon": "🛡️",
     "file": "assets/supuestos/tips/plantillazo-ens.md"
+  },
+  {
+    "id": "plantillazo-rto-rpo",
+    "title": "Plantillas RTO/RPO",
+    "description": "Modelos de respuesta para preguntas sobre el Esquema Nacional de Seguridad y Planes de Continuidad.",
+    "icon": "🛡️",
+    "file": "assets/supuestos/tips/plantillazo-rto-rpo.md"
   }
 ]
