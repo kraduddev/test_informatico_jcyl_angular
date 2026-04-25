@@ -14,7 +14,7 @@ export async function initManifest() {
   grid.innerHTML = '<div class="loader-wrap"><div class="loader"></div></div>';
 
   try {
-    const res = await fetch('tests/index.json');
+    const res = await fetch('assets/tests/index.json');
     if (!res.ok) throw new Error('No se pudo cargar el manifiesto de tests.');
     const tests = await res.json();
     renderTestGrid(tests);

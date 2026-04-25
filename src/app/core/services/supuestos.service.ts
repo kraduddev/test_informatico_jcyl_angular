@@ -4,9 +4,9 @@ import { firstValueFrom } from 'rxjs';
 import { SupuestosData } from '../models';
 
 const ORIGEN_A_FICHERO: Record<string, string> = {
-  'JCyL 2022':      'supuestos/jcyl-2022.md',
-  'JCyL 2024':      'supuestos/jcyl-2024.md',
-  'Salamanca 2023': 'supuestos/salamanca-2023.md',
+  'JCyL 2022':      'assets/supuestos/jcyl-2022.md',
+  'JCyL 2024':      'assets/supuestos/jcyl-2024.md',
+  'Salamanca 2023': 'assets/supuestos/salamanca-2023.md',
 };
 
 @Injectable({ providedIn: 'root' })
@@ -17,7 +17,7 @@ export class SupuestosService {
 
   async loadData(): Promise<SupuestosData> {
     if (this.cachedData) return this.cachedData;
-    this.cachedData = await firstValueFrom(this.http.get<SupuestosData>('supuestos/categorias.json'));
+    this.cachedData = await firstValueFrom(this.http.get<SupuestosData>('assets/upuestos/categorias.json'));
     return this.cachedData;
   }
 
