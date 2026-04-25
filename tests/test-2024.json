@@ -1,0 +1,1437 @@
+{
+  "examen": "Proceso selectivo para el ingreso en la categoría profesional de Técnico-a Superior de Informática de la Administración de la Comunidad de Castilla y León",
+  "ejercicio": "Primer Ejercicio",
+  "fecha": "26 de octubre de 2024",
+  "preguntas": [
+    {
+      "numero": 1,
+      "tema": "Materias Comunes - Tema 1: La Constitución Española",
+      "enunciado": "De acuerdo con la Constitución Española, la Administración Pública sirve con objetividad los intereses generales y actúa de acuerdo con los principios de:",
+      "opciones": {
+        "a": "Competencia, legalidad, proporcionalidad, desconcentración y coordinación.",
+        "b": "Eficacia, jerarquía, descentralización, desconcentración y coordinación.",
+        "c": "Eficacia, legalidad, proporcionalidad, desconcentración y solidaridad.",
+        "d": "Competencia, jerarquía, descentralización, desconcentración y solidaridad."
+      },
+      "respuesta_correcta": "b",
+      "explicación": "El artículo 103.1 de la Constitución Española enumera taxativamente estos cinco principios de actuación administrativa."
+    },
+    {
+      "numero": 2,
+      "tema": "Materias Comunes - Tema 1: La Constitución Española",
+      "enunciado": "De acuerdo con el artículo 141.3 de la Constitución Española, señale la respuesta correcta:",
+      "opciones": {
+        "a": "No se podrán crear agrupaciones de municipios diferentes de la provincia.",
+        "b": "La agrupación de municipios diferentes de la provincia deberá ser autorizada por la Cortes Generales.",
+        "c": "La creación de agrupaciones de municipios diferentes de la provincia supondrá su unificación.",
+        "d": "Se podrán crear agrupaciones de municipios diferentes de la provincia."
+      },
+      "respuesta_correcta": "d",
+      "explicación": "La Constitución permite explícitamente la creación de agrupaciones municipales distintas de la provincia para gestionar intereses comunes."
+    },
+    {
+      "numero": 3,
+      "tema": "Materias Comunes - Tema 3: La Unión Europea",
+      "enunciado": "¿Cuál es el órgano de representación de la Unión Europea que reúne a los jefes de Estado o de Gobierno de los Estados miembros y fija las orientaciones y las prioridades políticas de la Unión Europea?",
+      "opciones": {
+        "a": "La Comisión Europea.",
+        "b": "El Consejo Europeo.",
+        "c": "El Consejo de la Unión Europea.",
+        "d": "El Parlamento Europeo."
+      },
+      "respuesta_correcta": "b",
+      "explicación": "El Consejo Europeo es el encargado de la dirección política estratégica, a diferencia del Consejo de la UE que tiene funciones legislativas."
+    },
+    {
+      "numero": 4,
+      "tema": "Materias Comunes - Tema 4: El Estatuto de Autonomía de Castilla y León.",
+      "enunciado": "La Comunidad de Castilla y León tiene competencia exclusiva en la siguiente materia:",
+      "opciones": {
+        "a": "Protección del medio ambiente y de los ecosistemas.",
+        "b": "Productos farmacéuticos.",
+        "c": "Obras públicas de interés para la Comunidad Autónoma dentro de su propio territorio...",
+        "d": "Colegios profesionales y ejercicio de profesiones tituladas."
+      },
+      "respuesta_correcta": "c",
+      "explicación": "El artículo 70.1.7 del Estatuto otorga competencia exclusiva sobre obras públicas que no afecten a otras comunidades ni sean de interés general del Estado."
+    },
+    {
+      "numero": 5,
+      "tema": "Materias Comunes - Tema 5: Instituciones básicas de Castilla y León",
+      "enunciado": "La competencia para aprobar los Presupuestos de la Comunidad de Castilla y León corresponde:",
+      "opciones": {
+        "a": "Al Presidente de la Junta de Castilla y León.",
+        "b": "A la Junta de Castilla y León.",
+        "c": "Al Consejo de Gobierno de la Junta de Castilla y León.",
+        "d": "A las Cortes de Castilla y León."
+      },
+      "respuesta_correcta": "d",
+      "explicación": "Como en cualquier sistema parlamentario, la potestad legislativa y presupuestaria reside en el Parlamento (las Cortes)."
+    },
+    {
+      "numero": 6,
+      "tema": "Materias Comunes - Tema 5: Instituciones básicas de Castilla y León",
+      "enunciado": "Según el artículo 37 del Estatuto de Autonomía de Castilla y León, no podrá acordarse la disolución anticipada de las Cortes de Castilla y León en el siguiente supuesto:",
+      "opciones": {
+        "a": "Cuando se encuentre en tramitación una moción de censura.",
+        "b": "Durante el segundo período de sesiones de la legislatura.",
+        "c": "Antes de que transcurran seis meses desde la anterior disolución...",
+        "d": "Puede acordarse en cualquier momento sin limitación alguna."
+      },
+      "respuesta_correcta": "a",
+      "explicación": "Se prohíbe la disolución de la cámara para evitar que el Presidente eluda una posible destitución mediante moción de censura."
+    },
+    {
+      "numero": 7,
+      "tema": "Materias Comunes - Tema 5: Instituciones básicas de Castilla y León",
+      "enunciado": "Corresponde al Presidente de la Junta de Castilla y León:",
+      "opciones": {
+        "a": "Ratificar los convenios que la Junta concluya...",
+        "b": "Establecer y exigir tributos...",
+        "c": "Convocar, presidir, fijar el orden del día de las reuniones del Consejo de Gobierno...",
+        "d": "Interponer recursos de inconstitucionalidad..."
+      },
+      "respuesta_correcta": "c",
+      "explicación": "Dirigir y coordinar la acción del Consejo de Gobierno es una función intrínseca de la presidencia ejecutiva según el Estatuto."
+    },
+    {
+      "numero": 8,
+      "tema": "Materias Comunes - Tema 5: Instituciones básicas de Castilla y León",
+      "enunciado": "La Junta de Castilla y León se compone del:",
+      "opciones": {
+        "a": "Presidente, del Vicepresidente o Vicepresidentes, en su caso, y de un máximo de diez Consejeros.",
+        "b": "Presidente, dos Vicepresidentes como mínimo, y de un máximo de diez Consejeros.",
+        "c": "Presidente, del Vicepresidente o Vicepresidentes, en su caso, y de un máximo de nueve Consejeros.",
+        "d": "Presidente, del Vicepresidente o Vicepresidentes, en su caso, y de un máximo de doce Consejeros."
+      },
+      "respuesta_correcta": "a",
+      "explicación": "El artículo 29.2 del Estatuto limita el número de consejerías a un máximo de diez, además del Presidente y posibles Vicepresidentes."
+    },
+    {
+      "numero": 9,
+      "tema": "Materias Comunes - Tema 6: Instituciones propias de Castilla y León",
+      "enunciado": "El Procurador del Común es el Alto Comisionado de las Cortes de Castilla y León, elegido por:",
+      "opciones": {
+        "a": "La Junta de Castilla y León.",
+        "b": "Las Cortes de Castilla y León.",
+        "c": "El Defensor del Pueblo.",
+        "d": "El Presidente de la Junta de Castilla y León."
+      },
+      "respuesta_correcta": "b",
+      "explicación": "Al ser un comisionado de las Cortes para la defensa de los derechos, su elección corresponde exclusivamente al poder legislativo."
+    },
+    {
+      "numero": 10,
+      "tema": "Materias Comunes - Tema 7: La Administración de la Comunidad de Castilla y León.",
+      "enunciado": "El Delegado Territorial de la Junta de Castilla y León en cada provincia depende funcionalmente de:",
+      "opciones": {
+        "a": "La Consejería de Economía y Hacienda.",
+        "b": "La Consejería de la Presidencia.",
+        "c": "La Consejería que corresponda por razón de la competencia material.",
+        "d": "La Consejería de Movilidad y Transformación Digital."
+      },
+      "respuesta_correcta": "c",
+      "explicación": "Aunque orgánicamente dependan de Presidencia, su labor funcional se vincula a cada consejería según el asunto que gestionen."
+    },
+    {
+      "numero": 11,
+      "tema": "Materias Comunes - Tema 8: El Estatuto Básico del Empleado Público",
+      "enunciado": "Según dispone el artículo 14 de la Ley de la Función Pública de Castilla y León, queda reservado al personal funcionario el desempeño de puestos de trabajo que:",
+      "opciones": {
+        "a": "Impliquen el ejercicio de autoridad.",
+        "b": "Sean de carácter instrumental correspondientes a las áreas de mantenimiento.",
+        "c": "Sean de naturaleza no permanente.",
+        "d": "Estén calificados como de confianza."
+      },
+      "respuesta_correcta": "a",
+      "explicación": "Las funciones que implican fe pública o ejercicio de autoridad están legalmente reservadas a funcionarios de carrera para garantizar imparcialidad."
+    },
+    {
+      "numero": 12,
+      "tema": "Materias Comunes - Tema 8: El Estatuto Básico del Empleado Público",
+      "enunciado": "De conformidad con lo dispuesto en el artículo 42 de la Ley de la Función Pública de Castilla y León, el sistema de concurso-oposición será el sistema general de selección de:",
+      "opciones": {
+        "a": "Personal funcionario.",
+        "b": "Personal laboral fijo.",
+        "c": "Personal temporal.",
+        "d": "Personal eventual."
+      },
+      "respuesta_correcta": "b",
+      "explicación": "Mientras que para funcionarios el sistema general es la oposición, para el personal laboral fijo se establece el concurso-oposición."
+    },
+    {
+      "numero": 13,
+      "tema": "Materias Comunes - Tema 9: Convenio colectivo para el personal laboral",
+      "enunciado": "Según señala el artículo 22 del convenio colectivo..., el periodo de prueba para los trabajadores del grupo I, será de:",
+      "opciones": {
+        "a": "Un mes.",
+        "b": "Dos meses.",
+        "c": "Tres meses.",
+        "d": "Seis meses."
+      },
+      "respuesta_correcta": "c",
+      "explicación": "El convenio vigente para Castilla y León estipula un periodo de tres meses para los grupos profesionales de mayor cualificación (Grupo I)."
+    },
+    {
+      "numero": 14,
+      "tema": "Materias Comunes - Tema 10: La Administración Pública al servicio de los ciudadanos",
+      "enunciado": "De acuerdo con la Ley 2/2010, de 11 de marzo, la consejería encargada de hacer pública y actualizar la relación de oficinas de asistencia en materia de registros será:",
+      "opciones": {
+        "a": "La consejería competente en materia de administración territorial.",
+        "b": "La consejería competente en materia de atención al ciudadano.",
+        "c": "La consejería competente en materia de hacienda.",
+        "d": "La consejería competente en materia de función pública."
+      },
+      "respuesta_correcta": "b",
+      "explicación": "La gestión de la información sobre registros y oficinas es una competencia directa del área de Atención al Ciudadano."
+    },
+    {
+      "numero": 15,
+      "tema": "Materias Comunes - Tema 11: Nuevas tecnologías",
+      "enunciado": "Conforme al artículo 11 de la Ley 39/2015, ¿Para cuál de los siguientes supuestos las Administraciones Públicas NO requerirán a los interesados el uso obligatorio de firma?",
+      "opciones": {
+        "a": "Renunciar a derechos.",
+        "b": "Pagar tasas de un procedimiento iniciado electrónicamente.",
+        "c": "Presentar declaraciones responsables o comunicaciones.",
+        "d": "Desistir de acciones."
+      },
+      "respuesta_correcta": "b",
+      "explicación": "El pago es una acción material de ingreso; la ley exige firma para actos que expresen voluntad jurídica clara (renuncia, desistimiento, solicitud)."
+    },
+    {
+      "numero": 16,
+      "tema": "Materias Comunes - Tema 12: Transparencia y participación",
+      "enunciado": "Conforme al artículo 17 de la Ley 3/2015, serán objeto de participación ciudadana... (Señale la respuesta INCORRECTA):",
+      "opciones": {
+        "a": "Los planes.",
+        "b": "Las estrategias.",
+        "c": "Los proyectos de disposiciones que regulen órganos, cargos y autoridades.",
+        "d": "Los programas."
+      },
+      "respuesta_correcta": "c",
+      "explicación": "Las normas auto-organizativas (que regulan órganos y cargos internos) suelen excluirse de los procesos de participación ciudadana externa."
+    },
+    {
+      "numero": 17,
+      "tema": "Materias Comunes - Tema 13: Políticas públicas de igualdad y discapacidad",
+      "enunciado": "Conforme al artículo 54 de la Ley 2/2013, los Planes autonómicos de accesibilidad... incluirán:",
+      "opciones": {
+        "a": "Los recursos de apoyo a la familia.",
+        "b": "Los recursos sanitarios disponibles.",
+        "c": "La evaluación de la aplicación de la normativa y sus efectos, así como las propuestas de modificaciones normativas.",
+        "d": "Los recursos educativos disponibles."
+      },
+      "respuesta_correcta": "c",
+      "explicación": "Los planes de accesibilidad deben contener mecanismos de seguimiento y propuestas de mejora normativa para ser efectivos."
+    },
+    {
+      "numero": 18,
+      "tema": "Materias Comunes - Tema 13: Políticas públicas de igualdad",
+      "enunciado": "Conforme al artículo 3 de la Ley 1/2003, la Administración de Castilla y León se regirá... por los siguientes principios:",
+      "opciones": {
+        "a": "Seguridad jurídica, eficacia y eficiencia.",
+        "b": "Transversalidad, planificación y coordinación.",
+        "c": "Necesidad, efectividad y menor onerosidad.",
+        "d": "Solidaridad, profesionalidad y calidad."
+      },
+      "respuesta_correcta": "b",
+      "explicación": "La transversalidad es el principio estrella en políticas de igualdad (el enfoque de género en todas las áreas de la administración)."
+    },
+    {
+      "numero": 19,
+      "tema": "Materias Comunes - Tema 15: Prevención de Riesgos Laborales.",
+      "enunciado": "Conforme al artículo 4 de la Ley 31/1995, se entenderá por \"riesgo laboral\":",
+      "opciones": {
+        "a": "La posibilidad de que un trabajador sufra un determinado daño derivado del trabajo.",
+        "b": "La realización de procesos que originen riesgos para la seguridad.",
+        "c": "Las enfermedades o lesiones sufridas con motivo del trabajo.",
+        "d": "Cualquier característica del trabajo que pueda influir en riesgos."
+      },
+      "respuesta_correcta": "a",
+      "explicación": "La definición legal de riesgo se basa en la 'posibilidad' o probabilidad de daño, no en el daño ya consumado (accidente)."
+    },
+    {
+      "numero": 20,
+      "tema": "Materias Comunes - Tema 11: Nuevas tecnologías",
+      "enunciado": "Conforme al artículo 17 de la Ley 39/2015, los documentos electrónicos deberán conservarse... (Señale la respuesta INCORRECTA):",
+      "opciones": {
+        "a": "La integridad del documento.",
+        "b": "La conservación del documento.",
+        "c": "La consulta durante un período de tiempo determinado.",
+        "d": "La autenticidad del documento."
+      },
+      "respuesta_correcta": "c",
+      "explicación": "La ley exige garantizar la consulta a lo largo del tiempo, no limitarla a un 'periodo determinado' arbitrario."
+    },
+    {
+      "numero": 21,
+      "tema": "Bloque I - Tema 2: El Esquema Nacional de Interoperabilidad.",
+      "enunciado": "Según el RD 4/2010 (ENI), señale cuál es el propósito del Centro de Transferencia de Tecnología (CTT):",
+      "opciones": {
+        "a": "Es un inventario de procedimientos administrativos.",
+        "b": "Almacenará modelos de datos de servicios de interoperabilidad.",
+        "c": "Es un directorio de aplicaciones para su libre reutilización.",
+        "d": "Permitirá la sincronización de inventarios de unidades orgánicas."
+      },
+      "respuesta_correcta": "c",
+      "explicación": "El CTT es el 'GitHub' de la administración pública española, destinado a compartir código y soluciones para evitar duplicidades."
+    },
+    {
+      "numero": 22,
+      "tema": "Bloque I - Tema 2: El Esquema Nacional de Interoperabilidad.",
+      "enunciado": "Indique cuál de las siguientes respuestas NO es una Norma Técnica de Interoperabilidad (NTI) recogida en el RD 4/2010:",
+      "opciones": {
+        "a": "Documento electrónico.",
+        "b": "Expediente electrónico.",
+        "c": "Archivo electrónico.",
+        "d": "Digitalización de documentos."
+      },
+      "respuesta_correcta": "c",
+      "explicación": "Existen NTIs para Documento, Expediente y Digitalización, pero no una específica bajo el nombre único de 'Archivo electrónico' (se cubren en Política de Gestión de Documentos)."
+    },
+    {
+      "numero": 23,
+      "tema": "Bloque I - Tema 1: La Administración Electrónica.",
+      "enunciado": "Según el artículo 41 de la Ley 40/2015, ¿cómo se denomina el acto realizado íntegramente por medios electrónicos sin intervención directa de un empleado público?",
+      "opciones": {
+        "a": "Acción administrativa automatizada.",
+        "b": "Solicitud electrónica automatizada.",
+        "c": "Actuación administrativa automatizada.",
+        "d": "Trámite electrónico automatizado."
+      },
+      "respuesta_correcta": "c",
+      "explicación": "El término jurídico exacto definido en la Ley de Régimen Jurídico es 'Actuación administrativa automatizada'."
+    },
+    {
+      "numero": 24,
+      "tema": "Bloque I - Tema 5: Protección jurídica de aplicaciones.",
+      "enunciado": "Duración de los derechos de explotación de programas de ordenador cuando el autor sea una persona jurídica:",
+      "opciones": {
+        "a": "70 años desde el día siguiente a la divulgación lícita.",
+        "b": "50 años desde el día siguiente a la divulgación lícita.",
+        "c": "70 años desde el día 1 de enero del año siguiente a la divulgación lícita.",
+        "d": "50 años desde el día 1 de enero del año siguiente a la divulgación lícita."
+      },
+      "respuesta_correcta": "c",
+      "explicación": "Según el artículo 98 de la Ley de Propiedad Intelectual, son 70 años y el cómputo empieza el 1 de enero del año siguiente."
+    },
+    {
+      "numero": 25,
+      "tema": "Bloque I - Tema 14: Organización de la actividad informática",
+      "enunciado": "Según el Decreto 137/2001, ¿cuáles son los requisitos para el puesto de Jefe de Servicio de Informática?",
+      "opciones": {
+        "a": "Técnico Superior o de Gestión, y dos años de antigüedad.",
+        "b": "Técnico Superior únicamente, y dos años de antigüedad.",
+        "c": "Técnico Superior o de Gestión, y un año de antigüedad.",
+        "d": "Técnico Superior únicamente, y un año de antigüedad."
+      },
+      "respuesta_correcta": "c",
+      "explicación": "Esta normativa autonómica permite que ambos cuerpos técnicos accedan a la jefatura con un mínimo de un año de antigüedad."
+    },
+    {
+      "numero": 26,
+      "tema": "Bloque I - Tema 7: Gestión estratégica de TI y ROI.",
+      "enunciado": "Indique cuál de las siguientes respuestas es un método dinámico para la evaluación de la rentabilidad de la inversión:",
+      "opciones": {
+        "a": "Plazo de recuperación o \"Pay-back\".",
+        "b": "Retorno de Inversión o ROI.",
+        "c": "Tasa Interna de Retorno.",
+        "d": "Flujo de caja total."
+      },
+      "respuesta_correcta": "c",
+      "explicación": "Un método es 'dinámico' cuando tiene en cuenta el valor del dinero en el tiempo (actualización de flujos), como la TIR o el VAN."
+    },
+    {
+      "numero": 27,
+      "tema": "Bloque II - Tema 20: Servidores de aplicaciones",
+      "enunciado": "Con relación al quorum y al \"split brain\" en clústers de alta disponibilidad, señale la respuesta correcta:",
+      "opciones": {
+        "a": "Cualquier nodo puede operar si detecta una partición.",
+        "b": "El split brain ocurre sin necesidad de quorum.",
+        "c": "El quorum se define como la mitad más uno de los nodos para evitar el split brain.",
+        "d": "En caso de split brain, el quorum se distribuye equitativamente."
+      },
+      "respuesta_correcta": "c",
+      "explicación": "El quorum (n/2 + 1) evita que dos subgrupos del clúster operen por separado tras un fallo de red, evitando inconsistencias de datos."
+    },
+    {
+      "numero": 28,
+      "tema": "Bloque II - Tema 16: Componentes físicos y procesadores.",
+      "enunciado": "¿Cuál de las siguientes respuestas describe mejor la función de pipelining?",
+      "opciones": {
+        "a": "Permite la ejecución simultánea de múltiples instrucciones en diferentes etapas.",
+        "b": "Asegura que cada instrucción se complete antes de la siguiente.",
+        "c": "Reduce los ciclos de reloj ejecutando instrucciones secuencialmente.",
+        "d": "Incrementa el tamaño del registro de instrucciones."
+      },
+      "respuesta_correcta": "a",
+      "explicación": "El pipelining es como una cadena de montaje: mientras una instrucción se escribe, la siguiente se ejecuta y la otra se decodifica."
+    },
+    {
+      "numero": 29,
+      "tema": "Bloque II - Tema 24: Requerimientos de un CPD.",
+      "enunciado": "Según niveles Tier, ¿qué nivel garantiza indisponibilidad anual inferior a 2 horas?",
+      "opciones": {
+        "a": "Tier I y Tier II.",
+        "b": "Únicamente Tier IV.",
+        "c": "Tier III y Tier IV.",
+        "d": "Únicamente Tier I."
+      },
+      "respuesta_correcta": "c",
+      "explicación": "El Tier III (99,982%) permite un máximo de 1.6 horas anuales, mientras que el Tier IV (99,995%) permite solo unos minutos."
+    },
+    {
+      "numero": 30,
+      "tema": "Bloque II - Tema 21: Arquitecturas de almacenamiento",
+      "enunciado": "En el contexto de estrategias de almacenamiento, señale la respuesta correcta:",
+      "opciones": {
+        "a": "Thick Provisioning asigna espacio anticipadamente sin sobreasignación.",
+        "b": "Thin Provisioning asigna espacio de forma predecible.",
+        "c": "Storage Tiering no permite el solapamiento de niveles.",
+        "d": "Deduplicación elimina datos duplicados, liberando espacio."
+      },
+      "respuesta_correcta": "d",
+      "explicación": "La deduplicación ahorra espacio al guardar una sola instancia de datos repetidos y usar punteros para el resto."
+    },
+    {
+      "numero": 31,
+      "tema": "Bloque II - Tema 17: Sistemas operativos",
+      "enunciado": "¿Qué algoritmo de planificación garantiza que los procesos son atendidos en el orden de llegada sin ser interrumpidos?",
+      "opciones": {
+        "a": "Round-Robin (RR).",
+        "b": "Shortest Job First (SJF).",
+        "c": "First Come First Served (FCFS).",
+        "d": "Algoritmo basado en Prioridades."
+      },
+      "respuesta_correcta": "c",
+      "explicación": "FCFS (First Come First Served) es un algoritmo no expulsivo que atiende por estricto orden de llegada a la cola de listos."
+    },
+    {
+      "numero": 32,
+      "tema": "Bloque II - Tema 22: Servicios de directorio",
+      "enunciado": "En Windows Server, ¿cuál es la funcionalidad principal de AD FS?",
+      "opciones": {
+        "a": "Resolución de nombres de dominio.",
+        "b": "Gestión de actualizaciones y parches.",
+        "c": "Autenticación de usuarios entre diferentes sistemas de identidad.",
+        "d": "Registro de eventos del sistema para auditoría."
+      },
+      "respuesta_correcta": "c",
+      "explicación": "Active Directory Federation Services (AD FS) permite el SSO (Single Sign-On) federado entre distintas organizaciones o dominios."
+    },
+    {
+      "numero": 33,
+      "tema": "Bloque II - Tema 19: El sistema operativo UNIX–Linux.",
+      "enunciado": "En UNIX, ¿qué describe el nivel de funcionamiento 0 (Runlevel 0)?",
+      "opciones": {
+        "a": "Apaga el sistema por completo.",
+        "b": "Inicia en modo usuario único para mantenimiento.",
+        "c": "Nivel multiusuario con todos los servicios.",
+        "d": "Proporciona interfaz gráfica completa."
+      },
+      "respuesta_correcta": "a",
+      "explicación": "Tradicionalmente, en SysVinit el nivel 0 es 'halt' (apagado) y el nivel 6 es 'reboot' (reinicio)."
+    },
+    {
+      "numero": 34,
+      "tema": "Bloque II - Tema 19: El sistema operativo UNIX–Linux.",
+      "enunciado": "¿Qué entrada crontab ejecutaría un script todos los lunes a las 3:15 AM?",
+      "opciones": {
+        "a": "15 3 * * 1",
+        "b": "15 3 1 * 1",
+        "c": "15 3 1 1 1",
+        "d": "15 3 * * 7"
+      },
+      "respuesta_correcta": "a",
+      "explicación": "El formato es [minutos] [hora] [día] [mes] [día_semana]. El 1 representa el lunes (en muchos sistemas) o se usa el asterisco para omitir fecha fija."
+    },
+    {
+      "numero": 35,
+      "tema": "Bloque II - Tema 25: Virtualización y contenedores",
+      "enunciado": "¿Cuál es el papel de un hipervisor de tipo 1?",
+      "opciones": {
+        "a": "Se instala sobre un sistema operativo anfitrión.",
+        "b": "Se instala directamente en el hardware.",
+        "c": "Se ejecuta como una aplicación dentro de un SO.",
+        "d": "Permite a múltiples anfitriones ejecutar apps de virtualización."
+      },
+      "respuesta_correcta": "b",
+      "explicación": "Los hipervisores tipo 1 o 'bare-metal' (como ESXi o Proxmox) se ejecutan directamente sobre el hardware físico para mayor rendimiento."
+    },
+    {
+      "numero": 36,
+      "tema": "Bloque II - Tema 25: Virtualización y contenedores",
+      "enunciado": "Señale la respuesta correcta sobre contenedores y máquinas virtuales:",
+      "opciones": {
+        "a": "Los contenedores incluyen un SO completo.",
+        "b": "Las máquinas virtuales son más ligeras que los contenedores.",
+        "c": "Los contenedores comparten el núcleo del SO host y son más eficientes.",
+        "d": "Los contenedores y las máquinas virtuales son idénticos."
+      },
+      "respuesta_correcta": "c",
+      "explicación": "A diferencia de las VMs, los contenedores no necesitan un SO invitado completo, solo las librerías necesarias, compartiendo el kernel del host."
+    },
+    {
+      "numero": 37,
+      "tema": "Bloque III - Tema 40: Arquitectura de los sistemas de información",
+      "enunciado": "En Clean Architecture, ¿en qué capa están las clases de acceso a la base de datos?",
+      "opciones": {
+        "a": "Dominio.",
+        "b": "Casos de uso.",
+        "c": "Aplicación.",
+        "d": "Infraestructura."
+      },
+      "respuesta_correcta": "d",
+      "explicación": "La capa de infraestructura (o adaptadores externos) gestiona los detalles de bajo nivel como bases de datos, APIs externas o sistemas de archivos."
+    },
+    {
+      "numero": 38,
+      "tema": "Bloque II - Tema 15: Sistemas Informáticos",
+      "enunciado": "Diferencia entre escalabilidad vertical y horizontal:",
+      "opciones": {
+        "a": "Vertical agrega instancias; horizontal aumenta hardware.",
+        "b": "Vertical aumenta recursos en un servidor; horizontal añade más servidores.",
+        "c": "Son términos intercambiables.",
+        "d": "La horizontal no requiere más servidores."
+      },
+      "respuesta_correcta": "b",
+      "explicación": "Vertical (Scale-up) es dar 'más potencia' a un nodo; Horizontal (Scale-out) es añadir 'más nodos' al conjunto."
+    },
+    {
+      "numero": 39,
+      "tema": "Bloque II - Tema 23: Correo electrónico",
+      "enunciado": "Propósito principal de DKIM en correo electrónico:",
+      "opciones": {
+        "a": "Asegurar confidencialidad del mensaje.",
+        "b": "Verificar la autenticidad del remitente y la integridad del mensaje.",
+        "c": "Limitar el tamaño de los mensajes.",
+        "d": "Auditar mensajes para detectar spam."
+      },
+      "respuesta_correcta": "b",
+      "explicación": "DKIM añade una firma digital al encabezado del correo para que el servidor receptor verifique que el dominio del remitente es real y el cuerpo no ha sido alterado."
+    },
+    {
+      "numero": 40,
+      "tema": "Bloque II - Tema 22: Servicios de directorio",
+      "enunciado": "Característica típica del Active Directory de Microsoft:",
+      "opciones": {
+        "a": "No admite la gestión de usuarios ni dispositivos.",
+        "b": "Utiliza un modelo jerárquico similar a X.500.",
+        "c": "Es un estándar abierto compatible con cualquier SO nativamente.",
+        "d": "No admite la replicación entre controladores."
+      },
+      "respuesta_correcta": "b",
+      "explicación": "Active Directory se basa en estándares como LDAP y sigue la estructura jerárquica de árbol/bosque inspirada en el modelo X.500."
+    },
+    {
+      "numero": 41,
+      "tema": "Bloque II - Tema 31: Gestión de identidades (SSO).",
+      "enunciado": "¿Cuál NO es una solución SSO de software libre?",
+      "opciones": {
+        "a": "Keycloak.",
+        "b": "CAS.",
+        "c": "Gluu Server.",
+        "d": "Auth0."
+      },
+      "respuesta_correcta": "d",
+      "explicación": "Auth0 es una plataforma comercial SaaS (Identity-as-a-Service), a diferencia de Keycloak o CAS que son proyectos de código abierto."
+    },
+    {
+      "numero": 42,
+      "tema": "Bloque I - Tema 6: Software libre",
+      "enunciado": "En relación al software libre, señale la respuesta INCORRECTA:",
+      "opciones": {
+        "a": "Permite modificar el programa.",
+        "b": "Permite redistribuir copias.",
+        "c": "Permite ejecutar el software para cualquier propósito.",
+        "d": "El software libre es gratuito."
+      },
+      "respuesta_correcta": "d",
+      "explicación": "'Free' en software libre se refiere a libertad, no a precio. Se puede cobrar por distribuir software libre, aunque rara vez ocurre."
+    },
+    {
+      "numero": 43,
+      "tema": "Bloque I - Tema 11: Dirección de Proyectos (PMBOK).",
+      "enunciado": "¿Qué principio de PMBOK 7 hace referencia a la personalización del proyecto?",
+      "opciones": {
+        "a": "Pensamiento holístico.",
+        "b": "Tailoring.",
+        "c": "Adaptabilidad y resiliencia.",
+        "d": "Entrega de valor."
+      },
+      "respuesta_correcta": "b",
+      "explicación": "El 'Tailoring' es el principio de adaptar la metodología, procesos y herramientas al contexto específico de cada proyecto."
+    },
+    {
+      "numero": 44,
+      "tema": "Bloque I - Tema 12: ITIL v4",
+      "enunciado": "ITIL v4 describe seis actividades clave en la cadena de valor. Señálelas:",
+      "opciones": {
+        "a": "Organizar, Planificar, Diseño, Análisis, Operación, Mejora.",
+        "b": "Planificar, Mejorar, Interactuar, Diseño/Transición, Obtener, Entregar.",
+        "c": "Planificar, Diseñar, Transición, Desarrollo, Implantar, Soporte.",
+        "d": "Planificar, Definir, Diseñar, Implementar, Mejora, Soporte."
+      },
+      "respuesta_correcta": "b",
+      "explicación": "Plan, Improve, Engage, Design & Transition, Obtain/Build, Deliver & Support son las actividades del Service Value Chain (SVC)."
+    },
+    {
+      "numero": 45,
+      "tema": "Bloque III - Tema 36: Metodologías ágiles",
+      "enunciado": "¿Cómo se llama la técnica de formación que consiste en resolver problemas conocidos para practicar TDD?",
+      "opciones": {
+        "a": "Code Craftmanship.",
+        "b": "Code Challenge.",
+        "c": "Kata.",
+        "d": "Mastery Quest."
+      },
+      "respuesta_correcta": "c",
+      "explicación": "Inspirado en las artes marciales, una 'Code Kata' es un ejercicio repetitivo para perfeccionar habilidades de programación y diseño."
+    },
+    {
+      "numero": 46,
+      "tema": "Bloque III - Tema 50: DevOps",
+      "enunciado": "¿Cómo se llama la documentación para registrar incidencias críticas en producción?",
+      "opciones": {
+        "a": "Post-mortem.",
+        "b": "Crisis Report.",
+        "c": "Bug Retrospective.",
+        "d": "Error Analysis."
+      },
+      "respuesta_correcta": "a",
+      "explicación": "Un 'Post-mortem' analiza las causas raíz de un fallo tras su resolución para evitar que se repita y mejorar la resiliencia."
+    },
+    {
+      "numero": 47,
+      "tema": "Bloque III - Tema 50: DevOps",
+      "enunciado": "¿Qué herramienta se usa en desarrollo local para ejecutar varios contenedores Docker relacionados?",
+      "opciones": {
+        "a": "Docker Swarm.",
+        "b": "Docker Hub.",
+        "c": "Docker Scout.",
+        "d": "Docker Compose."
+      },
+      "respuesta_correcta": "d",
+      "explicación": "Docker Compose permite definir y gestionar aplicaciones multi-contenedor mediante un único archivo YAML."
+    },
+    {
+      "numero": 48,
+      "tema": "Bloque III - Tema 35: Metodología METRICA V3.",
+      "enunciado": "¿Qué tipo de cohesión es el mejor nivel según Métrica v3?",
+      "opciones": {
+        "a": "Casual.",
+        "b": "Procedimental.",
+        "c": "Funcional.",
+        "d": "Lógica."
+      },
+      "respuesta_correcta": "c",
+      "explicación": "La cohesión funcional (cuando todos los elementos de un módulo contribuyen a una única tarea definida) es el nivel ideal de diseño."
+    },
+    {
+      "numero": 49,
+      "tema": "Bloque III - Tema 36: Metodologías ágiles (XP)",
+      "enunciado": "¿Qué respuesta NO es una práctica definida en XP (Extreme Programming)?",
+      "opciones": {
+        "a": "Programación en parejas.",
+        "b": "Diseño simple.",
+        "c": "Propiedad colectiva del código.",
+        "d": "Pruebas del equipo de calidad."
+      },
+      "respuesta_correcta": "d",
+      "explicación": "En XP, las pruebas son responsabilidad del desarrollador (TDD) y del cliente (pruebas de aceptación), no de un equipo externo aislado."
+    },
+    {
+      "numero": 50,
+      "tema": "Bloque III - Tema 36: Metodologías ágiles (Scrum)",
+      "enunciado": "En SCRUM, ¿cómo se denominan las tareas de investigación previa?",
+      "opciones": {
+        "a": "Spike.",
+        "b": "Groundwork.",
+        "c": "Research.",
+        "d": "Investigation."
+      },
+      "respuesta_correcta": "a",
+      "explicación": "Un 'Spike' es una historia de usuario técnica y de tiempo limitado destinada a investigar o reducir la incertidumbre técnica."
+    },
+    {
+      "numero": 51,
+      "tema": "Bloque III - Tema 37: Historias de usuario",
+      "enunciado": "En el acrónimo INVEST, señale el significado correcto de la letra V:",
+      "opciones": {
+        "a": "Isolated.",
+        "b": "Valuable.",
+        "c": "Effortless.",
+        "d": "Timely."
+      },
+      "respuesta_correcta": "b",
+      "explicación": "INVEST: Independent, Negotiable, Valuable (debe aportar valor al cliente), Estimable, Small, Testable."
+    },
+    {
+      "numero": 52,
+      "tema": "Bloque IV - Tema 56: El modelo relacional y SQL.",
+      "enunciado": "Respecto al modelo Entidad Relación Extendido, señale la respuesta correcta:",
+      "opciones": {
+        "a": "La especialización genera una entidad común (supertipo).",
+        "b": "La generalización genera nuevas entidades (subtipo).",
+        "c": "La agregación permite varios valores en un atributo.",
+        "d": "Una Entidad débil requiere una relación con una entidad fuerte."
+      },
+      "respuesta_correcta": "d",
+      "explicación": "Las entidades débiles no tienen clave primaria propia y dependen de su relación con una entidad fuerte para identificarse."
+    },
+    {
+      "numero": 53,
+      "tema": "Bloque III - Tema 39: Análisis orientado a objetos",
+      "enunciado": "En orientación a objetos, ¿qué se debilita si todas las propiedades son públicas?",
+      "opciones": {
+        "a": "Encapsulamiento.",
+        "b": "Abstracción.",
+        "c": "Herencia.",
+        "d": "Polimorfismo."
+      },
+      "respuesta_correcta": "a",
+      "explicación": "El encapsulamiento consiste en ocultar el estado interno y obligar a usar métodos (getters/setters) para interactuar con los datos."
+    },
+    {
+      "numero": 54,
+      "tema": "Bloque III - Tema 39: Análisis orientado a objetos",
+      "enunciado": "Respecto a patrones de diseño, señale la respuesta correcta:",
+      "opciones": {
+        "a": "Iterator altera comportamiento.",
+        "b": "Mediator separa algoritmos.",
+        "c": "State restaura estado previo.",
+        "d": "Observer permite un mecanismo de suscripción y notificación."
+      },
+      "respuesta_correcta": "d",
+      "explicación": "El patrón Observer define una dependencia 1:N para que cuando un objeto cambie de estado, sus dependientes sean notificados automáticamente."
+    },
+    {
+      "numero": 55,
+      "tema": "Bloque III - Tema 39: Principios SOLID",
+      "enunciado": "En referencia a principios SOLID, señale la respuesta correcta:",
+      "opciones": {
+        "a": "Varias funcionalidades en una clase cumple el principio S.",
+        "b": "Sobreescribir lanzando excepción cumple el principio L.",
+        "c": "Interfaz con muchos métodos innecesarios cumple el principio I.",
+        "d": "Utilizar interfaz en vez de implementación concreta cumple el principio D."
+      },
+      "respuesta_correcta": "d",
+      "explicación": "El principio D (Dependency Inversion) establece que se debe depender de abstracciones (interfaces) y no de concreciones."
+    },
+    {
+      "numero": 56,
+      "tema": "Bloque III - Tema 44: Javascript",
+      "enunciado": "Señale la respuesta INCORRECTA sobre técnicas Javascript:",
+      "opciones": {
+        "a": "Tree shaking elimina código muerto.",
+        "b": "Lazy Load retrasa descargas innecesarias.",
+        "c": "Minification elimina espacios y comentarios.",
+        "d": "Debounce divide el código en archivos pequeños."
+      },
+      "respuesta_correcta": "d",
+      "explicación": "Debounce es una técnica para limitar la frecuencia de ejecución de una función; dividir el código se llama 'Code Splitting'."
+    },
+    {
+      "numero": 57,
+      "tema": "Bloque III - Tema 44: Javascript",
+      "enunciado": "Señale la pila tecnológica 100% Javascript/Typescript:",
+      "opciones": {
+        "a": "Vue, Node, Django.",
+        "b": "Angular, Deno, Doctrine.",
+        "c": "React, Node.js, Express.js, Mongoose.",
+        "d": "Rust, Deno, Sequelize."
+      },
+      "respuesta_correcta": "c",
+      "explicación": "Django es Python, Doctrine es PHP y Rust es un lenguaje independiente. La opción C es el clásico stack MERN/MEAN."
+    },
+    {
+      "numero": 58,
+      "tema": "Bloque III - Tema 43: Java",
+      "enunciado": "¿Cuál es la última versión de Java con LTS?",
+      "opciones": {
+        "a": "Java SE 17.",
+        "b": "Java SE 19.",
+        "c": "Java SE 21.",
+        "d": "Java SE 23."
+      },
+      "respuesta_correcta": "c",
+      "explicación": "A fecha del examen (2024), Java 21 era la versión LTS (Long Term Support) más reciente lanzada por Oracle."
+    },
+    {
+      "numero": 59,
+      "tema": "Bloque III - Tema 43: Java",
+      "enunciado": "En Java, ¿dónde se almacenan los objetos creados con \"new\"?",
+      "opciones": {
+        "a": "Method Area.",
+        "b": "Heap.",
+        "c": "Stack.",
+        "d": "JNI."
+      },
+      "respuesta_correcta": "b",
+      "explicación": "El Heap es el área de memoria donde residen los objetos y variables de instancia; el Stack es para llamadas a métodos y variables locales."
+    },
+    {
+      "numero": 60,
+      "tema": "Bloque III - Tema 45: Microsoft .NET",
+      "enunciado": "¿Qué framework de .NET permite frontend con HTML y C#?",
+      "opciones": {
+        "a": "Kestrel.",
+        "b": "Xamarin.",
+        "c": "Blazor.",
+        "d": "Flask."
+      },
+      "respuesta_correcta": "c",
+      "explicación": "Blazor permite ejecutar lógica de cliente en el navegador mediante WebAssembly usando C# en lugar de Javascript."
+    },
+    {
+      "numero": 61,
+      "tema": "Bloque III - Tema 42: Aplicaciones móviles",
+      "enunciado": "En relación al desarrollo móvil, señale la respuesta correcta:",
+      "opciones": {
+        "a": "Apps híbridas no requieren instalación.",
+        "b": "Apps nativas son adecuadas para funcionalidades simples.",
+        "c": "Apps nativas permiten alto rendimiento gráfico y acceso a hardware avanzado.",
+        "d": "Apps PWA se instalan a través de App Stores."
+      },
+      "respuesta_correcta": "c",
+      "explicación": "El desarrollo nativo ofrece el mejor acceso a las APIs del dispositivo (cámara, sensores, GPU) y el mayor rendimiento."
+    },
+    {
+      "numero": 62,
+      "tema": "Bloque III - Tema 42: Aplicaciones móviles",
+      "enunciado": "Combinación tecnológica NO adecuada para desarrollar en iOS:",
+      "opciones": {
+        "a": "Dart con Flutter.",
+        "b": "Kotlin Multiplatform.",
+        "c": "C# con .NET MAUI.",
+        "d": "Go con AppleGo."
+      },
+      "respuesta_correcta": "d",
+      "explicación": "Go no es un lenguaje estándar para desarrollo móvil nativo en iOS, y 'AppleGo' no es un framework existente."
+    },
+    {
+      "numero": 63,
+      "tema": "Bloque III - Tema 47: Servicios Web (OAuth 2).",
+      "enunciado": "En OAuth 2.0, ¿quién emite los tokens de acceso?",
+      "opciones": {
+        "a": "Resource Server.",
+        "b": "Authorization Server.",
+        "c": "Credential Server.",
+        "d": "Session Manager."
+      },
+      "respuesta_correcta": "b",
+      "explicación": "El Authorization Server es el rol encargado de validar la identidad del usuario y emitir el token que el cliente usará después."
+    },
+    {
+      "numero": 64,
+      "tema": "Bloque III - Tema 49: Aseguramiento de la calidad",
+      "enunciado": "Señale la combinación INCORRECTA de prueba y herramienta:",
+      "opciones": {
+        "a": "Pentesting con Metasploit.",
+        "b": "Vulnerabilidades con ZAP.",
+        "c": "Seguridad de APIs con Appium.",
+        "d": "SAST con SonarQube."
+      },
+      "respuesta_correcta": "c",
+      "explicación": "Appium es una herramienta para la automatización de pruebas funcionales en aplicaciones móviles, no de seguridad de APIs."
+    },
+    {
+      "numero": 65,
+      "tema": "Bloque III - Tema 50: DevOps (Git)",
+      "enunciado": "¿Qué estrategia Git incluye ramas feature, release y hotfix?",
+      "opciones": {
+        "a": "Git Flow.",
+        "b": "GitHub Flow.",
+        "c": "GitLab Flow.",
+        "d": "Trunk-Based Development."
+      },
+      "respuesta_correcta": "a",
+      "explicación": "Git Flow es el modelo de ramificación más estructurado que define específicamente estos tipos de ramas para el ciclo de vida del software."
+    },
+    {
+      "numero": 66,
+      "tema": "Bloque I - Tema 13: Calidad del Software (EFQM)",
+      "enunciado": "Estructura del Modelo EFQM 2020:",
+      "opciones": {
+        "a": "9 criterios (Agentes y Factores).",
+        "b": "9 criterios (Agentes y Resultados).",
+        "c": "7 criterios (Enfoque, Despliegue, Evaluación).",
+        "d": "7 criterios (Dirección, Ejecución y Resultados)."
+      },
+      "respuesta_correcta": "d",
+      "explicación": "La versión 2020 del modelo EFQM se simplificó a 7 criterios agrupados en tres grandes bloques: Dirección, Ejecución y Resultados."
+    },
+    {
+      "numero": 67,
+      "tema": "Bloque IV - Tema 55: Bases de datos",
+      "enunciado": "¿Qué principio ACID asegura que las transacciones no se afectan entre sí?",
+      "opciones": {
+        "a": "Atomicity.",
+        "b": "Consistency.",
+        "c": "Isolation.",
+        "d": "Durability."
+      },
+      "respuesta_correcta": "c",
+      "explicación": "Aislamiento (Isolation) garantiza que las transacciones concurrentes se ejecuten como si fueran secuenciales, sin interferir entre ellas."
+    },
+    {
+      "numero": 68,
+      "tema": "Bloque IV - Tema 55: Bases de datos NoSQL",
+      "enunciado": "¿Qué base de Datos NoSQL usa Xpath o XQuery?",
+      "opciones": {
+        "a": "Documental.",
+        "b": "Nativa XML.",
+        "c": "De grafos.",
+        "d": "Orientada a Objetos."
+      },
+      "respuesta_correcta": "b",
+      "explicación": "Las bases de datos XML nativas están diseñadas para almacenar documentos XML y usar sus lenguajes de consulta específicos (XPath/XQuery)."
+    },
+    {
+      "numero": 69,
+      "tema": "Bloque IV - Tema 56: SQL",
+      "enunciado": "En SQL, ¿qué se obtiene con un LEFT JOIN?",
+      "opciones": {
+        "a": "Solo filas coincidentes.",
+        "b": "Mismo número de filas que un Join natural.",
+        "c": "Columnas de izquierda y aquellas de derecha que no coinciden.",
+        "d": "Todas las filas de la izquierda y las coincidentes de la derecha."
+      },
+      "respuesta_correcta": "d",
+      "explicación": "LEFT JOIN devuelve todos los registros de la tabla izquierda y los registros coincidentes de la derecha (o NULL si no hay coincidencia)."
+    },
+    {
+      "numero": 70,
+      "tema": "Bloque IV - Tema 57: Oracle",
+      "enunciado": "Pool opcional de la SGA en Oracle:",
+      "opciones": {
+        "a": "RedoLog.",
+        "b": "Java.",
+        "c": "Control.",
+        "d": "System."
+      },
+      "respuesta_correcta": "b",
+      "explicación": "El Java Pool es un área opcional de la System Global Area (SGA) utilizada si se ejecutan procedimientos almacenados en Java."
+    },
+    {
+      "numero": 71,
+      "tema": "Bloque IV - Tema 54: Business Intelligence",
+      "enunciado": "En DataWareHouse, ¿qué hace la operación \"Drill down\"?",
+      "opciones": {
+        "a": "Agregar.",
+        "b": "Desagregar.",
+        "c": "Reduce dimensionalidad seleccionando un valor.",
+        "d": "Selecciona valores de varias dimensiones."
+      },
+      "respuesta_correcta": "b",
+      "explicación": "Drill-down es bajar de nivel de granularidad (ej. de año a mes) para ver los datos con más detalle."
+    },
+    {
+      "numero": 72,
+      "tema": "Bloque IV - Tema 53: Ciencia de datos (Hadoop)",
+      "enunciado": "Secuencia correcta de fases en MapReduce:",
+      "opciones": {
+        "a": "Map, Split, Shuffle, Reduce.",
+        "b": "Split, Map, Reduce, Shuffle.",
+        "c": "Map, Split, Reduce, Shuffle.",
+        "d": "Split, Map, Shuffle and Sort, Reduce."
+      },
+      "respuesta_correcta": "d",
+      "explicación": "Primero se divide la entrada (Split), se procesa (Map), se baraja/ordena (Shuffle/Sort) y finalmente se agregan los resultados (Reduce)."
+    },
+    {
+      "numero": 73,
+      "tema": "Bloque IV - Tema 51: Inteligencia Artificial",
+      "enunciado": "En IA, ¿cómo se llama el error que parece coherente pero es falso?",
+      "opciones": {
+        "a": "Bug learning.",
+        "b": "Alucinación.",
+        "c": "Fallo contextual.",
+        "d": "Pragma error."
+      },
+      "respuesta_correcta": "b",
+      "explicación": "Una 'alucinación' ocurre cuando un modelo de lenguaje genera información que suena convincente pero no tiene base real."
+    },
+    {
+      "numero": 74,
+      "tema": "Bloque II - Tema 21: Almacenamiento (RAID)",
+      "enunciado": "En sistemas RAID, ¿qué ocurre con el MTBF?",
+      "opciones": {
+        "a": "Aumenta en RAID 0.",
+        "b": "Disminuye en RAID 1.",
+        "c": "Aumenta en RAID 1.",
+        "d": "Aumenta al añadir discos en RAID 5."
+      },
+      "respuesta_correcta": "c",
+      "explicación": "El MTBF (tiempo medio entre fallos) del sistema aumenta en RAID 1 (espejo) porque el sistema sigue funcionando aunque falle uno de los discos."
+    },
+    {
+      "numero": 75,
+      "tema": "Bloque III - Tema 48: Sistemas de información geográfica",
+      "enunciado": "¿Qué es EPSG:25830?",
+      "opciones": {
+        "a": "Sistema cartesiano estándar en zona 30N.",
+        "b": "Sistema propietario de ESRI.",
+        "c": "Sistema cartesiano ETRS89 en zona 30N.",
+        "d": "Sistema geodésico ETRS89 en zona UTM 30N."
+      },
+      "respuesta_correcta": "d",
+      "explicación": "Es el código estándar para el sistema ETRS89 en la proyección UTM zona 30N, el oficial en la Península Ibérica."
+    },
+    {
+      "numero": 76,
+      "tema": "Bloque IV - Tema 51: Inteligencia Artificial (RPA)",
+      "enunciado": "Señale la respuesta INCORRECTA sobre RPA:",
+      "opciones": {
+        "a": "Puede ejecutarse de forma desatendida.",
+        "b": "Usuarios finales pueden preparar bots.",
+        "c": "Realizan trabajos simples y complejos.",
+        "d": "Requieren soporte del Departamento de Informática durante su operación."
+      },
+      "respuesta_correcta": "d",
+      "explicación": "La filosofía RPA busca que los procesos se ejecuten de forma autónoma (bots desatendidos) sin intervención continua del personal técnico."
+    },
+    {
+      "numero": 77,
+      "tema": "Bloque IV - Tema 58: Esquema Nacional de Seguridad",
+      "enunciado": "Dos dimensiones de seguridad según el ENS:",
+      "opciones": {
+        "a": "Confiabilidad y Trazabilidad.",
+        "b": "Confidencialidad y Disponibilidad.",
+        "c": "Accesibilidad e Integridad.",
+        "d": "Autenticidad y Conformidad."
+      },
+      "respuesta_correcta": "b",
+      "explicación": "El ENS define cinco dimensiones (CIDAT): Confidencialidad, Integridad, Disponibilidad, Autenticidad y Trazabilidad."
+    },
+    {
+      "numero": 78,
+      "tema": "Bloque IV - Tema 58: Esquema Nacional de Seguridad",
+      "enunciado": "¿Qué soporte recoge las medidas de seguridad del ENS y quién lo firma?",
+      "opciones": {
+        "a": "Desglose de Seguridad (Responsable Info).",
+        "b": "Compromiso de Conformidad (Resp. Seguridad).",
+        "c": "Declaración de Aplicabilidad (Resp. Seguridad).",
+        "d": "Política de Seguridad (Resp. Info)."
+      },
+      "respuesta_correcta": "c",
+      "explicación": "La Declaración de Aplicabilidad (SoA) es el documento formal que lista qué medidas de seguridad se aplican al sistema."
+    },
+    {
+      "numero": 79,
+      "tema": "Bloque IV - Tema 58: Esquema Nacional de Seguridad",
+      "enunciado": "¿Cómo se denomina al órgano de coordinación interna de seguridad en CyL?",
+      "opciones": {
+        "a": "Comité de Seguridad de la Información.",
+        "b": "Asamblea Coordinadora.",
+        "c": "Comisión de Seguridad.",
+        "d": "Consejo de Seguridad."
+      },
+      "respuesta_correcta": "a",
+      "explicación": "Es el nombre estándar que reciben los grupos transversales encargados de la gobernanza de la seguridad en las administraciones públicas."
+    },
+    {
+      "numero": 80,
+      "tema": "Bloque IV - Tema 60: MAGERIT y PILAR.",
+      "enunciado": "¿Qué herramienta apoya auditorías de cumplimiento normativo?",
+      "opciones": {
+        "a": "CLARA.",
+        "b": "PILAR.",
+        "c": "ROCIO.",
+        "d": "INES."
+      },
+      "respuesta_correcta": "a",
+      "explicación": "CLARA es una herramienta del CCN-CERT diseñada para auditorías de cumplimiento del ENS y el RGPD."
+    },
+    {
+      "numero": 81,
+      "tema": "Bloque IV - Tema 60: MAGERIT v3",
+      "enunciado": "¿En qué consiste el impacto acumulado según MAGERIT v3?",
+      "opciones": {
+        "a": "Probabilidad de daño.",
+        "b": "Estimación de riesgos acumulados.",
+        "c": "Inverso de la degradación.",
+        "d": "Pérdida de valor del activo y de los que dependen de él."
+      },
+      "respuesta_correcta": "d",
+      "explicación": "El impacto acumulado se calcula sobre los activos superiores de los que depende un activo inferior que sufre una degradación."
+    },
+    {
+      "numero": 82,
+      "tema": "Bloque IV - Tema 61: Protección de datos",
+      "enunciado": "Función principal del Delegado de Protección de Datos (DPD):",
+      "opciones": {
+        "a": "Implementación de medidas técnicas solamente.",
+        "b": "Sancionar a la organización.",
+        "c": "Supervisar cumplimiento y actuar como intermediario.",
+        "d": "Aprobar políticas internas exclusivamente."
+      },
+      "respuesta_correcta": "c",
+      "explicación": "El DPD informa, asesora y supervisa el cumplimiento del RGPD, actuando como enlace con la autoridad de control (AEPD)."
+    },
+    {
+      "numero": 83,
+      "tema": "Bloque IV - Tema 61: Protección de datos",
+      "enunciado": "¿Qué debe hacer una organización ante una violación de datos de alto riesgo?",
+      "opciones": {
+        "a": "Notificar a interesados y autoridad en 72 horas.",
+        "b": "Notificar solo a autoridad en 24 horas.",
+        "c": "Notificar solo a interesados.",
+        "d": "Notificar solo a autoridad en 96 horas."
+      },
+      "respuesta_correcta": "a",
+      "explicación": "El RGPD obliga a notificar a la autoridad (en 72h) y, si el riesgo es alto, también a los ciudadanos afectados sin dilación."
+    },
+    {
+      "numero": 84,
+      "tema": "Bloque IV - Tema 62: Técnicas de cifrado",
+      "enunciado": "Señale la respuesta correcta sobre cifrado híbrido:",
+      "opciones": {
+        "a": "Simétrico para intercambio; asimétrico para datos.",
+        "b": "Simétrico para datos; asimétrico para intercambio de claves.",
+        "c": "Simétrico para autenticidad.",
+        "d": "Asimétrico para velocidad."
+      },
+      "respuesta_correcta": "b",
+      "explicación": "Usa lo mejor de ambos: la velocidad del cifrado simétrico para el mensaje y la seguridad del asimétrico para enviar la clave."
+    },
+    {
+      "numero": 85,
+      "tema": "Bloque II - Tema 28: Redes inalámbricas.",
+      "enunciado": "¿Qué versión de WiFi NO puede operar en distintas bandas?",
+      "opciones": {
+        "a": "Wi-Fi 4.",
+        "b": "Wi-Fi 5.",
+        "c": "Wi-Fi 6.",
+        "d": "Wi-Fi 6E."
+      },
+      "respuesta_correcta": "b",
+      "explicación": "Wi-Fi 5 (802.11ac) opera exclusivamente en la banda de 5 GHz; el resto pueden operar también en 2.4 GHz o 6 GHz."
+    },
+    {
+      "numero": 86,
+      "tema": "Bloque IV - Tema 64: Firma electrónica.",
+      "enunciado": "Requisito que NO es imprescindible para firma avanzada:",
+      "opciones": {
+        "a": "Identificación única.",
+        "b": "Control exclusivo.",
+        "c": "Detección de modificación ulterior.",
+        "d": "Que la integridad no se haya visto comprometida."
+      },
+      "respuesta_correcta": "d",
+      "explicación": "La firma avanzada debe 'permitir detectar' si hubo cambios, pero el hecho de que la integridad se haya roto no es el 'requisito' de la firma, sino lo que esta detecta."
+    },
+    {
+      "numero": 87,
+      "tema": "Bloque IV - Tema 64: Firma electrónica.",
+      "enunciado": "Estados de un certificado cualificado durante su validez:",
+      "opciones": {
+        "a": "Activo, Revocado, Suspendido.",
+        "b": "Válido, Anulado, Extinto.",
+        "c": "Activo, Revocado, Cancelado.",
+        "d": "Activo, Revocado, Anulado."
+      },
+      "respuesta_correcta": "a",
+      "explicación": "Un certificado puede estar operativo, invalidado permanentemente (revocado) o invalidado temporalmente (suspendido)."
+    },
+    {
+      "numero": 88,
+      "tema": "Bloque IV - Tema 65: Accesibilidad",
+      "enunciado": "Sobre la Declaración de Accesibilidad:",
+      "opciones": {
+        "a": "Actualización cada dos años.",
+        "b": "Actualización tras cada revisión bianual.",
+        "c": "Actualización anual o tras cada revisión.",
+        "d": "Obligatoria solo tras un año."
+      },
+      "respuesta_correcta": "c",
+      "explicación": "El RD 1112/2018 obliga a revisar y actualizar la declaración de accesibilidad de los sitios web de forma anual."
+    },
+    {
+      "numero": 89,
+      "tema": "Bloque IV - Tema 65: Accesibilidad (W3C)",
+      "enunciado": "Principio de las WCAG v2.2:",
+      "opciones": {
+        "a": "Perceptible.",
+        "b": "Contrastable.",
+        "c": "Intuitivo.",
+        "d": "Interactivo."
+      },
+      "respuesta_correcta": "a",
+      "explicación": "Los 4 principios WCAG son Perceptible, Operable, Comprensible y Robusto (POUR)."
+    },
+    {
+      "numero": 90,
+      "tema": "Bloque II - Tema 26: Protocolos de encaminamiento",
+      "enunciado": "En relación a protocolos de encaminamiento:",
+      "opciones": {
+        "a": "OSPF es vector distancia.",
+        "b": "BGPv4 es estado del enlace.",
+        "c": "Vector distancia comparte rutas; estado del enlace comparte enlaces.",
+        "d": "RIPng es estado del enlace para IPv6."
+      },
+      "respuesta_correcta": "c",
+      "explicación": "Vector distancia (RIP) intercambia tablas completas con vecinos; Estado del enlace (OSPF) intercambia el estado de sus conexiones."
+    },
+    {
+      "numero": 91,
+      "tema": "Bloque II - Tema 30: IoT y redes inalámbricas.",
+      "enunciado": "Protocolo de red inalámbrica para IoT:",
+      "opciones": {
+        "a": "802.11ad.",
+        "b": "802.11s.",
+        "c": "802.11e.",
+        "d": "802.11ah (HaLow)."
+      },
+      "respuesta_correcta": "d",
+      "explicación": "HaLow opera en bandas sub-gigahertz, ofreciendo mayor alcance y menor consumo, ideal para sensores IoT."
+    },
+    {
+      "numero": 92,
+      "tema": "Bloque II - Tema 29: Comunicaciones móviles",
+      "enunciado": "¿Qué mecanismo permite localizar un móvil en movimiento en una red celular?",
+      "opciones": {
+        "a": "Handover.",
+        "b": "Paging.",
+        "c": "Roaming.",
+        "d": "Trunking."
+      },
+      "respuesta_correcta": "b",
+      "explicación": "El 'Paging' es el proceso mediante el cual la red envía un mensaje de aviso a una zona de localización para encontrar el terminal."
+    },
+    {
+      "numero": 93,
+      "tema": "Bloque II - Tema 26: IPv6",
+      "enunciado": "Dirección IPv6 de túnel 6to4:",
+      "opciones": {
+        "a": "2001:db8::/32",
+        "b": "fc00::/7",
+        "c": "::ffff:192.168.1.1",
+        "d": "2002:C6A8:0101::/48"
+      },
+      "respuesta_correcta": "d",
+      "explicación": "Las direcciones de transición 6to4 utilizan siempre el prefijo específico 2002::/16."
+    },
+    {
+      "numero": 94,
+      "tema": "Bloque II - Tema 27: Redes LAN y direccionamiento IP.",
+      "enunciado": "Red y nodos para IP 192.168.85.120 máscara 255.255.255.192:",
+      "opciones": {
+        "a": "192.168.85.1 (64 nodos).",
+        "b": "192.168.85.255 (64 nodos).",
+        "c": "192.168.85.192 (62 nodos).",
+        "d": "192.168.85.64 (62 nodos)."
+      },
+      "respuesta_correcta": "d",
+      "explicación": "La máscara .192 (/26) divide en saltos de 64. Las subredes son .0, .64, .128. La .120 pertenece a la red .64. Nodos útiles: 64-2=62."
+    },
+    {
+      "numero": 95,
+      "tema": "Bloque II - Tema 32: Seguridad de redes",
+      "enunciado": "Tecnología NO adecuada para teletrabajo seguro:",
+      "opciones": {
+        "a": "IPsec.",
+        "b": "FTP con contraseña larga.",
+        "c": "SSH.",
+        "d": "SSL/TLS."
+      },
+      "respuesta_correcta": "b",
+      "explicación": "FTP es un protocolo inseguro que transmite tanto el usuario como la contraseña en texto plano por la red."
+    },
+    {
+      "numero": 96,
+      "tema": "Bloque II - Tema 32: Cortafuegos",
+      "enunciado": "¿Qué cortafuegos opera en Capa 4 y filtra por puertos?",
+      "opciones": {
+        "a": "Inspección de estado.",
+        "b": "Filtro de tramas.",
+        "c": "Nivel de aplicación.",
+        "d": "Proxy."
+      },
+      "respuesta_correcta": "a",
+      "explicación": "Los firewalls de inspección de estado (stateful) operan en la capa de transporte, controlando el origen/destino y el estado de la conexión."
+    },
+    {
+      "numero": 97,
+      "tema": "Bloque II - Tema 32: Proxies",
+      "enunciado": "Señale la respuesta INCORRECTA sobre proxies:",
+      "opciones": {
+        "a": "Proxy inverso distribuye carga.",
+        "b": "Proxy transparente no modifica solicitudes.",
+        "c": "Proxy HTTP opera bajo la capa de aplicación.",
+        "d": "Proxy SOCKS actúa en Capa 5."
+      },
+      "respuesta_correcta": "c",
+      "explicación": "Un proxy HTTP opera precisamente en la Capa 7 (Aplicación), analizando el contenido del protocolo HTTP."
+    },
+    {
+      "numero": 98,
+      "tema": "Bloque II - Tema 33: Computación en la nube",
+      "enunciado": "Característica típica de PaaS:",
+      "opciones": {
+        "a": "Acceso al hardware físico.",
+        "b": "Control total de red.",
+        "c": "Gestión automática de SO y middleware.",
+        "d": "Gestión manual de infraestructura."
+      },
+      "respuesta_correcta": "c",
+      "explicación": "En Platform-as-a-Service, el proveedor gestiona el SO y el entorno de ejecución, y el usuario solo se preocupa de su aplicación."
+    },
+    {
+      "numero": 99,
+      "tema": "Bloque I - Tema 10: Factura electrónica",
+      "enunciado": "Requisito para validez de factura electrónica:",
+      "opciones": {
+        "a": "Formato XML con esquemas de datos específicos.",
+        "b": "Firma de proveedor nacional únicamente.",
+        "c": "Uso de plataforma de intercambio confidencial.",
+        "d": "Código QR sin firma."
+      },
+      "respuesta_correcta": "a",
+      "explicación": "La normativa europea y española (Facturae) exige formatos estructurados (XML) para permitir el procesamiento automático."
+    },
+    {
+      "numero": 100,
+      "tema": "Bloque IV - Tema 64: Firma electrónica.",
+      "enunciado": "Servicio común de firma como producto instalable con lógica central:",
+      "opciones": {
+        "a": "Autofirma.",
+        "b": "FIRe.",
+        "c": "Port@firma.",
+        "d": "Cliente @firma."
+      },
+      "respuesta_correcta": "b",
+      "explicación": "FIRe es el componente de la plataforma @firma diseñado para centralizar la lógica de firma en un servidor común."
+    },
+    {
+      "numero": 101,
+      "tema": "Bloque IV - Tema 63: DNI electrónico.",
+      "enunciado": "Información en el chip del DNIe, señale la respuesta correcta:",
+      "opciones": {
+        "a": "Zona Privada tiene clave Diffie-Hellman.",
+        "b": "Datos de filiación y firma manuscrita en Zona de Seguridad.",
+        "c": "Zona Pública tiene el escaneo de fotografía.",
+        "d": "Zona Privada tiene certificado x509 de componente."
+      },
+      "respuesta_correcta": "b",
+      "explicación": "La zona de seguridad del chip contiene los datos biométricos y de filiación protegidos por mecanismos de acceso."
+    },
+    {
+      "numero": 102,
+      "tema": "Bloque III - Tema 40: Arquitectura (Microservicios)",
+      "enunciado": "Funcionalidad NO común del API Gateway en microservicios:",
+      "opciones": {
+        "a": "Transacciones distribuidas.",
+        "b": "Caché.",
+        "c": "Traducción de protocolos.",
+        "d": "Autenticación."
+      },
+      "respuesta_correcta": "a",
+      "explicación": "Las transacciones distribuidas son lógica de negocio compleja que se gestiona mediante patrones como Saga, no en el Gateway."
+    },
+    {
+      "numero": 103,
+      "tema": "Materias Comunes - Tema 6: Consejo Consultivo de CyL",
+      "enunciado": "Aprobación de dictámenes del Consejo Consultivo de Castilla y León:",
+      "opciones": {
+        "a": "Mayoría de 3/5.",
+        "b": "Mayoría simple.",
+        "c": "Mayoría de 2/3.",
+        "d": "Mayoría absoluta."
+      },
+      "respuesta_correcta": "d",
+      "explicación": "La ley reguladora del Consejo Consultivo exige la mayoría absoluta de sus miembros para la aprobación de sus dictámenes."
+    },
+    {
+      "numero": 104,
+      "tema": "Bloque II - Tema 22: X.500",
+      "enunciado": "En relación al conjunto X.500, señale la respuesta correcta:",
+      "opciones": {
+        "a": "Desarrollado solo por ISO.",
+        "b": "LDAP es más pesado que X.500.",
+        "c": "X.509 es independiente de X.500.",
+        "d": "Incluye X.509 para gestión de certificados en TLS."
+      },
+      "respuesta_correcta": "d",
+      "explicación": "X.509 nació como parte del estándar de directorio X.500 para definir el formato de los certificados de clave pública."
+    },
+    {
+      "numero": 105,
+      "tema": "Bloque II - Tema 21: Almacenamiento (SAN)",
+      "enunciado": "Protocolos en redes SAN, señale la respuesta correcta:",
+      "opciones": {
+        "a": "AoE permite discos SATA sobre Ethernet.",
+        "b": "iSCSI: Individual SCSI.",
+        "c": "FCoE mapea SCSI sobre FC.",
+        "d": "AoE incompatible con fibra."
+      },
+      "respuesta_correcta": "a",
+      "explicación": "ATA over Ethernet (AoE) es un protocolo de capa 2 que permite acceder a unidades SATA directamente sobre una red Ethernet."
+    },
+    {
+      "numero": 106,
+      "tema": "Bloque III - Tema 36: Metodologías ágiles (Kanban)",
+      "enunciado": "¿Qué mide la métrica Lead Time?",
+      "opciones": {
+        "a": "Tiempo hasta inicio de desarrollo.",
+        "b": "Tiempo hasta validación de QA.",
+        "c": "Tiempo desde inicio hasta despliegue real.",
+        "d": "Tiempo desde recepción de requisito hasta puesta a disposición real."
+      },
+      "respuesta_correcta": "d",
+      "explicación": "Lead Time mide el tiempo total desde que surge la necesidad hasta que el cliente tiene la solución; Cycle Time mide solo el tiempo de trabajo."
+    },
+    {
+      "numero": 107,
+      "tema": "Bloque IV - Tema 60: MAGERIT v3",
+      "enunciado": "NO es una salvaguarda preventiva según MAGERIT v3:",
+      "opciones": {
+        "a": "Disuasoria.",
+        "b": "Minimizadora.",
+        "c": "Eliminatoria.",
+        "d": "Preventiva."
+      },
+      "respuesta_correcta": "b",
+      "explicación": "Una salvaguarda 'minimizadora' actúa sobre el impacto una vez ocurre el daño; las preventivas intentan evitar que el daño ocurra."
+    },
+    {
+      "numero": 108,
+      "tema": "Materias Comunes - Tema 14: Agenda 2030",
+      "enunciado": "¿En qué eje se integra potenciar políticas públicas de Alianzas (Agenda 2030)?",
+      "opciones": {
+        "a": "Formación.",
+        "b": "Definición y desarrollo de acción pública en sociedad.",
+        "c": "Sensibilización.",
+        "d": "Coherencia estratégica."
+      },
+      "respuesta_correcta": "b",
+      "explicación": "Las alianzas se consideran el mecanismo para movilizar recursos y desarrollar la acción pública efectiva entre actores sociales."
+    },
+    {
+      "numero": 109,
+      "tema": "Bloque III - Tema 50: Infraestructura como código (IaC)",
+      "enunciado": "NO es una herramienta de IaC:",
+      "opciones": {
+        "a": "Terraform.",
+        "b": "Puppet.",
+        "c": "Pulumi.",
+        "d": "Pulsonic."
+      },
+      "respuesta_correcta": "d",
+      "explicación": "Terraform, Puppet y Pulumi son estándares de la industria; 'Pulsonic' no es una herramienta de IaC."
+    },
+    {
+      "numero": 110,
+      "tema": "Bloque I - Tema 9: Contratación TI",
+      "enunciado": "¿En qué concepto de Contratos se incluye el IVA?",
+      "opciones": {
+        "a": "Presupuesto base de licitación y precio.",
+        "b": "Valor estimado.",
+        "c": "En ninguno.",
+        "d": "En presupuesto, valor estimado y precio."
+      },
+      "respuesta_correcta": "a",
+      "explicación": "El Valor Estimado de Contrato (VEC) nunca incluye IVA; el Presupuesto Base (PBL) y el Precio Final sí lo incluyen."
+    }
+  ]
+}

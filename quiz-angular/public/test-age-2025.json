@@ -1,0 +1,1307 @@
+{
+  "examen": "Convocatoria de ingreso al Cuerpo Superior de Sistemas y Tecnologías de la Información del Estado (AGE)",
+  "ejercicio": "Primer Ejercicio",
+  "fecha": "14 de febrero de 2025",
+  "preguntas": [
+    {
+      "numero": 1,
+      "enunciado": "Las fórmulas Erlang, respecto al dimensionamiento de sistemas de información se utilizan para:",
+      "opciones": {
+        "a": "El dimensionamiento de telecomunicaciones.",
+        "b": "El dimensionamiento de servidores.",
+        "c": "Consolidar infraestructuras.",
+        "d": "La automatización de procesos."
+      },
+      "respuesta_correcta": "a",
+      "tema": "Planificación y Dimensionamiento",
+      "explicación": "Estas fórmulas matemáticas se aplican específicamente para calcular la capacidad necesaria en redes de telecomunicaciones basándose en el tráfico de llamadas o datos[cite: 2, 4]."
+    },
+    {
+      "numero": 2,
+      "enunciado": "¿Cuándo aplican las referencias del Real Decreto 1125/2024 de 5 de noviembre a la Agencia Estatal de Administración Digital?",
+      "opciones": {
+        "a": "Desde su entrada en vigor, el 8 de noviembre de 2024.",
+        "b": "En la próxima legislatura.",
+        "c": "Cuando se produzca su constitución efectiva.",
+        "d": "Pasados 6 meses desde la publicación del Real Decreto."
+      },
+      "respuesta_correcta": "c",
+      "tema": "Normativa TIC y Gobernanza",
+      "explicación": "La normativa establece que su aplicación a la Agencia queda supeditada al momento en que esta se constituya de forma efectiva[cite: 11, 18]."
+    },
+    {
+      "numero": 3,
+      "enunciado": "Los conjuntos de datos de alto valor son:",
+      "opciones": {
+        "a": "Datos derivados de investigaciones financiadas públicamente que son plenamente reutilizables, interoperables y de acceso abierto.",
+        "b": "Datos derivados de documentos sobre los que existan prohibiciones o limitaciones en el derecho de acceso.",
+        "c": "Datos para cuyo acceso se requiera ser titular de un derecho o interés legítimo.",
+        "d": "Datos a los que la Comisión Europea otorgue dicho carácter, así que como aquellos previstos a nivel nacional que sean seleccionados en relación a su potencial para generar beneficios socioeconómicos o medioambienteales importantes y servicios innovadores o beneficiar a un gran número de usuarios o pymes, entre otros aspectos."
+      },
+      "respuesta_correcta": "d",
+      "tema": "Datos Abiertos y Reutilización",
+      "explicación": "Se definen por su potencial para generar beneficios socioeconómicos importantes y son designados tanto por la Comisión Europea como a nivel nacional[cite: 20, 24]."
+    },
+    {
+      "numero": 4,
+      "enunciado": "De acuerdo con el artículo 13 del Real Decreto 1125/2024, ¿a quién corresponde establecer los criterios técnicos y de oportunidad para la contratación centralizada de materia TIC?",
+      "opciones": {
+        "a": "A la Agencia Estatal de Administración Digital.",
+        "b": "A la Dirección General de Digitalización.",
+        "c": "A la Secretaría de Estado de Digitalización.",
+        "d": "A la Subsecretaría del Ministerio para la Transformación Digital y de la Función Pública."
+      },
+      "respuesta_correcta": "d",
+      "tema": "Contratación Pública TIC",
+      "explicación": "El Real Decreto asigna explícitamente esta competencia de supervisión y establecimiento de criterios a la Subsecretaría del Ministerio[cite: 25, 30]."
+    },
+    {
+      "numero": 5,
+      "enunciado": "El análisis de sensibilidad que evalúa cómo cambian los resultados cuando se alteran las variables clave, es uno de los pasos previstos en el:",
+      "opciones": {
+        "a": "Análisis coste/beneficio.",
+        "b": "Ciclo PDCA o Ciclo de Deming.",
+        "c": "Análisis GAP.",
+        "d": "Diagrama causa-efecto o de Ishikawa."
+      },
+      "respuesta_correcta": "a",
+      "tema": "Gestión Económica de Proyectos",
+      "explicación": "Este análisis es una fase crítica del estudio coste/beneficio para determinar la robustez de los resultados ante variaciones en las premisas iniciales[cite: 31, 33]."
+    },
+    {
+      "numero": 6,
+      "enunciado": "Indique cuál de las siguientes afirmaciones sobre el Sistema de Valor de Servicios (SVS) de ITIL 4 es correcta:",
+      "opciones": {
+        "a": "EI SVS de ITIL está compuesto únicamente por las cuatro dimensiones del modelo de gestión del servicio.",
+        "b": "El propósito del SVS es garantizar que los componentes y actividades de la organización trabajen de forma coordinada para facilitar la creación de valor.",
+        "c": "EI SVS de ITIL 4 excluye las prácticas de gestión de servicios, ya que se centran en procesos específicos.",
+        "d": "La mejora continua no es una parte del SVS de ITIL 4."
+      },
+      "respuesta_correcta": "b",
+      "tema": "Gestión de Servicios (ITIL)",
+      "explicación": "El SVS está diseñado para alinear todas las partes de la organización hacia la co-creación de valor de forma integrada[cite: 38, 42]."
+    },
+    {
+      "numero": 7,
+      "enunciado": "El grado, cantidad o volumen de riesgo que podrá resistir una organización, se denomina:",
+      "opciones": {
+        "a": "Propensión al riesgo.",
+        "b": "Análisis del riesgo.",
+        "c": "Tolerancia al riesgo.",
+        "d": "Umbral de riesgo."
+      },
+      "respuesta_correcta": "c",
+      "tema": "Gestión de Riesgos",
+      "explicación": "La tolerancia al riesgo define el nivel aceptable de desviación respecto al logro de los objetivos de la organización[cite: 45, 50]."
+    },
+    {
+      "numero": 8,
+      "enunciado": "En un diagrama PERT:",
+      "opciones": {
+        "a": "Una prelación de convergencia indica que para iniciar una actividad ha de finalizar una única actividad.",
+        "b": "Una prelación lineal indica que para iniciar dos actividades se han de terminar dos o más actividades.",
+        "c": "Las prelaciones son las condiciones que indican en que orden deben ejecutarse las actividades.",
+        "d": "Una prelación de divergencia indica que para iniciar dos o más actividades no hace falta terminar ninguna actividad."
+      },
+      "respuesta_correcta": "c",
+      "tema": "Gestión de Proyectos",
+      "explicación": "Las prelaciones establecen las dependencias lógicas y temporales necesarias para organizar la secuencia de tareas del proyecto[cite: 54, 60]."
+    },
+    {
+      "numero": 9,
+      "enunciado": "¿Cuál de las siguientes técnicas se utilizaría para priorizar requisitos en el marco de trabajo Scrum?",
+      "opciones": {
+        "a": "Técnica MoSCOW.",
+        "b": "Técnica SWOT.",
+        "c": "Técnica PERT.",
+        "d": "Técnica Gantt."
+      },
+      "respuesta_correcta": "a",
+      "tema": "Metodologías Ágiles",
+      "explicación": "MoSCoW (Must, Should, Could, Won't) es el método estándar en entornos ágiles para clasificar la importancia de los requisitos en el Product Backlog[cite: 63, 66]."
+    },
+    {
+      "numero": 10,
+      "enunciado": "Según la guía CCN-STIC-802, el equipo auditor deberá estar dirigido y tutelado siempre por un Auditor Jefe, que deberá probar como mínimo:",
+      "opciones": {
+        "a": "Certificaciones o experiencia verificable de al menos 4 años en auditoría TI.",
+        "b": "Certificaciones o experiencia verificable de al menos 5 años en auditoría TI.",
+        "c": "Certificaciones nacionales o experiencia verificable de al menos 5 años en auditoría TI.",
+        "d": "Certificaciones nacionales o experiencia verificable de al menos 4 años en auditoría TI."
+      },
+      "respuesta_correcta": "b",
+      "tema": "Seguridad y Auditoría",
+      "explicación": "La guía exige certificaciones reconocidas o una trayectoria profesional mínima de 5 años específicamente en auditoría de TI[cite: 72, 75]."
+    },
+    {
+      "numero": 11,
+      "enunciado": "¿Cuál de las siguientes afirmaciones es correcta respecto de la adquisición por parte de las entidades públicas del derecho de uso de activos de software en la nube?",
+      "opciones": {
+        "a": "Es un contrato mixto (licencia + servicios).",
+        "b": "Es un contrato de servicios.",
+        "c": "Es un contrato de suministros, a menos que se trate del desarrollo de programas de ordenador a medida del órgano de contratación en la nube, que será un contrato de servicios.",
+        "d": "Es un contrato de servicios, a menos que se trate del desarrollo de programas de ordenador a medida del órgano de contratación en la nube, que será un contrato de suministros."
+      },
+      "respuesta_correcta": "c",
+      "tema": "Contratación Pública",
+      "explicación": "Generalmente se considera suministro (licencia), pero el desarrollo a medida se categoriza legalmente como un servicio[cite: 78, 85, 86]."
+    },
+    {
+      "numero": 12,
+      "enunciado": "¿En qué actividad del Estudio de Viabilidad del Sistema en Métrica V3 se utiliza la técnica de análisis coste beneficio?",
+      "opciones": {
+        "a": "Estudio de alternativas de solución.",
+        "b": "Selección de la solución.",
+        "c": "Valoración de las alternativas.",
+        "d": "Recolección de los requisitos del sistema."
+      },
+      "respuesta_correcta": "c",
+      "tema": "Métrica V3",
+      "explicación": "Métrica V3 sitúa esta herramienta económica dentro de la fase de valoración para comparar la viabilidad de las distintas opciones planteadas[cite: 89, 95]."
+    },
+    {
+      "numero": 13,
+      "enunciado": "¿Qué se entiende por demanda latente en los recursos de un sistema?",
+      "opciones": {
+        "a": "Cantidad de trabajo útil ejecutado por unidad de tiempo.",
+        "b": "Máxima cantidad de trabajo útil.",
+        "c": "En el estudio de la capacidad de los sistemas de información, es el trabajo frenado por la falta de recursos.",
+        "d": "Media entre los valores del MTBF y del MTTR."
+      },
+      "respuesta_correcta": "c",
+      "tema": "Capacidad y Rendimiento",
+      "explicación": "Se refiere a la carga de trabajo que no puede procesarse inmediatamente debido a la saturación o insuficiencia de los componentes del sistema[cite: 97, 101]."
+    },
+    {
+      "numero": 14,
+      "enunciado": "¿Cuál es el propósito principal de calcular el VAN de un proyecto?",
+      "opciones": {
+        "a": "Determinar el costo total del proyecto.",
+        "b": "Evaluar la rentabilidad de la inversión.",
+        "c": "Calcular los ingresos futuros.",
+        "d": "Estimar los costos operativos."
+      },
+      "respuesta_correcta": "b",
+      "tema": "Análisis Económico",
+      "explicación": "El Valor Actual Neto (VAN) permite conocer si la inversión generará beneficios tras descontar la inversión inicial y el valor temporal del dinero[cite: 103, 105]."
+    },
+    {
+      "numero": 15,
+      "enunciado": "¿Qué debe incluir, como mínimo, la declaración de accesibilidad que cada entidad del sector público debe publicar en su sitio web?",
+      "opciones": {
+        "a": "Informe detallado de los errores de accesibilidad según la WCAG, preparación de la declaración, observaciones y datos de contacto y procedimiento de aplicación.",
+        "b": "Situación de cumplimiento, contenido no accesible, preparación de la declaración, observaciones y datos de contacto y procedimiento de aplicación.",
+        "c": "Situación de cumplimiento, contenido no accesible, enlace a informe de evaluación, preparación de la declaración y observaciones y datos de contacto.",
+        "d": "Situación de cumplimiento, contenido no accesible, preparación de la declaración, y observaciones y datos de contacto."
+      },
+      "respuesta_correcta": "b",
+      "tema": "Accesibilidad Web",
+      "explicación": "La normativa europea exige transparencia sobre el nivel de cumplimiento, las excepciones y los canales de comunicación para el usuario[cite: 112, 116]."
+    },
+    {
+      "numero": 16,
+      "enunciado": "El Esquema Nacional de Interoperabilidad, según el artículo 156 de la Ley 40/2015, comprende:",
+      "opciones": {
+        "a": "Las obligaciones a que están sujetas las Administraciones Públicas para garantizar una correcta interoperabilidad de sus sistemas, redes y aplicaciones en su relación con la ciudadanía.",
+        "b": "Los criterios técnicos que han de seguir las Administraciones Públicas en el desarrollo, contratación y puesta a disposición de herramientas tecnológicas por los departamentos ministeriales.",
+        "c": "El conjunto de criterios y recomendaciones en materia de seguridad, conservación y normalización de la información, de los formatos y de las aplicaciones que deberán ser tenidos en cuenta por las Administraciones Públicas para la toma de decisiones tecnológicas que garanticen la interoperabilidad.",
+        "d": "La política de seguridad en la utilización de medios electrónicos por las Administraciones Públicas."
+      },
+      "respuesta_correcta": "c",
+      "tema": "Interoperabilidad (ENI)",
+      "explicación": "Su alcance es normativo para asegurar que los sistemas de las AAPP puedan intercambiar información de manera efectiva y segura[cite: 119, 125, 126]."
+    },
+    {
+      "numero": 17,
+      "enunciado": "¿Cuál es el objeto de la NTI del Catálogo de Estándares en el Esquema Nacional de Interoperabilidad?",
+      "opciones": {
+        "a": "Establecer un conjunto completo de estándares utilizados por las administraciones públicas.",
+        "b": "Establecer una lista de restricciones sobre las aplicaciones y herramientas que cada administración utiliza para su gestión interna.",
+        "c": "Establecer un conjunto mínimo de estándares basados en criterios definidos para garantizar la interoperabilidad.",
+        "d": "Establecer un procedimiento de homologación de estándares para el intercambio de información entre administraciones y ciudadanos."
+      },
+      "respuesta_correcta": "c",
+      "tema": "Interoperabilidad (ENI)",
+      "explicación": "Fija los estándares comunes obligatorios para evitar la fragmentación tecnológica entre diferentes organismos públicos[cite: 128, 133]."
+    },
+    {
+      "numero": 18,
+      "enunciado": "Según la metodología MAGERIT, ¿cuál es el primer paso en el proceso de análisis de riesgos?",
+      "opciones": {
+        "a": "Identificación de amenazas.",
+        "b": "Determinación del impacto residual.",
+        "c": "Identificación de activos.",
+        "d": "Aplicación de salvaguardas."
+      },
+      "respuesta_correcta": "c",
+      "tema": "Análisis de Riesgos (MAGERIT)",
+      "explicación": "No se puede evaluar el riesgo sin conocer primero qué elementos valiosos (activos) componen el sistema de información[cite: 135, 140]."
+    },
+    {
+      "numero": 19,
+      "enunciado": "¿Qué norma regula la acreditación de entidades para certificar la conformidad con el ENS?",
+      "opciones": {
+        "a": "UNE-EN ISO/IEC 17065:2012.",
+        "b": "UNE-EN ISO/IEC 17026:2015.",
+        "c": "UNE-EN ISO/IEC 17021:2015.",
+        "d": "UNE-EN ISO/IEC 17011:2017."
+      },
+      "respuesta_correcta": "a",
+      "tema": "Esquema Nacional de Seguridad (ENS)",
+      "explicación": "Esta norma específica define los requisitos técnicos para organismos que certifican la calidad y seguridad de productos y servicios[cite: 142, 145]."
+    },
+    {
+      "numero": 20,
+      "enunciado": "¿Cuál de las siguientes NO es una serie ITU-T?",
+      "opciones": {
+        "a": "B. Servicios de Benchmarking (por ejemplo, B.25 codificación de pruebas).",
+        "b": "G. Sistemas y medios de transmisión, sistemas y redes digitales (por ejemplo, G.711 codificación de audio PCM).",
+        "c": "I. Red Digital de Servicios integrados, RDSI (por ejemplo, 1.120: Redes digitales de servicios integrados).",
+        "d": "H. Sistemas audiovisuales y multimedia (por ejemplo, H.323 sistemas de comunicaciones multimedia basados en paquetes)."
+      },
+      "respuesta_correcta": "a",
+      "tema": "Estándares de Telecomunicaciones",
+      "explicación": "La serie B de la ITU-T se refiere a medios de expresión y terminología, no a servicios de 'benchmarking'[cite: 151, 153]."
+    },
+    {
+      "numero": 21,
+      "enunciado": "¿Cuáles de los siguientes son planes de España Digital 2026?",
+      "opciones": {
+        "a": "Plan Nacional de Ciberseguridad. Plan Nacional de Competencias Digitales.",
+        "b": "Plan de Servicios Públicos Digitales, Plan de Confianza en el Ámbito Digital.",
+        "c": "Plan de TIC en PYME, Programa de Fomento del Uso de la Factura Electrónica.",
+        "d": "Plan de Internacionalización de Empresas Tecnológicas, Plan de Impulso de la Economía Digital y los Contenidos Digitales."
+      },
+      "respuesta_correcta": "a",
+      "tema": "Estrategia Digital Nacional",
+      "explicación": "Ambos planes son pilares estratégicos actuales para reforzar la seguridad y el talento digital en el país[cite: 160, 162]."
+    },
+    {
+      "numero": 22,
+      "enunciado": "¿Cómo contribuye la Infrastructure de Disponibilidad del Sistema (SAI) a la resiliencia en un sistema distribuido?",
+      "opciones": {
+        "a": "La SAI almacena copias de seguridad de todos los datos en cada nodo.",
+        "b": "La SAI utiliza un sistema de escalabilidad dinámica.",
+        "c": "La SAI monitorea de forma continua el estado de los nodos y redistribuye automáticamente las tareas de los nodos con fallos hacia nodos operativos.",
+        "d": "La SAI garantiza que todos los nodos estén sincronizados en tiempo real."
+      },
+      "respuesta_correcta": "c",
+      "tema": "Disponibilidad y Resiliencia",
+      "explicación": "La función central de la SAI es detectar fallos en tiempo real y asegurar la continuidad del servicio mediante el reencaminamiento de tareas[cite: 169, 176]."
+    },
+    {
+      "numero": 23,
+      "enunciado": "¿Qué sistema híbrido centralizado engloba la gestión de información de seguridad y la gestión de eventos (SIEM)?",
+      "opciones": {
+        "a": "COCS.",
+        "b": "SIEM.",
+        "c": "NAC.",
+        "d": "IDS."
+      },
+      "respuesta_correcta": "b",
+      "tema": "Seguridad Informática",
+      "explicación": "El SIEM unifica el análisis de logs y alertas para proporcionar una visión global y en tiempo real de la seguridad de la red[cite: 178, 181]."
+    },
+    {
+      "numero": 24,
+      "enunciado": "¿Cuál es la principal función de las soluciones EMM (Enterprise Mobility Management)?",
+      "opciones": {
+        "a": "Administrar el acceso a redes inalámbricas.",
+        "b": "Proporcionar aplicaciones de productividad.",
+        "c": "Gestionar la seguridad y políticas corporativas en dispositivos.",
+        "d": "Monitorizar el uso de aplicaciones de entretenimiento."
+      },
+      "respuesta_correcta": "c",
+      "tema": "Movilidad Empresarial",
+      "explicación": "Permiten a las organizaciones aplicar controles de seguridad y configurar dispositivos móviles de forma remota y centralizada[cite: 186, 190]."
+    },
+    {
+      "numero": 25,
+      "enunciado": "¿Cuál de las siguientes es una tecnologías de orquestación cloud-edge de código abierto desarrollada en la Unión Europea?",
+      "opciones": {
+        "a": "Open Eucalyptus.",
+        "b": "Open Nebula.",
+        "c": "Open Ware.",
+        "d": "Open Stack."
+      },
+      "respuesta_correcta": "b",
+      "tema": "Cloud Computing",
+      "explicación": "OpenNebula es el principal proyecto europeo de código abierto para la gestión de infraestructuras de nube y computación en el borde[cite: 192, 195]."
+    },
+    {
+      "numero": 26,
+      "enunciado": "En el ámbito de las políticas de backup (respaldo), señale la respuesta correcta:",
+      "opciones": {
+        "a": "La copia de seguridad incremental realiza copia de los archivos modificados desde la última copia completa.",
+        "b": "La copia de seguridad incremental es igual que la copia diferencial.",
+        "c": "La copia de seguridad incremental ahorra tiempo pero ocupa el mismo espacio.",
+        "d": "La copia de seguridad incremental realiza copia de los archivos y directorios que han sido modificados desde la última copia, ya sea completa o no."
+      },
+      "respuesta_correcta": "d",
+      "tema": "Gestión de Backups",
+      "explicación": "A diferencia de la diferencial, la incremental resetea el bit de modificación tras cada proceso, basándose siempre en el último backup realizado[cite: 198, 205]."
+    },
+    {
+      "numero": 27,
+      "enunciado": "¿Qué afirmación es correcta respecto a los clúster de alta disponibilidad?",
+      "opciones": {
+        "a": "Disponen de nodos redundantes, de manera que se siga proporcionando servicio aunque alguno de los componentes del clúster falle.",
+        "b": "La carga de trabajo se distribuye sólo entre parte de los servidores.",
+        "c": "Dividen las tareas mediante procesamiento secuencial.",
+        "d": "La carga de trabajo se reparte para asegurar que todos llegan al mismo resultado."
+      },
+      "respuesta_correcta": "a",
+      "tema": "Sistemas y Arquitectura",
+      "explicación": "Su objetivo primordial es eliminar puntos únicos de fallo mediante la replicación de componentes críticos[cite: 206, 210]."
+    },
+    {
+      "numero": 28,
+      "enunciado": "¿Cual de los siguientes sistemas es un servicio común que se basa en una arquitectura orientada a servicios (SOA)?",
+      "opciones": {
+        "a": "REÚNETE.",
+        "b": "Servicio de Verificación y Consulta de Datos: Plataforma de Intermediación.",
+        "c": "SICRES.",
+        "d": "COFFEE-MRR."
+      },
+      "respuesta_correcta": "b",
+      "tema": "Servicios Comunes y SOA",
+      "explicación": "La Plataforma de Intermediación es el ejemplo paradigmático de interoperabilidad basada en servicios web en la Administración española[cite: 216, 220]."
+    },
+    {
+      "numero": 29,
+      "enunciado": "¿Cuál es el propósito de la memoria virtual en un sistema operativo?",
+      "opciones": {
+        "a": "Limitar el uso de la CPU por cada proceso.",
+        "b": "Permitir que el sistema operativo ejecute programas más grandes que la memoria física disponible.",
+        "c": "Controlar el acceso de los usuarios a los recursos del sistema.",
+        "d": "Mejorar la velocidad de procesamiento en la RAM."
+      },
+      "respuesta_correcta": "b",
+      "tema": "Sistemas Operativos",
+      "explicación": "Utiliza espacio en disco para simular RAM adicional, permitiendo que el software no se vea limitado por el hardware físico inmediato[cite: 227, 229]."
+    },
+    {
+      "numero": 30,
+      "enunciado": "[ANULADA] Desde el punto de vista de los recursos lógicos, indique un estado para ficheros abiertos en UNIX:",
+      "opciones": {
+        "a": "Sleeping en almacenamiento primario.",
+        "b": "Finalizado en estado de registro.",
+        "c": "En ejecución modo kernel.",
+        "d": "Volviendo del kernel al modo usuario."
+      },
+      "respuesta_correcta": "null",
+      "tema": "Sistemas Operativos",
+      "explicación": "Pregunta anulada oficialmente en el examen original por errores en su planteamiento técnico[cite: 232]."
+    },
+    {
+      "numero": 31,
+      "enunciado": "El sistema operativo Darwin, base de macOS:",
+      "opciones": {
+        "a": "Utiliza un núcleo desarrollado íntegramente por Apple.",
+        "b": "Es un software de código abierto.",
+        "c": "Incluye la interfaz Aqua como parte de su distribución.",
+        "d": "Es una versión del sistema operativo linux."
+      },
+      "respuesta_correcta": "b",
+      "tema": "Sistemas Operativos",
+      "explicación": "Darwin es el componente de bajo nivel y de código abierto sobre el que Apple construye la interfaz propietaria de macOS[cite: 240, 244]."
+    },
+    {
+      "numero": 32,
+      "enunciado": "El lenguaje que se utiliza para especificar el esquema de la base de datos es el:",
+      "opciones": {
+        "a": "LMD (DML).",
+        "b": "LCD (DCL).",
+        "c": "LCT (TCL).",
+        "d": "LDD (DDL)."
+      },
+      "respuesta_correcta": "d",
+      "tema": "Bases de Datos",
+      "explicación": "El Data Definition Language (DDL) permite crear y modificar la estructura de tablas, índices y restricciones de la base de datos[cite: 249, 254]."
+    },
+    {
+      "numero": 33,
+      "enunciado": "El cálculo relacional de tuplas es un lenguaje de consulta:",
+      "opciones": {
+        "a": "Imperativo.",
+        "b": "Declarativo.",
+        "c": "De procesamiento paralelo.",
+        "d": "Procedimental."
+      },
+      "respuesta_correcta": "b",
+      "tema": "Bases de Datos",
+      "explicación": "Es un lenguaje no procedimental o declarativo donde se describe el resultado deseado en lugar de los pasos para obtenerlo[cite: 255, 259]."
+    },
+    {
+      "numero": 34,
+      "enunciado": "¿Qué tipo de cifrado utiliza HTTPS para asegurar la comunicación?",
+      "opciones": {
+        "a": "Cifrado asimétrico en la negociación, seguido de cifrado simétrico en la transmisión de datos.",
+        "b": "Cifrado simétrico únicamente.",
+        "c": "Cifrado por flujo.",
+        "d": "Capa de transporte sin autenticación."
+      },
+      "respuesta_correcta": "a",
+      "tema": "Seguridad en Comunicaciones",
+      "explicación": "Combina la seguridad del cifrado asimétrico para el intercambio de claves con la eficiencia del simétrico para el grueso de los datos[cite: 263, 264]."
+    },
+    {
+      "numero": 35,
+      "enunciado": "¿Qué componente de .NET es responsable de ejecutar aplicaciones?",
+      "opciones": {
+        "a": "Visual Studio.",
+        "b": "Common Language Runtime (CLR).",
+        "c": "Entity Framework.",
+        "d": "Microsoft SQL Server."
+      },
+      "respuesta_correcta": "b",
+      "tema": "Desarrollo de Software",
+      "explicación": "El CLR actúa como la máquina virtual de .NET, gestionando la memoria, hilos y ejecución del código compilado[cite: 268, 272]."
+    },
+    {
+      "numero": 36,
+      "enunciado": "¿Cómo ayuda el patrón MVC a mejorar la eficiencia en el desarrollo multiplataforma?",
+      "opciones": {
+        "a": "Comparte vista y modelo.",
+        "b": "Centraliza funciones de la vista.",
+        "c": "La separación entre la vista y el modelo permite crear vistas específicas para cada plataforma sin afectar la lógica de negocio.",
+        "d": "No es adecuado para múltiples plataformas."
+      },
+      "respuesta_correcta": "c",
+      "tema": "Arquitectura de Software",
+      "explicación": "Al aislar la lógica (modelo), esta puede reutilizarse íntegramente mientras se diseñan interfaces (vistas) adaptadas a web o móvil[cite: 278, 285]."
+    },
+    {
+      "numero": 37,
+      "enunciado": "¿Cuál es una característica de PHP?",
+      "opciones": {
+        "a": "Es un lenguaje compilado.",
+        "b": "Solo funciona en servidores Windows.",
+        "c": "Es un lenguaje de código abierto y multiplataforma.",
+        "d": "No soporta bases de datos."
+      },
+      "respuesta_correcta": "c",
+      "tema": "Desarrollo Web",
+      "explicación": "Es un lenguaje interpretado de servidor ampliamente usado por ser libre y compatible con casi cualquier sistema operativo[cite: 287, 292]."
+    },
+    {
+      "numero": 38,
+      "enunciado": "Sobre licenciamiento en Administración Pública (RD 4/2010), el artículo 16 contempla:",
+      "opciones": {
+        "a": "Obligación de convenio.",
+        "b": "Ausencia total de responsabilidad del cesionario.",
+        "c": "La exención de responsabilidad del cedente por un posible mal uso por parte del cesionario.",
+        "d": "La obligación de asistencia técnica."
+      },
+      "respuesta_correcta": "c",
+      "tema": "Reutilización de Software",
+      "explicación": "Protege a la administración que cede el código de cualquier responsabilidad legal derivada del uso indebido que haga el receptor[cite: 294, 301]."
+    },
+    {
+      "numero": 39,
+      "enunciado": "¿Cuál de las siguientes siglas corresponde a un lenguaje de agentes inteligentes?",
+      "opciones": {
+        "a": "KQML.",
+        "b": "FIPA.",
+        "c": "DML.",
+        "d": "JADE."
+      },
+      "respuesta_correcta": "a",
+      "tema": "Inteligencia Artificial",
+      "explicación": "El Knowledge Query and Manipulation Language (KQML) permite que los agentes compartan conocimientos y realicen consultas complejas entre sí[cite: 303, 304]."
+    },
+    {
+      "numero": 40,
+      "enunciado": "En el ámbito de la ciencia de datos, la ténica 'binning' permite:",
+      "opciones": {
+        "a": "Operar sobre datos cifrados.",
+        "b": "Transformar datos continuos en categorías discretas.",
+        "c": "Producir una salida conocida para aprender.",
+        "d": "Descubrir patrones y segmentar los datos."
+      },
+      "respuesta_correcta": "b",
+      "tema": "Ciencia de Datos",
+      "explicación": "Es un proceso de pre-procesamiento que agrupa valores numéricos en rangos para simplificar el análisis estadístico o el aprendizaje automático[cite: 309, 312]."
+    },
+    {
+      "numero": 41,
+      "enunciado": "¿Cuál de las siguientes afirmaciones describe correctamente a SAP HANA?",
+      "opciones": {
+        "a": "Solución ERP para pymes.",
+        "b": "Es una plataforma de base de datos en memoria para asegurar su alto rendimiento.",
+        "c": "Es el modelo de datos estándar.",
+        "d": "Es el lenguaje de programación SAP."
+      },
+      "respuesta_correcta": "b",
+      "tema": "Sistemas de Gestión (ERP)",
+      "explicación": "Su tecnología 'in-memory' permite procesar volúmenes masivos de datos mucho más rápido que las bases de datos tradicionales en disco[cite: 317, 320]."
+    },
+    {
+      "numero": 42,
+      "enunciado": "¿Qué estructura tienen las declaraciones de xAPI para registrar eventos de aprendizaje?",
+      "opciones": {
+        "a": "usuario, evento, curso.",
+        "b": "actor, verbo, objeto.",
+        "c": "rol, acción, contexto.",
+        "d": "alumno, tarea, resultado."
+      },
+      "respuesta_correcta": "b",
+      "tema": "Tecnologías de Aprendizaje",
+      "explicación": "Sigue una gramática sencilla para registrar que un individuo (actor) realizó una acción (verbo) sobre un recurso (objeto)[cite: 323, 326]."
+    },
+    {
+      "numero": 43,
+      "enunciado": "¿Cuál es la finalidad principal de la Directiva INSPIRE en la Unión Europea?",
+      "opciones": {
+        "a": "Crear una infraestructura para compartir información geográfica entre Estados miembros.",
+        "b": "Regular el uso de GPS.",
+        "c": "Desarrollar estándares únicos.",
+        "d": "Reducir los costos de almacenamiento."
+      },
+      "respuesta_correcta": "a",
+      "tema": "Sistemas de Información Geográfica",
+      "explicación": "Busca que los datos espaciales sean compatibles y accesibles para apoyar políticas medioambientales transfronterizas[cite: 330, 331]."
+    },
+    {
+      "numero": 44,
+      "enunciado": "¿Qué técnica garantiza el principio de minimización de datos señalado por el RGPD?",
+      "opciones": {
+        "a": "Algoritmos de Compresión.",
+        "b": "Pruebas de conocimiento cero.",
+        "c": "Indexación de Bases de Datos.",
+        "d": "Filtrado Cuántico de Relevancia."
+      },
+      "respuesta_correcta": "b",
+      "tema": "Privacidad y RGPD",
+      "explicación": "Permiten validar una información (como la mayoría de edad) sin necesidad de transferir el dato original sensible (la fecha de nacimiento)[cite: 338, 340]."
+    },
+    {
+      "numero": 45,
+      "enunciado": "¿Cuál es la diferencia principal entre la gestión del dato y la gestión de la calidad del dato?",
+      "opciones": {
+        "a": "La gestión del dato se refiere a la creación y almacenamiento, mientras que la calidad del dato se centra en asegurar la precisión, consistencia y confiabilidad.",
+        "b": "Gestión=seguridad; Calidad=encriptación.",
+        "c": "Gestión=precisión; Calidad=administración.",
+        "d": "Gestión=requisitos de negocio; Calidad=uso pretendido."
+      },
+      "respuesta_correcta": "a",
+      "tema": "Gobierno del Dato",
+      "explicación": "Mientras la gestión abarca el ciclo de vida técnico, la calidad se enfoca en que los datos sean correctos y útiles para el negocio[cite: 344, 345, 346]."
+    },
+    {
+      "numero": 46,
+      "enunciado": "¿Cuál es el motor de renderizado del navegador web Safari?",
+      "opciones": {
+        "a": "Webkit.",
+        "b": "Blink.",
+        "c": "Gecko.",
+        "d": "Trident."
+      },
+      "respuesta_correcta": "a",
+      "tema": "Navegadores y Web",
+      "explicación": "WebKit es el motor de código abierto mantenido principalmente por Apple para sus sistemas operativos iOS y macOS[cite: 354, 356]."
+    },
+    {
+      "numero": 47,
+      "enunciado": "¿Cuál de las siguientes medidas se aplicaría en una pasarela de pago PCI DSS?",
+      "opciones": {
+        "a": "Almacenar datos sin reautenticación.",
+        "b": "Permitir acceso al personal.",
+        "c": "Realizar la tokenización de los datos sensibles de las tarjetas, reemplazándolos por un identificador único no reversible.",
+        "d": "Requerir contraseña para pagos recurrentes."
+      },
+      "respuesta_correcta": "c",
+      "tema": "Seguridad de Pagos",
+      "explicación": "La tokenización evita que los datos reales de la tarjeta viajen o se almacenen en los sistemas del comercio, reduciendo el riesgo de fraude[cite: 363, 370]."
+    },
+    {
+      "numero": 48,
+      "enunciado": "La criptografía asimétrica:",
+      "opciones": {
+        "a": "Seguridad en única clave.",
+        "b": "Necesita n(n-1)/2 claves.",
+        "c": "Requiere dos claves privadas por usuario.",
+        "d": "Se fundamenta en la imposibilidad práctica de resolver ciertos problemas matemáticos de forma eficiente."
+      },
+      "respuesta_correcta": "d",
+      "tema": "Criptografía",
+      "explicación": "Su seguridad reside en la dificultad computacional de factorizar números primos grandes o resolver logaritmos discretos[cite: 372, 379]."
+    },
+    {
+      "numero": 49,
+      "enunciado": "¿Cuál es el formato y firma de facturas electrónicas según la NTI?",
+      "opciones": {
+        "a": "EPES con XADES.",
+        "b": "Facturae con PADES.",
+        "c": "Facturae con firma electrónica XAdES.",
+        "d": "EPES con PADES."
+      },
+      "respuesta_correcta": "c",
+      "tema": "Factura Electrónica",
+      "explicación": "El estándar Facturae junto con la firma XML Advanced Electronic Signatures (XAdES) es el formato oficial en España para el B2G[cite: 380, 386]."
+    },
+    {
+      "numero": 50,
+      "enunciado": "¿Qué entidad identifica de forma inequívoca al solicitante de un certificado?",
+      "opciones": {
+        "a": "Autoridad de Registro (RA).",
+        "b": "Autoridad de Certificación (CA).",
+        "c": "Autoridad de Emisión (EA).",
+        "d": "Autoridad de Validación (VA)."
+      },
+      "respuesta_correcta": "a",
+      "tema": "Certificación Digital",
+      "explicación": "La RA actúa como 'recepcionista' verificando físicamente la identidad antes de que la CA emita técnicamente el certificado[cite: 388, 390]."
+    },
+    {
+      "numero": 51,
+      "enunciado": "¿Cuál es la guía que articula el mecanismo de certificación de conformidad con el ENS?",
+      "opciones": {
+        "a": "Guía CCN-STIC 812.",
+        "b": "Guía CCN-STIC 823.",
+        "c": "Guía CCN-STIC 809.",
+        "d": "Guía CCN-STIC 803."
+      },
+      "respuesta_correcta": "c",
+      "tema": "ENS",
+      "explicación": "La Guía 809 especifica cómo los organismos deben declarar o certificar que cumplen con las medidas de seguridad del ENS[cite: 396, 401]."
+    },
+    {
+      "numero": 52,
+      "enunciado": "La digitalización de un documento deberá contener:",
+      "opciones": {
+        "a": "El índice electrónico.",
+        "b": "Los metadatos mínimos obligatorios.",
+        "c": "La firma de la imagen electrónica.",
+        "d": "La firma del indice electrónico."
+      },
+      "respuesta_correcta": "b",
+      "tema": "Administración Electrónica",
+      "explicación": "Toda copia electrónica auténtica debe ir acompañada de metadatos que describan su origen, validez y contexto[cite: 403, 407]."
+    },
+    {
+      "numero": 53,
+      "enunciado": "[ANULADA] El uso de sistemas biométricos para el registro de jornada laboral es:",
+      "opciones": {
+        "a": "Tratamiento prohibido.",
+        "b": "Lícito con norma rango ley.",
+        "c": "Lícito con consentimiento.",
+        "d": "Lícito por misión interés público."
+      },
+      "respuesta_correcta": "null",
+      "tema": "Privacidad y RGPD",
+      "explicación": "Pregunta anulada debido a la complejidad interpretativa reciente sobre los datos biométricos en el ámbito laboral[cite: 411]."
+    },
+    {
+      "numero": 54,
+      "enunciado": "En el ámbito de la Identidad Digital Soberana (SSI):",
+      "opciones": {
+        "a": "Credenciales se almacenan en blockchain.",
+        "b": "Los usuarios gestionan sus identificadores descentralizados (DIDs) y credenciales verificables mediante una billetera digital.",
+        "c": "DIDs emitidos por gobiernos.",
+        "d": "Billeteras solo para pagos."
+      },
+      "respuesta_correcta": "b",
+      "tema": "Blockchain e Identidad",
+      "explicación": "La esencia de SSI es que el ciudadano tenga el control total de sus datos en su propia 'wallet' sin depender de una base de datos central[cite: 420, 423]."
+    },
+    {
+      "numero": 55,
+      "enunciado": "¿Cuál de las siguientes describe la integración continua?",
+      "opciones": {
+        "a": "Actualizaciones sin pruebas.",
+        "b": "Pruebas manuales.",
+        "c": "Automatizar la integración de los cambios de código de varios contribuidores en un único proyecto de software.",
+        "d": "Esperar a completar módulos."
+      },
+      "respuesta_correcta": "c",
+      "tema": "DevOps / Integración Continua",
+      "explicación": "Busca detectar conflictos de código lo antes posible mediante la construcción y prueba automática tras cada 'commit'[cite: 426, 434]."
+    },
+    {
+      "numero": 56,
+      "enunciado": "¿Cómo se llama el metódo de evaluación utilizado por el modelo EFQM?",
+      "opciones": {
+        "a": "REDER.",
+        "b": "EVAM.",
+        "c": "CAF.",
+        "d": "RED."
+      },
+      "respuesta_correcta": "a",
+      "tema": "Calidad y Excelencia",
+      "explicación": "REDER (Resultados, Enfoque, Despliegue, Evaluación y Revisión) es el esquema de puntuación para medir el rendimiento organizacional[cite: 436, 437]."
+    },
+    {
+      "numero": 57,
+      "enunciado": "[ANULADA] ¿Qué es OAIS?",
+      "opciones": {
+        "a": "Estándar OASIS.",
+        "b": "Modelo de referencia SIP, AIP y EIP.",
+        "c": "Especificación DLM Forum.",
+        "d": "Modelo referencia sistema abierto información archivo UNE-ISO 1471."
+      },
+      "respuesta_correcta": "null",
+      "tema": "Preservación Digital",
+      "explicación": "Anulada por imprecisiones en las opciones de respuesta respecto a la normativa técnica citada[cite: 443]."
+    },
+    {
+      "numero": 58,
+      "enunciado": "¿Qué establece la ley 39/2015 respecto del archivo de documentos?",
+      "opciones": {
+        "a": "Procedimientos actualizados.",
+        "b": "Formación del personal.",
+        "c": "Prohibido traslado formatos.",
+        "d": "Los documentos electrónicos deberán conservarse en un formato que permita garantizar la autenticidad, integridad y conservación del documento."
+      },
+      "respuesta_correcta": "d",
+      "tema": "Archivo Electrónico",
+      "explicación": "La ley obliga a que el archivo garantice que el documento sea inalterable y accesible a largo plazo a pesar del cambio tecnológico[cite: 451, 458]."
+    },
+    {
+      "numero": 59,
+      "enunciado": "¿Cuales son las dimensiones de gestión de servicios que introduce ITIL 4?",
+      "opciones": {
+        "a": "Organizaciones; tecnología; socios; procesos.",
+        "b": "Personas; tecnología; proveedores; procedimientos.",
+        "c": "Organizaciones y personas: información y tecnología; socios y proveedores: flujos de valor y procesos.",
+        "d": "Tecnología; proveedores; procedimientos."
+      },
+      "respuesta_correcta": "c",
+      "tema": "ITIL 4",
+      "explicación": "ITIL 4 expande el foco más allá de los procesos, considerando el factor humano, la tecnología y el ecosistema de socios[cite: 459, 462]."
+    },
+    {
+      "numero": 60,
+      "enunciado": "¿En qué se basan los ordenadores cuánticos?",
+      "opciones": {
+        "a": "En la estructura subatómica de la materia.",
+        "b": "En la estructura atómica.",
+        "c": "En la estuctura molecular.",
+        "d": "En las fuerzas intermoleculares."
+      },
+      "respuesta_correcta": "a",
+      "tema": "Computación Cuántica",
+      "explicación": "Utilizan fenómenos como la superposición y el entrelazamiento que ocurren a nivel de partículas subatómicas[cite: 466, 468]."
+    },
+    {
+      "numero": 61,
+      "enunciado": "El modelo de proceso en espiral:",
+      "opciones": {
+        "a": "Es un modelo en cascada evolutivo, dividido en ciclos.",
+        "b": "Desarrollo versiones incrementales.",
+        "c": "Producción automática código.",
+        "d": "Reutilización piezas código."
+      },
+      "respuesta_correcta": "a",
+      "tema": "Ciclos de Vida Software",
+      "explicación": "Combina el control del modelo en cascada con la flexibilidad del desarrollo iterativo centrado en el análisis de riesgos[cite: 475, 476]."
+    },
+    {
+      "numero": 62,
+      "enunciado": "En Kanban, ¿qué representa una tarjeta en el tablero?",
+      "opciones": {
+        "a": "Responsable.",
+        "b": "Periodo tiempo.",
+        "c": "Una tarea o ítem de trabajo que necesita ser completado.",
+        "d": "Reunión planificada."
+      },
+      "respuesta_correcta": "c",
+      "tema": "Metodologías Ágiles",
+      "explicación": "Cada tarjeta visualiza una unidad mínima de valor que fluye a través de las diferentes etapas de la cadena de producción[cite: 482, 487]."
+    },
+    {
+      "numero": 63,
+      "enunciado": "¿Cómo se implementa una relación N:M entre dos entidades?",
+      "opciones": {
+        "a": "Relación directa.",
+        "b": "Clave foránea.",
+        "c": "Mediante una tabla intermedia, que contiene las claves primarias de las dos entidades.",
+        "d": "Atributo adicional."
+      },
+      "respuesta_correcta": "c",
+      "tema": "Modelado de Datos",
+      "explicación": "Debido a que una tabla no puede tener múltiples valores en una celda, se requiere una tabla de unión para gestionar las conexiones[cite: 489, 494]."
+    },
+    {
+      "numero": 64,
+      "enunciado": "Los símbolos de diagramas BPMN se clasifican en:",
+      "opciones": {
+        "a": "Flujo, datos, conexión y almacenes.",
+        "b": "Flujo, datos, carriles y artefactos.",
+        "c": "Flujo, conexión, carriles y almacenes.",
+        "d": "Objetos de flujo, objetos de conexión, carriles y artefactos."
+      },
+      "respuesta_correcta": "d",
+      "tema": "Modelado de Procesos (BPMN)",
+      "explicación": "Esta categorización permite modelar de forma estándar quién hace qué, cuándo y cómo se comunican las tareas[cite: 497, 503]."
+    },
+    {
+      "numero": 65,
+      "enunciado": "¿Qué requisitos no funcionales define el cumplimiento con normativas legales?",
+      "opciones": {
+        "a": "Requisitos de rendimiento.",
+        "b": "Requisitos organizativos.",
+        "c": "Requisitos de producto.",
+        "d": "Requisitos externos."
+      },
+      "respuesta_correcta": "d",
+      "tema": "Ingeniería de Requisitos",
+      "explicación": "Se consideran externos porque derivan de factores fuera del control del desarrollo, como la legislación o la ética[cite: 504, 508]."
+    },
+    {
+      "numero": 66,
+      "enunciado": "En el modelo 4+1, además de los escenarios, ¿cuáles son las otras cuatro vistas?",
+      "opciones": {
+        "a": "Proceso, desarrollo, despliegue y física.",
+        "b": "La vista lógica, la vista de desarrollo, la vista de proceso y la vista física.",
+        "c": "Lógica, desarrollo, proceso y funcional.",
+        "d": "Lógica, desarrollo, implementación y despliegue."
+      },
+      "respuesta_correcta": "b",
+      "tema": "Arquitectura Software",
+      "explicación": "Este modelo de Kruchten permite describir la arquitectura del software desde diferentes perspectivas de los interesados[cite: 511, 516]."
+    },
+    {
+      "numero": 67,
+      "enunciado": "¿Cuál de las siguientes describe el patrón 'Singleton'?",
+      "opciones": {
+        "a": "Permite que una clase tenga solo una instancia y proporciona un punto de acceso global a esa instancia.",
+        "b": "Separa construcción de representación.",
+        "c": "Familia algoritmos intercambiables.",
+        "d": "Interfaz crear familias objetos."
+      },
+      "respuesta_correcta": "a",
+      "tema": "Patrones de Diseño",
+      "explicación": "Es un patrón creacional útil para objetos de control centralizados como gestores de logs o pools de conexiones[cite: 520, 522]."
+    },
+    {
+      "numero": 68,
+      "enunciado": "En MÉTRICA V3, en relación a las interfaces, las descritas son:",
+      "opciones": {
+        "a": "Gestión, Mejora, Personal, Configuración.",
+        "b": "La Gestión de Proyectos, la Seguridad, el Aseguramiento de la Calidad y la Gestión de la Configuración.",
+        "c": "Gestión, Seguridad, Mejora, Configuración.",
+        "d": "Gestión, Mejora, Calidad, Configuración."
+      },
+      "respuesta_correcta": "b",
+      "tema": "Métrica V3",
+      "explicación": "Estas interfaces atraviesan todos los procesos del ciclo de vida para garantizar un desarrollo ordenado y seguro[cite: 529, 534]."
+    },
+    {
+      "numero": 69,
+      "enunciado": "Las pruebas de caja negra sirven para:",
+      "opciones": {
+        "a": "Deducidas de estructura interna.",
+        "b": "Verificar que los requisitos funcionales de la aplicación se cumplen, siendo la estructura interna del programa irrelevante.",
+        "c": "Verificar partes del código.",
+        "d": "Extractos con acceso al código."
+      },
+      "respuesta_correcta": "b",
+      "tema": "Pruebas Software",
+      "explicación": "Se centran en las entradas y salidas esperadas, tratando al sistema como un ente opaco para el auditor[cite: 538, 544]."
+    },
+    {
+      "numero": 70,
+      "enunciado": "¿Qué describe el término 'Pipeline' en el contexto de CI?",
+      "opciones": {
+        "a": "Pruebas manuales.",
+        "b": "Un conjunto de etapas automatizadas que procesan el código, desde la construcción hasta el despliegue.",
+        "c": "Repositorio actualizado.",
+        "d": "Un paso final."
+      },
+      "respuesta_correcta": "b",
+      "tema": "DevOps",
+      "explicación": "Es el flujo de trabajo automatizado que permite que el código nuevo sea testeado e integrado rápidamente[cite: 547, 549]."
+    },
+    {
+      "numero": 71,
+      "enunciado": "¿Cómo se denomina el grado de relación entre datos y métodos de un módulo?",
+      "opciones": {
+        "a": "Acoplamiento.",
+        "b": "Cohesión.",
+        "c": "Complejidad.",
+        "d": "Código duplicado."
+      },
+      "respuesta_correcta": "b",
+      "tema": "Diseño Software",
+      "explicación": "Una alta cohesión indica que los elementos del módulo están estrechamente relacionados y tienen un propósito único[cite: 553, 556]."
+    },
+    {
+      "numero": 72,
+      "enunciado": "¿Cuál de los siguientes es un método de medición de Puntos de Función?",
+      "opciones": {
+        "a": "Técnicas Delphi.",
+        "b": "COCOMO.",
+        "c": "COSMIC FFP.",
+        "d": "SPFP."
+      },
+      "respuesta_correcta": "c",
+      "tema": "Métricas de Software",
+      "explicación": "COSMIC es un método estándar ISO para medir el tamaño funcional del software basado en movimientos de datos[cite: 560, 566]."
+    },
+    {
+      "numero": 73,
+      "enunciado": "En el desarrollo de un proyecto de software, LOC es:",
+      "opciones": {
+        "a": "Métrica basada en tokens.",
+        "b": "Una medida de la longitud del código fuente.",
+        "c": "Diagramas de flujo.",
+        "d": "Especificaciones algebraicas."
+      },
+      "respuesta_correcta": "b",
+      "tema": "Métricas de Software",
+      "explicación": "Lines of Code (LOC) es la medida más básica de tamaño, aunque no siempre refleja la complejidad real[cite: 569, 573]."
+    },
+    {
+      "numero": 74,
+      "enunciado": "¿Qué establece la Ley de Shannon-Hartley?",
+      "opciones": {
+        "a": "Relación eficiencia/ruido.",
+        "b": "Capacidad máxima señal/ruido muestreo.",
+        "c": "Que, para un determinado ancho de banda asignado, existe una capacidad máxima que vendrá dada por la relación señal/ruido.",
+        "d": "Señal aparente máxima."
+      },
+      "respuesta_correcta": "c",
+      "tema": "Teoría de la Información",
+      "explicación": "Define el límite teórico máximo de transmisión de datos sin errores sobre un canal ruidoso[cite: 578, 585]."
+    },
+    {
+      "numero": 75,
+      "enunciado": "¿Qué TLD sería elegible para organizaciones de tratados y observadores de la ONU?",
+      "opciones": {
+        "a": "ARPA.",
+        "b": ".INT.",
+        "c": ".ORG.",
+        "d": "UNO."
+      },
+      "respuesta_correcta": "b",
+      "tema": "Nombres de Dominio",
+      "explicación": "El dominio .int está estrictamente reservado para entidades internacionales constituidas por tratados[cite: 587, 591]."
+    },
+    {
+      "numero": 76,
+      "enunciado": "Indique la norma europea de compatibilidad electromagnética:",
+      "opciones": {
+        "a": "Directiva 2014/30/UE.",
+        "b": "Reglamento 2014/30/UE.",
+        "c": "Decisión 2014/30/UE.",
+        "d": "Recomendación 2014/30/UE."
+      },
+      "respuesta_correcta": "a",
+      "tema": "Normativa Técnica",
+      "explicación": "Esta directiva obliga a que los aparatos no perturben a otros equipos y sean inmunes a interferencias externas[cite: 595, 596]."
+    },
+    {
+      "numero": 77,
+      "enunciado": "¿Cuál es el orden correcto de primitivas OSI?",
+      "opciones": {
+        "a": "REQUEST, INDICATION, RESPONSE, CONFIRM.",
+        "b": "INDICATION, REQUEST, CONFIRM, RESPONSE.",
+        "c": "REQUEST, RESPONSE, INDICATION, CONFIRM.",
+        "d": "RESPONSE, REQUEST, INDICATION, CONFIRM."
+      },
+      "respuesta_correcta": "a",
+      "tema": "Modelo OSI",
+      "explicación": "Sigue el flujo lógico de inicio de petición, aviso al receptor, respuesta de este y confirmación al emisor[cite: 600, 603]."
+    },
+    {
+      "numero": 78,
+      "enunciado": "¿Qué características definen las 'mmWave' en redes 5G?",
+      "opciones": {
+        "a": "SHF, 3 a 30GHz.",
+        "b": "Se corresponden con la banda 11. EHF, gama de frecuencias de 30 a 300GHz y subdivisión métrica 10mm-1mm.",
+        "c": "EHF, 30 a 300GHz, 1mm-0,1mm.",
+        "d": "SHF, 3 a 30GHz, 1mm-0,1mm."
+      },
+      "respuesta_correcta": "b",
+      "tema": "Redes Móviles (5G)",
+      "explicación": "Son ondas milimétricas de muy alta frecuencia que permiten velocidades extremas pero tienen poco alcance físico[cite: 606, 610]."
+    },
+    {
+      "numero": 79,
+      "enunciado": "¿Qué estándar define el mecanismo Q-in-Q (VLAN stacking)?",
+      "opciones": {
+        "a": "IEEE 802.1Q.",
+        "b": "IEEE 802.1p.",
+        "c": "IEEE 802.3ad.",
+        "d": "IEEE 802.1ad."
+      },
+      "respuesta_correcta": "d",
+      "tema": "Redes de Área Local",
+      "explicación": "Permite insertar una etiqueta VLAN adicional para transportar múltiples VLANs de clientes sobre una red troncal de proveedor[cite: 615, 621]."
+    },
+    {
+      "numero": 80,
+      "enunciado": "Según la Ley 11/2022, el espectro radioeléctrico es:",
+      "opciones": {
+        "a": "Dominio público compartido.",
+        "b": "Es un bien de dominio público, cuya titularidad y administración corresponden al Estado.",
+        "c": "Titularidad Estado, administración CCAA.",
+        "d": "Transferido a las CCAA."
+      },
+      "respuesta_correcta": "b",
+      "tema": "Telecomunicaciones",
+      "explicación": "Al ser un recurso limitado y estratégico, su gestión es competencia exclusiva de la Administración central[cite: 622, 626]."
+    },
+    {
+      "numero": 81,
+      "enunciado": "¿Cuál de las siguientes afirmaciones sobre IPv6 es correcta?",
+      "opciones": {
+        "a": "Tamaño fijo de 64 bits.",
+        "b": "Notación decimal.",
+        "c": "No contiene ceros izquierda.",
+        "d": "Una dirección IPv6 se compone de ocho grupos de cuatro dígitos hexadecimales."
+      },
+      "respuesta_correcta": "d",
+      "tema": "Protocolo IPv6",
+      "explicación": "Utiliza 128 bits organizados en ocho hextetos separados por dos puntos para ampliar el espacio de direccionamiento[cite: 633, 637]."
+    },
+    {
+      "numero": 82,
+      "enunciado": "Señale la especificación (RFC) que describe NAT:",
+      "opciones": {
+        "a": "RFC 3202.",
+        "b": "RFC 2033.",
+        "c": "RFC 3022.",
+        "d": "RFC 3023."
+      },
+      "respuesta_correcta": "c",
+      "tema": "Redes IP",
+      "explicación": "Este documento técnico define el protocolo básico para traducir direcciones privadas en una pública para internet[cite: 638, 644]."
+    },
+    {
+      "numero": 83,
+      "enunciado": "¿Qué componente proporciona conexión entre redes H.323 y PSTN?",
+      "opciones": {
+        "a": "Gatekeeper.",
+        "b": "MEGAGO.",
+        "c": "Gateway.",
+        "d": "MCU."
+      },
+      "respuesta_correcta": "c",
+      "tema": "Voz sobre IP",
+      "explicación": "El Gateway traduce la señalización y los datos entre dos redes de naturalezas tecnológicas diferentes[cite: 647, 654]."
+    },
+    {
+      "numero": 84,
+      "enunciado": "¿Cuál es la principal función de un MIB en la gestión de redes?",
+      "opciones": {
+        "a": "Almacenar y organizar los parámetros de configuración de los dispositivos de red, permitiendo la gestión remota a través de SNMP.",
+        "b": "Recopilación datos operativos.",
+        "c": "Gestión interfaces.",
+        "d": "Control tráfico."
+      },
+      "respuesta_correcta": "a",
+      "tema": "Gestión de Redes",
+      "explicación": "Es la base de datos jerárquica que define qué objetos del dispositivo puede leer o modificar el gestor SNMP[cite: 657, 661]."
+    },
+    {
+      "numero": 85,
+      "enunciado": "En seguridad informática, las siglas 'AAA' significan:",
+      "opciones": {
+        "a": "Authentication, Access, Allocation.",
+        "b": "Authentication. Authorization. Accounting.",
+        "c": "Access, Allocation, Accountability.",
+        "d": "Authentication, Authorization, Audit."
+      },
+      "respuesta_correcta": "b",
+      "tema": "Seguridad de Redes",
+      "explicación": "Define los procesos de saber quién eres, qué puedes hacer y registrar qué es lo que has hecho[cite: 665, 667]."
+    },
+    {
+      "numero": 86,
+      "enunciado": "¿Cuál de los siguientes es un servidor que cumple con J2EE?",
+      "opciones": {
+        "a": "Oracle WebLogic.",
+        "b": "Internet Information Server.",
+        "c": "Enterprise Java Beans.",
+        "d": "LTSP Server."
+      },
+      "respuesta_correcta": "a",
+      "tema": "Infraestructura de Aplicaciones",
+      "explicación": "Es uno de los servidores de aplicaciones comerciales más potentes que implementa totalmente el estándar Java Enterprise Edition[cite: 671, 672]."
+    },
+    {
+      "numero": 87,
+      "enunciado": "Requisito para adquirir condición de PdP de la Red SARA:",
+      "opciones": {
+        "a": "30 administraciones.",
+        "b": "20.000 transacciones.",
+        "c": "Que al conjunto de Administraciones a las que preste servicio representen al menos a una población de 400.000 habitantes.",
+        "d": "Tres quintos de CCAA."
+      },
+      "respuesta_correcta": "c",
+      "tema": "Red SARA",
+      "explicación": "Este umbral poblacional asegura que el Punto de Presencia tenga una masa crítica mínima de ciudadanos afectados[cite: 678, 683]."
+    },
+    {
+      "numero": 88,
+      "enunciado": "¿Qué describe correctamente el término FTTx?",
+      "opciones": {
+        "a": "Tecnología inalámbrica.",
+        "b": "FTTx se refiere a varias arquitecturas de red donde la fibra óptica se extiende hacia el usuario final.",
+        "c": "Estándar obligatorio sin transición.",
+        "d": "Solo para grandes empresas."
+      },
+      "respuesta_correcta": "b",
+      "tema": "Redes de Acceso",
+      "explicación": "Sustituye el cobre por fibra hasta diferentes puntos (hogar, edificio, armario) para aumentar el ancho de banda[cite: 688, 693]."
+    },
+    {
+      "numero": 89,
+      "enunciado": "En SMTP, ¿qué sección contiene la información para transportar el mensaje?",
+      "opciones": {
+        "a": "Encabezado.",
+        "b": "Sobre (Envelope).",
+        "c": "Protocolo.",
+        "d": "Codificación."
+      },
+      "respuesta_correcta": "b",
+      "tema": "Correo Electrónico",
+      "explicación": "El 'Sobre' contiene los comandos técnicos necesarios para encaminar el correo entre servidores[cite: 696, 700]."
+    },
+    {
+      "numero": 90,
+      "enunciado": "¿Cómo se llama el programa para provisión de infraestructura 5G activa?",
+      "opciones": {
+        "a": "UNICO 5G I+D.",
+        "b": "UNICO 5G Redes - Pasivas.",
+        "c": "UNICO 5G Redes - Activas.",
+        "d": "UNICO 5G - Backhaul Fibra Óptica."
+      },
+      "respuesta_correcta": "c",
+      "tema": "Políticas Públicas Telecom",
+      "explicación": "Este plan subvenciona los equipos activos (estaciones base, antenas) necesarios para dar servicio real al usuario[cite: 705, 711]."
+    },
+    {
+      "numero": 91,
+      "enunciado": "¿Qué NO debe ser declarado en AndroidManifest.xml?",
+      "opciones": {
+        "a": "Las funciones de diccionario.",
+        "b": "Funciones hardware/software.",
+        "c": "Permisos.",
+        "d": "Componentes de la app."
+      },
+      "respuesta_correcta": "a",
+      "tema": "Desarrollo Android",
+      "explicación": "El manifiesto registra metadatos estructurales de la app, no funciones de lógica interna como diccionarios[cite: 714, 715]."
+    },
+    {
+      "numero": 92,
+      "enunciado": "¿Qué ataque se basa en crear un escenario ficticio (pretexting)?",
+      "opciones": {
+        "a": "Phising.",
+        "b": "Baiting.",
+        "c": "Pretexting.",
+        "d": "Tailgating."
+      },
+      "respuesta_correcta": "c",
+      "tema": "Seguridad Social",
+      "explicación": "El atacante adopta una identidad falsa con una historia creíble para ganar la confianza de la víctima y obtener datos[cite: 723, 727]."
+    },
+    {
+      "numero": 93,
+      "enunciado": "Guía de referencia OWASP para medir madurez en seguridad desarrollo:",
+      "opciones": {
+        "a": "OWASP SAMM.",
+        "b": "OWASP FSTM.",
+        "c": "OWASP-ZAP.",
+        "d": "OWASP Top Ten."
+      },
+      "respuesta_correcta": "a",
+      "tema": "Seguridad en Desarrollo",
+      "explicación": "El Software Assurance Maturity Model (SAMM) ayuda a las empresas a mejorar paso a paso sus prácticas de codificación segura[cite: 729, 732]."
+    },
+    {
+      "numero": 94,
+      "enunciado": "Objetivo I Estrategia Ciberseguridad 2019 ciberespionaje:",
+      "opciones": {
+        "a": "Asegurar la protección del patrimonio tecnológico de España.",
+        "b": "Detectar ataques empresas.",
+        "c": "Uso seguro ciberespacio.",
+        "d": "Soberanía industrial."
+      },
+      "respuesta_correcta": "a",
+      "tema": "Estrategia de Seguridad",
+      "explicación": "Busca evitar el robo de propiedad intelectual y secretos de estado que comprometan el avance tecnológico nacional[cite: 738, 740]."
+    },
+    {
+      "numero": 95,
+      "enunciado": "Correcta sobre un plan de continuidad de negocio:",
+      "opciones": {
+        "a": "El RTO debe ser siempre menor o igual al MTD para evitar interrupciones críticas.",
+        "b": "MTD definido por técnicos.",
+        "c": "RTO supera al RPO.",
+        "d": "ROL tiempo recuperación proceso clave."
+      },
+      "respuesta_correcta": "a",
+      "tema": "Continuidad de Negocio",
+      "explicación": "Si tardamos más en recuperar el servicio (RTO) de lo que el negocio puede soportar (MTD), la interrupción será fatal[cite: 747, 748]."
+    },
+    {
+      "numero": 96,
+      "enunciado": "Ley 11/2022 art 14.3 sobre acuerdos acceso e interconexión:",
+      "opciones": {
+        "a": "Los operadores podrán negociar entre sí sin restricción acuerdos de acceso e interconexión.",
+        "b": "Restricciones precios por Secretaría Estado.",
+        "c": "Autorización previa administrativa.",
+        "d": "Sin restricción si no afecta básicos."
+      },
+      "respuesta_correcta": "a",
+      "tema": "Telecomunicaciones",
+      "explicación": "La ley promueve el libre mercado y la competencia permitiendo que las empresas pacten sus propias condiciones de interconexión[cite: 754, 755]."
+    },
+    {
+      "numero": 97,
+      "enunciado": "UML 2.5.1 modela el comportamiento a través de:",
+      "opciones": {
+        "a": "Máquinas de Estados. Interacción. Casos de Uso y Actividad.",
+        "b": "Estados, Interacción, Clases y Actividad.",
+        "c": "Estados, Secuencia, Casos de Uso, Actividad.",
+        "d": "Estados, Secuencia, Comunicación, Casos Uso, Actividad."
+      },
+      "respuesta_correcta": "a",
+      "tema": "Modelado UML",
+      "explicación": "Estos cuatro tipos de diagramas capturan la dinámica y las funciones del sistema en lugar de su estructura estática[cite: 762, 763]."
+    },
+    {
+      "numero": 98,
+      "enunciado": "Según CCN-STIC 836, la VPN de acceso remoto:",
+      "opciones": {
+        "a": "Servidor en cada extremo.",
+        "b": "Precisa que los equipos cliente deben tener instalado y correctamente configurado el software VPN y deben autenticarse.",
+        "c": "Protege tráfico entre dos equipos.",
+        "d": "Protege dos redes."
+      },
+      "respuesta_correcta": "b",
+      "tema": "Comunicaciones Seguras",
+      "explicación": "Está pensada para que trabajadores externos se conecten a la red interna de forma segura desde cualquier lugar[cite: 768, 773]."
+    },
+    {
+      "numero": 99,
+      "enunciado": "¿Qué afirmación sobre las unidades NAS es correcta?",
+      "opciones": {
+        "a": "Acceso solo físico USB.",
+        "b": "No pueden conectarse a internet.",
+        "c": "Una unidad NAS permite compartir y acceder a datos a través de una red, ofreciendo características como copias de seguridad.",
+        "d": "No ofrecen redundancia."
+      },
+      "respuesta_correcta": "c",
+      "tema": "Almacenamiento",
+      "explicación": "Es un dispositivo de almacenamiento conectado a la red local que actúa como una nube privada para varios usuarios[cite: 777, 781]."
+    },
+    {
+      "numero": 100,
+      "enunciado": "Obligatorio en cabecera de página de inicio de web AGE:",
+      "opciones": {
+        "a": "Imagen, multi, aviso legal, mapa, buscador.",
+        "b": "Imagen institucional, multilingüismo, contacto, mapa web y buscador.",
+        "c": "Imagen, contacto, mapa, accesibilidad, buscador.",
+        "d": "Imagen, guía navegación, aviso legal, mapa, buscador."
+      },
+      "respuesta_correcta": "b",
+      "tema": "Imagen Institucional Web",
+      "explicación": "La Guía de Comunicación Digital fija estos elementos para unificar la experiencia del ciudadano en todos los ministerios[cite: 783, 785]."
+    }
+  ]
+}

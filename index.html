@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Quiz interactivo de preparación para las oposiciones de Técnico Superior de Informática de la JCyL" />
+  <title>Quiz JCyL — Técnico Superior de Informática</title>
+  <link rel="stylesheet" href="assets/css/styles.css?v=3" />
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📝</text></svg>" />
+</head>
+<body>
+
+<div class="app-wrapper">
+
+  <!-- ═══════════════════════════════════════════════════════
+       CABECERA GLOBAL
+  ════════════════════════════════════════════════════════ -->
+  <header class="app-header">
+    <a href="#" class="logo" id="btn-logo" aria-label="Inicio">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+           stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path>
+        <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path>
+      </svg>
+      Quiz JCyL
+    </a>
+    <div class="header-actions">
+      <button class="btn btn-ghost" id="btn-go-stats" title="Estadísticas" aria-label="Ver estadísticas">
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
+             fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="18" y1="20" x2="18" y2="10"></line>
+          <line x1="12" y1="20" x2="12" y2="4"></line>
+          <line x1="6"  y1="20" x2="6"  y2="14"></line>
+        </svg>
+        <span class="hide-xs">Estadísticas</span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ═══════════════════════════════════════════════════════
+       CONTENIDO PRINCIPAL
+  ════════════════════════════════════════════════════════ -->
+  <main class="main-content">
+    <div class="container">
+
+      <!-- ─────────────────────────────────────────────────
+           PANTALLA 0: DASHBOARD
+      ────────────────────────────────────────────────── -->
+      <section class="screen active" id="screen-dashboard" aria-label="Inicio">
+        <div class="dashboard-header">
+          <h1>Quiz JCyL</h1>
+          <p>Técnico Superior de Informática — Elige una sección para comenzar.</p>
+        </div>
+        <div class="dashboard-grid">
+          <button class="dashboard-card" id="btn-go-tests">
+            <div class="dashboard-card-icon">📝</div>
+            <h2>Tests</h2>
+            <p>Practica con preguntas tipo test de convocatorias anteriores y consulta tus estadísticas.</p>
+            <span class="dashboard-card-cta">Ir a los tests →</span>
+          </button>
+          <button class="dashboard-card" id="btn-go-supuestos">
+            <div class="dashboard-card-icon">📋</div>
+            <h2>Supuestos Prácticos</h2>
+            <p>Explora los supuestos de exámenes reales por convocatoria o por categoría temática.</p>
+            <span class="dashboard-card-cta">Ir a supuestos →</span>
+          </button>
+        </div>
+      </section>
+
+      <!-- ─────────────────────────────────────────────────
+           PANTALLA 1: SELECTOR DE TEST
+      ────────────────────────────────────────────────── -->
+      <section class="screen" id="screen-tests" aria-label="Selección de test">
+
+        <div class="selector-header">
+          <button class="btn btn-ghost btn-back-section" id="btn-back-from-tests">← Volver</button>
+          <h1>Elige un test</h1>
+          <p>Selecciona el examen que quieres practicar.</p>
+        </div>
+
+        <!-- Banner sesión en curso -->
+        <div class="resume-banner" id="resume-banner" style="display:none" role="alert">
+          <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24"
+               fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"></circle>
+            <polyline points="12 6 12 12 16 14"></polyline>
+          </svg>
+          <div class="resume-banner-text">
+            <strong>Tienes una sesión en curso: <span id="resume-test-name"></span></strong>
+            <span id="resume-progress"></span>
+          </div>
+          <div class="resume-actions">
+            <button class="btn btn-secondary" id="btn-discard">Descartar</button>
+            <button class="btn btn-primary"   id="btn-resume">Continuar</button>
+          </div>
+        </div>
+
+        <!-- Grid de tests -->
+        <div class="test-grid" id="test-grid">
+          <!-- Rellena manifest.js -->
+        </div>
+
+      </section>
+
+      <!-- ─────────────────────────────────────────────────
+           PANTALLA 2: CONFIGURACIÓN
+      ────────────────────────────────────────────────── -->
+      <section class="screen" id="screen-config" aria-label="Configuración del test">
+
+        <div class="config-header">
+          <h2 id="config-test-title">Cargando…</h2>
+          <p  id="config-test-subtitle"></p>
+        </div>
+
+        <div class="card mb-2">
+          <!-- Toggle mezclar preguntas -->
+          <div class="toggle-row">
+            <div>
+              <div class="toggle-label">Orden aleatorio</div>
+              <div class="toggle-desc">Mezcla las preguntas y las opciones de respuesta.</div>
+            </div>
+            <label class="toggle-switch" title="Activar/desactivar orden aleatorio">
+              <input type="checkbox" id="toggle-shuffle" checked />
+              <span class="toggle-track"></span>
+            </label>
+          </div>
+
+          <hr class="divider" />
+
+          <!-- Filtro por temas -->
+          <p class="section-title">Filtrar por temas</p>
+          <div class="topics-controls">
+            <button class="btn btn-secondary" id="btn-select-all">Todos</button>
+            <button class="btn btn-secondary" id="btn-deselect-all">Ninguno</button>
+          </div>
+          <div class="topic-chips" id="topic-chips">
+            <!-- Rellena quiz.js -->
+          </div>
+        </div>
+
+        <!-- Resumen -->
+        <div class="config-summary" id="config-summary"></div>
+
+        <!-- Acciones -->
+        <div class="config-actions">
+          <button class="btn btn-secondary" id="btn-back-from-config">← Volver</button>
+          <button class="btn btn-primary btn-lg" id="btn-start-quiz">Comenzar test →</button>
+        </div>
+
+      </section>
+
+      <!-- ─────────────────────────────────────────────────
+           PANTALLA 3: QUIZ ACTIVO (FLASHCARD)
+      ────────────────────────────────────────────────── -->
+      <section class="screen" id="screen-quiz" aria-label="Test en curso">
+
+        <!-- Topbar: progreso y puntuación -->
+        <div class="quiz-topbar">
+          <span class="quiz-progress-text" id="quiz-progress-text">1 / 1</span>
+          <div style="flex:1"></div>
+          <span class="quiz-score-badge" id="quiz-score-badge">✓ 0</span>
+          <button class="btn btn-ghost" id="btn-quit-quiz" title="Salir del test" aria-label="Salir del test">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
+                 fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="18" y1="6" x2="6"  y2="18"></line>
+              <line x1="6"  y1="6" x2="18" y2="18"></line>
+            </svg>
+          </button>
+        </div>
+
+        <!-- Barra de progreso -->
+        <div class="progress-bar-wrap" role="progressbar" aria-valuemin="0" aria-valuemax="100">
+          <div class="progress-bar-fill" id="progress-bar-fill" style="width:0%"></div>
+        </div>
+
+        <!-- Tarjeta de pregunta -->
+        <div class="question-card">
+          <div class="question-tema" id="question-tema"></div>
+          <p  class="question-enunciado" id="question-enunciado"></p>
+
+          <!-- Opciones -->
+          <div class="options-list" id="options-list">
+            <!-- Rellena quiz.js -->
+          </div>
+
+          <!-- Explicación (oculta hasta responder) -->
+          <div class="explanation-box" id="explanation-box">
+            <strong>💡 Explicación</strong>
+            <p></p>
+          </div>
+        </div>
+
+        <!-- Navegación -->
+        <div class="quiz-nav">
+          <button class="btn btn-secondary" id="btn-blank">
+            — Dejar en blanco
+          </button>
+          <button class="btn btn-primary btn-lg" id="btn-next" style="display:none">
+            Siguiente →
+          </button>
+        </div>
+
+      </section>
+
+      <!-- ─────────────────────────────────────────────────
+           PANTALLA 4: RESULTADOS
+      ────────────────────────────────────────────────── -->
+      <section class="screen" id="screen-results" aria-label="Resultados del test">
+
+        <div class="card">
+          <div class="results-hero">
+            <div class="score-circle excellent" id="score-circle">0%</div>
+            <h2>Resultados</h2>
+            <p id="results-message"></p>
+            <div class="results-meta">
+              <div class="results-meta-item">
+                <span class="val badge-correct" id="results-correct">0</span>
+                <span class="lbl">Correctas</span>
+              </div>
+              <div class="results-meta-item">
+                <span class="val badge-wrong" id="results-wrong">0</span>
+                <span class="lbl">Incorrectas</span>
+              </div>
+              <div class="results-meta-item">
+                <span class="val badge-blank" id="results-blank">0</span>
+                <span class="lbl">En blanco</span>
+              </div>
+              <div class="results-meta-item">
+                <span class="val" id="results-total">0</span>
+                <span class="lbl">Total</span>
+              </div>
+            </div>
+          </div>
+
+          <hr class="divider" />
+
+          <!-- Desglose por tema -->
+          <p class="section-title">Desglose por tema</p>
+          <div style="overflow-x:auto">
+            <table class="topics-results-table">
+              <thead>
+                <tr>
+                  <th>Tema</th>
+                  <th>✓</th>
+                  <th>✗</th>
+                  <th>%</th>
+                </tr>
+              </thead>
+              <tbody id="topics-results-body">
+              </tbody>
+            </table>
+          </div>
+
+          <div class="results-actions mt-3">
+            <button class="btn btn-secondary"     id="btn-back-from-results">← Inicio</button>
+            <button class="btn btn-secondary"     id="btn-results-go-stats">📊 Estadísticas</button>
+            <button class="btn btn-primary btn-lg" id="btn-retry">🔄 Repetir</button>
+          </div>
+
+          <!-- Revisión de errores -->
+          <div id="wrong-answers-section" style="display:none">
+            <hr class="divider" />
+            <p class="section-title">Revisión de errores</p>
+            <div id="wrong-answers-list"></div>
+          </div>
+        </div>
+
+      </section>
+
+      <!-- ─────────────────────────────────────────────────
+           PANTALLA 5: ESTADÍSTICAS
+      ────────────────────────────────────────────────── -->
+      <section class="screen" id="screen-stats" aria-label="Estadísticas globales">
+
+        <div class="stats-header">
+          <h2>Estadísticas</h2>
+          <div style="display:flex;gap:.5rem;flex-wrap:wrap">
+            <button class="btn btn-danger"    id="btn-clear-history">🗑 Limpiar historial</button>
+            <button class="btn btn-secondary" id="btn-back-from-stats">← Volver</button>
+          </div>
+        </div>
+
+        <div id="stats-content">
+          <!-- Rellena stats.js -->
+        </div>
+
+      </section>
+
+      <!-- ─────────────────────────────────────────────────
+           PANTALLA 6: MENÚ SUPUESTOS PRÁCTICOS
+      ────────────────────────────────────────────────── -->
+      <section class="screen" id="screen-supuestos-menu" aria-label="Supuestos Prácticos">
+        <div class="selector-header">
+          <button class="btn btn-ghost btn-back-section" id="btn-back-from-supuestos-menu">← Volver</button>
+          <h1>Supuestos Prácticos</h1>
+          <p>Explora los supuestos de exámenes reales. Elige cómo quieres navegar.</p>
+        </div>
+        <div class="dashboard-grid">
+          <button class="dashboard-card" id="btn-go-examenes">
+            <div class="dashboard-card-icon">📂</div>
+            <h2>Por Examen</h2>
+            <p>Ve todas las preguntas agrupadas por convocatoria y origen del examen.</p>
+            <span class="dashboard-card-cta">Ver exámenes →</span>
+          </button>
+          <button class="dashboard-card" id="btn-go-categorias">
+            <div class="dashboard-card-icon">🏷️</div>
+            <h2>Por Categoría</h2>
+            <p>Filtra las preguntas por área temática: bases de datos, redes, seguridad…</p>
+            <span class="dashboard-card-cta">Ver categorías →</span>
+          </button>
+        </div>
+      </section>
+
+      <!-- ─────────────────────────────────────────────────
+           PANTALLA 7: SUPUESTOS POR EXAMEN
+      ────────────────────────────────────────────────── -->
+      <section class="screen" id="screen-supuestos-examenes" aria-label="Supuestos por examen">
+        <div class="selector-header">
+          <button class="btn btn-ghost btn-back-section" id="btn-back-from-examenes">← Volver</button>
+          <h1>Por Examen</h1>
+          <p>Preguntas agrupadas por convocatoria.</p>
+        </div>
+        <div id="examenes-content">
+          <div class="loader-wrap"><div class="loader"></div></div>
+        </div>
+      </section>
+
+      <!-- ─────────────────────────────────────────────────
+           PANTALLA 8: SUPUESTOS POR CATEGORÍA
+      ────────────────────────────────────────────────── -->
+      <section class="screen" id="screen-supuestos-categorias" aria-label="Supuestos por categoría">
+        <div class="selector-header">
+          <button class="btn btn-ghost btn-back-section" id="btn-back-from-categorias">← Volver</button>
+          <h1>Por Categoría</h1>
+          <p>Todas las preguntas de una misma área temática.</p>
+        </div>
+        <div id="categorias-content">
+          <div class="loader-wrap"><div class="loader"></div></div>
+        </div>
+      </section>
+
+    </div><!-- /.container -->
+  </main>
+
+</div><!-- /.app-wrapper -->
+
+<!-- Markdown parser (local — no CDN dependency) -->
+<script src="assets/js/marked.min.js"></script>
+<!-- Módulo principal -->
+<script type="module" src="assets/js/app.js"></script>
+
+</body>
+</html>
+
