@@ -17,7 +17,7 @@ export class SupuestosService {
 
   async loadData(): Promise<SupuestosData> {
     if (this.cachedData) return this.cachedData;
-    this.cachedData = await firstValueFrom(this.http.get<SupuestosData>('assets/upuestos/categorias.json'));
+    this.cachedData = await firstValueFrom(this.http.get<SupuestosData>('assets/supuestos/categorias.json'));
     return this.cachedData;
   }
 

@@ -4,14 +4,14 @@
     "nombre": "Técnico Superior de Informática — JCyL",
     "ejercicio": "Primer Ejercicio",
     "fecha": "26 de octubre de 2024",
-    "fichero": "tests/test-2024.json"
+    "fichero": "assets/tests/test-2024.json"
   },
   {
     "id": "test-age-2025",
     "nombre": "Cuerpo Superior TIC — AGE",
     "ejercicio": "Primer Ejercicio",
     "fecha": "14 de febrero de 2025",
-    "fichero": "tests/test-age-2025.json"
+    "fichero": "assets/tests/test-age-2025.json"
   }
 ]
 

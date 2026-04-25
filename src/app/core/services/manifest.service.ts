@@ -12,7 +12,7 @@ export class ManifestService {
   private storage = inject(StorageService);
 
   async loadTests(): Promise<TestMeta[]> {
-    return firstValueFrom(this.http.get<TestMeta[]>('tests/index.json'));
+    return firstValueFrom(this.http.get<TestMeta[]>('assets/tests/index.json'));
   }
 
   getSessionState(): SessionState | null {
