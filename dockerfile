@@ -4,7 +4,7 @@ FROM nginx:alpine
 RUN rm -rf /usr/share/nginx/html/*
 
 # copiar build de Angular
-COPY dist/tu-app /usr/share/nginx/html
+COPY dist/quiz-angular /usr/share/nginx/html
 
 # nginx config para SPA
 COPY nginx.conf /etc/nginx/conf.d/default.conf
