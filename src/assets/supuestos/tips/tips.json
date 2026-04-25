@@ -5,5 +5,12 @@
     "description": "Aprende a vincular tus respuestas técnicas con la legislación vigente de forma efectiva.",
     "icon": "⚖️",
     "file": "assets/supuestos/tips/tips-legislacion.md"
+  },
+  {
+    "id": "plantillazo-subnetting",
+    "title": "Plantilla Maestra: Subnetting",
+    "description": "Metodología paso a paso para resolver cálculos de subredes en el examen.",
+    "icon": "🌐",
+    "file": "assets/supuestos/tips/plantillazo-subnetting.md"
   }
 ]
