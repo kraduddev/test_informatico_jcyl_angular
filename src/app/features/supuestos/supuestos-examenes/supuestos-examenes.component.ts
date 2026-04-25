@@ -1,4 +1,4 @@
-import { Component, OnInit, AfterViewChecked, inject, signal } from '@angular/core';
+import { Component, OnInit, inject, signal } from '@angular/core';
 import { Router } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
@@ -8,6 +8,46 @@ import { PreguntaCardComponent } from '../../../shared/components/pregunta-card/
 import { PreguntaSupuesto, Categoria } from '../../../core/models';
 import { marked } from 'marked';
 import mermaid from 'mermaid';
+import katex from 'katex';
+
+// ── Configure marked once at module level ─────────────────────────────────────
+// marked v18: renderer methods receive a token object, not positional args
+marked.use({
+  renderer: {
+    code({ text, lang }: { text: string; lang?: string }) {
+      if (lang === 'mermaid') {
+        return `<div class="mermaid">${text}</div>`;
+      }
+      return false; // fall back to default renderer
+    }
+  }
+});
+
+// ── LaTeX helpers ─────────────────────────────────────────────────────────────
+function renderLatex(src: string): string {
+  // Display math:  $$...$$
+  src = src.replace(/\$\$([\s\S]+?)\$\$/g, (_, math) => {
+    try {
+      return katex.renderToString(math.trim(), { displayMode: true, throwOnError: false });
+    } catch { return _; }
+  });
+  // Inline math:  $...$  (avoid matching $$ already replaced above)
+  src = src.replace(/\$([^\n$]+?)\$/g, (_, math) => {
+    try {
+      return katex.renderToString(math.trim(), { displayMode: false, throwOnError: false });
+    } catch { return _; }
+  });
+  return src;
+}
+
+// ── Mermaid initialised once ───────────────────────────────────────────────────
+let mermaidReady = false;
+function ensureMermaid() {
+  if (!mermaidReady) {
+    mermaid.initialize({ startOnLoad: false, theme: 'default' });
+    mermaidReady = true;
+  }
+}
 
 interface GrupoExamen {
   origen: string;
@@ -24,18 +64,29 @@ interface GrupoExamen {
   imports: [CommonModule, AccordionGroupComponent, PreguntaCardComponent],
   styles: [`
     :host ::ng-deep .md-body { font-size: 0.95rem; line-height: 1.7; }
-    :host ::ng-deep .md-body h1, :host ::ng-deep .md-body h2, :host ::ng-deep .md-body h3 { margin: 1.2em 0 0.5em; font-weight: 700; }
+    :host ::ng-deep .md-body h1,
+    :host ::ng-deep .md-body h2,
+    :host ::ng-deep .md-body h3 { margin: 1.2em 0 0.5em; font-weight: 700; }
     :host ::ng-deep .md-body h2 { font-size: 1.2rem; border-bottom: 2px solid #4361ee; padding-bottom: 4px; }
     :host ::ng-deep .md-body h3 { font-size: 1.05rem; }
-    :host ::ng-deep .md-body p { margin: 0.5em 0; }
-    :host ::ng-deep .md-body ul, :host ::ng-deep .md-body ol { padding-left: 1.5em; margin: 0.5em 0; }
+    :host ::ng-deep .md-body p  { margin: 0.5em 0; }
+    :host ::ng-deep .md-body ul,
+    :host ::ng-deep .md-body ol { padding-left: 1.5em; margin: 0.5em 0; }
     :host ::ng-deep .md-body code { background: #f0f0f0; padding: 2px 5px; border-radius: 4px; font-size: 0.88em; }
-    :host ::ng-deep .md-body pre { background: #f8f8f8; border-radius: 8px; padding: 1em; overflow: auto; }
+    :host ::ng-deep .md-body pre  { background: #f8f8f8; border-radius: 8px; padding: 1em; overflow: auto; }
     :host ::ng-deep .md-body table { border-collapse: collapse; width: 100%; margin: 0.8em 0; font-size: 0.88rem; }
-    :host ::ng-deep .md-body th, :host ::ng-deep .md-body td { border: 1px solid #ddd; padding: 6px 10px; text-align: left; }
-    :host ::ng-deep .md-body th { background: #4361ee; color: #fff; }
+    :host ::ng-deep .md-body th,
+    :host ::ng-deep .md-body td  { border: 1px solid #ddd; padding: 6px 10px; text-align: left; }
+    :host ::ng-deep .md-body th  { background: #4361ee; color: #fff; }
     :host ::ng-deep .md-body strong { font-weight: 700; }
-    :host ::ng-deep .md-body blockquote { border-left: 4px solid #4361ee; margin: 0.8em 0; padding: 0.5em 1em; background: #f5f7ff; border-radius: 0 6px 6px 0; }
+    :host ::ng-deep .md-body blockquote {
+      border-left: 4px solid #4361ee; margin: 0.8em 0;
+      padding: 0.5em 1em; background: #f5f7ff; border-radius: 0 6px 6px 0;
+    }
+    /* Mermaid diagrams */
+    :host ::ng-deep .md-body .mermaid { margin: 1em 0; overflow: auto; }
+    /* KaTeX display blocks */
+    :host ::ng-deep .md-body .katex-display { overflow-x: auto; margin: 0.8em 0; }
   `],
   template: `
     <section class="screen active" aria-label="Supuestos por examen">
@@ -94,7 +145,7 @@ interface GrupoExamen {
     </section>
   `
 })
-export class SupuestosExamenesComponent implements OnInit, AfterViewChecked {
+export class SupuestosExamenesComponent implements OnInit {
   router    = inject(Router);
   supuestos = inject(SupuestosService);
   sanitizer = inject(DomSanitizer);
@@ -102,16 +153,6 @@ export class SupuestosExamenesComponent implements OnInit, AfterViewChecked {
   loading = signal(true);
   error   = signal<string | null>(null);
   grupos  = signal<GrupoExamen[]>([]);
-
-  private mermaidInit = false;
-  private pendingMermaid = false;
-
-  ngAfterViewChecked(): void {
-    if (this.pendingMermaid) {
-      this.pendingMermaid = false;
-      mermaid.run({ querySelector: '.mermaid:not([data-processed])' });
-    }
-  }
 
   async ngOnInit(): Promise<void> {
     try {
@@ -146,36 +187,31 @@ export class SupuestosExamenesComponent implements OnInit, AfterViewChecked {
   async togglePlantilla(grupo: GrupoExamen): Promise<void> {
     grupo.mdOpen = !grupo.mdOpen;
     this.grupos.update(g => [...g]);
+
     if (grupo.mdOpen && grupo.mdContent === null) {
       grupo.mdLoading = true;
       this.grupos.update(g => [...g]);
       try {
         const text = await this.supuestos.loadMarkdown(grupo.origen);
-        // Configure marked to wrap mermaid code blocks in .mermaid divs
-        const renderer = new (marked as any).Renderer();
-        const origCode = renderer.code.bind(renderer);
-        renderer.code = (code: string, lang: string) => {
-          if (lang === 'mermaid') {
-            return `<div class="mermaid">${code}</div>`;
-          }
-          return origCode(code, lang);
-        };
-        const html = await marked(text, { renderer });
+        // 1. Pre-process LaTeX before marked (prevents marked from escaping $ signs)
+        const withMath = renderLatex(text);
+        // 2. Parse Markdown → HTML (mermaid blocks become <div class="mermaid">)
+        const html = await marked.parse(withMath);
         grupo.mdContent = this.sanitizer.bypassSecurityTrustHtml(html);
-        this.pendingMermaid = true;
-        if (!this.mermaidInit) {
-          mermaid.initialize({ startOnLoad: false, theme: 'default' });
-          this.mermaidInit = true;
-        }
       } catch (e: any) {
-        grupo.mdContent = `<p class="supuestos-error">${e.message}</p>`;
+        grupo.mdContent = this.sanitizer.bypassSecurityTrustHtml(
+          `<p class="supuestos-error">${e.message}</p>`
+        );
       } finally {
         grupo.mdLoading = false;
         this.grupos.update(g => [...g]);
       }
-    } else if (grupo.mdOpen) {
-      // Panel re-opened, re-render mermaid diagrams
-      this.pendingMermaid = true;
+    }
+
+    // Run mermaid after Angular has flushed [innerHTML] to the real DOM
+    if (grupo.mdOpen) {
+      ensureMermaid();
+      setTimeout(() => mermaid.run({ querySelector: '.mermaid:not([data-processed])' }), 50);
     }
   }
 }

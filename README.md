@@ -30,7 +30,7 @@ Aplicación web SPA construida con **Angular 17** para practicar los exámenes d
 ### 📋 Supuestos Prácticos
 - **Menú de navegación** con dos modos de exploración:
   - **Por Examen** (`/supuestos/examenes`): preguntas agrupadas por convocatoria. Cada grupo muestra el número de preguntas y permite expandir/colapsar.
-    - Botón "Ver plantilla de examen": carga y renderiza el fichero Markdown de la convocatoria con formato completo (encabezados, tablas, código, blockquotes y **diagramas Mermaid**).
+    - Botón "Ver plantilla de examen": carga y renderiza el fichero Markdown de la convocatoria con formato completo (encabezados, tablas, código, blockquotes, **diagramas Mermaid** y **fórmulas matemáticas LaTeX**).
   - **Por Categoría** (`/supuestos/categorias`): preguntas agrupadas por bloque temático.
 - Los supuestos se cargan desde `assets/supuestos/categorias.json` y los ficheros `.md` asociados a cada convocatoria.
 
@@ -99,6 +99,7 @@ docker run -p 8080:80 quiz-jcyl
 | `@angular/core` + ecosystem | `^17.3` | Framework principal (standalone components, signals, lazy routing) |
 | `marked` | `^18.0` | Parseo de Markdown a HTML para las plantillas de supuestos |
 | `mermaid` | `^11.14` | Renderizado de diagramas en los ficheros Markdown |
+| `katex` | `^0.16` | Renderizado de fórmulas matemáticas LaTeX (`$...$` y `$$...$$`) en las plantillas |
 | `rxjs` | `~7.8` | Utilidades reactivas (usado internamente por Angular) |
 | `zone.js` | `~0.14` | Change detection de Angular |
 | `tslib` | `^2.3` | Helpers de TypeScript en runtime |
