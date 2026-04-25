@@ -19,5 +19,12 @@
     "description": "Modelos de respuesta para preguntas sobre Inteligencia Artificial y Blockchain.",
     "icon": "🤖",
     "file": "assets/supuestos/tips/plantillazo-ia-blockchain.md"
+  },
+  {
+    "id": "plantillazo-ens-pcb",
+    "title": "Plantillas ENS y PCB",
+    "description": "Modelos de respuesta para preguntas sobre el Esquema Nacional de Seguridad y Planes de Continuidad.",
+    "icon": "🛡️",
+    "file": "assets/supuestos/tips/plantillazo-ens-pcb.md"
   }
 ]
