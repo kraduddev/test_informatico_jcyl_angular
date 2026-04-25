@@ -1,0 +1,179 @@
+{
+"categorias": [
+{
+"id": "MOD_DATOS",
+"nombre": "Modelo de Datos y Base de Datos",
+"conceptos_core": [
+"Diagrama Entidad-Relación Extendido",
+"Diagrama de Clases UML",
+"Diseño Físico (Oracle)",
+"Consultas ANSI SQL",
+"Índices de optimización"
+],
+"leyes_relacionadas": [
+"RGPD (Privacidad desde el diseño)",
+"LOPDGDD",
+"Esquema Nacional de Interoperabilidad (ENI)"
+],
+"preguntas": [
+{
+"origen": "JCyL 2022",
+"enunciado": "Hacer el modelo conceptual utilizando un diagrama de clases según UML. Hacer el diseño físico de la tabla según Oracle. Hacer consulta utilizando ANSI SQL y determinar qué índice habría que crear.",
+"plantilla_solucion": "Identificar clases, atributos y relaciones. Diseñar tablas con claves foráneas modificables. Escribir consulta con JOIN y GROUP BY. Proponer índices B-Tree."
+},
+{
+"origen": "JCyL 2024",
+"enunciado": "Elabore un diagrama Entidad-Relación extendido que refleje el modelo de datos conceptual del Sistema de Información.",
+"plantilla_solucion": "Dibujar entidades principales (Operador, Dron, Plan Vuelo, Informe). Identificar cardinalidades y herencias (extendido) extrayendo los datos del enunciado."
+},
+{
+"origen": "Salamanca 2023",
+"enunciado": "Modelo de Dominio. Diagrama de Clases con los principales atributos.",
+"plantilla_solucion": "Identificar entidades de la Sede Electrónica (Proveedor, Contrato, Factura) y mapearlas en clases con sus correspondientes propiedades."
+}
+]
+},
+{
+"id": "INFRA_RED",
+"nombre": "Infraestructura y Redes de Comunicaciones",
+"conceptos_core": [
+"Dimensionamiento de cableado",
+"Subnetting y Máscaras IP",
+"VLANs",
+"Análisis de tráfico (Wireshark)",
+"VPN y Acceso Remoto"
+],
+"leyes_relacionadas": [
+"Norma CENELEC EN 50173",
+"Esquema Nacional de Seguridad (ENS)"
+],
+"preguntas": [
+{
+"origen": "Salamanca 2023",
+"enunciado": "Proponga un sistema conforme a la norma CENELEC EN 50173. Asigne una subred por departamento usando el rango privado 192.168.4.0/22. Análisis de tráfico de Wireshark.",
+"plantilla_solucion": "a) Cableado Estructurado (Norma EN 50173) Topología: Jerárquica en estrella. Dado que se busca reducir repartidores, instalaremos un Repartidor de Edificio (BD) en la planta baja que actúe también como Repartidor de Planta (FD) de dicha planta, y un FD en cada una de las otras 3 plantas.Cálculo de tomas: Superficie por planta: $25m \\times 40m = 1000 m^2$. A 2 puntos/$10 m^2$, resultan 200 tomas por planta (800 total).Subsistemas:Horizontal: Cable de par trenzado Categoría 6A o superior para soportar 10Gbps.Vertical (Backbone): Fibra óptica multimultimodo (OM4) entre el BD y los FD para garantizar ancho de banda y evitar interferencias.Interconexión: Enlace de fibra monomodo (OS2) desde el BD hacia el anillo de fibra municipal o Red SARA.b) Elementos ActivosNecesidades: 40 equipos + 25% crecimiento = 50 puertos por planta.Propuesta:Planta 0 (Core): 1 Switch de Core modular de Nivel 3 para gestionar el routing inter-VLAN.Plantas 1-3 (Acceso): 2 Switches de 48 puertos en \"stack\" (apilados) por planta para minimizar costes y simplificar gestión.Características: Puertos Gigabit Ethernet con soporte PoE+ (802.3at) para alimentar los teléfonos IP sin fuentes externas.c) Direccionamiento IP Rango: 192.168.4.0/22 (Máscara: 255.255.252.0). Dividimos en 4 subredes /24 (una por planta/departamento):Subred (Planta)Rango de IPs (Hosts)MáscaraPuerta de EnlacePlanta 0192.168.4.1 - 192.168.4.254/24192.168.4.1Planta 1192.168.5.1 - 192.168.5.254/24192.168.5.1Planta 2192.168.6.1 - 192.168.6.254/24192.168.6.1Planta 3192.168.7.1 - 192.168.7.254/24192.168.7.1d) VLANs Se implementarán VLANs etiquetadas bajo el estándar 802.1Q.VLAN de Datos: Una por planta para segmentar el tráfico de difusión y mejorar el rendimiento.VLAN de Voz: Priorizada mediante QoS para asegurar la calidad de las llamadas de telefonía IP.Justificación: Seguridad (aislamiento entre departamentos) y optimización del tráfico.e) Análisis de Tráfico (Figura 1)Descripción: Se observa un proceso de resolución DNS iterativa/recursiva.Trama 4: El host 20.1.0.30 pregunta a su servidor local 20.1.0.10 por la IP de www.cisco.com.Tramas 5-10: El servidor local consulta a servidores raíz, de TLD (.com) y autoritativos de Cisco hasta obtener la respuesta.Trama 11: El servidor local responde al host con las IPs finales (30.1.0.10).Encapsulación: Los datos DNS (Aplicación) se encapsulan en un segmento UDP (puerto 53), este en un paquete IP (Red) y finalmente en una trama Ethernet con etiqueta 802.1Q (Enlace)."
+
+},
+{
+"origen": "JCyL 2022",
+"enunciado": "Dimensionamiento del cableado, horizontal y vertical. Definir la subred asignando como comienzo la dirección IP 10.10.100.64. Solución de acceso remoto al puesto para teletrabajadores.",
+"plantilla_solucion": "Calcular número de puestos del plano (25). Buscar máscara mínima /27. Proponer VPN TLS/IPsec con doble factor (2FA) para el teletrabajo."
+},
+{
+"origen": "JCyL 2024",
+"enunciado": "Elabore un diagrama de red lógico que muestre los principales elementos del sistema y sus interconexiones para dispositivos móviles en campo.",
+"plantilla_solucion": "Dibujar zona externa conectada por VPN al Firewall corporativo, y segmentar la LAN interna mediante VLANs para aislar los servidores."
+}
+]
+},
+{
+"id": "ARQ_SOFT",
+"nombre": "Arquitectura de Software y UML",
+"conceptos_core": [
+"Diagrama de Casos de Uso",
+"Diagrama de Actividad",
+"Diagrama Lógico de Módulos",
+"Pila Tecnológica"
+],
+"leyes_relacionadas": [
+"Ley 39/2015 (Procedimiento Administrativo Común)",
+"Ley 25/2013 (Factura Electrónica)"
+],
+"preguntas": [
+{
+"origen": "Salamanca 2023",
+"enunciado": "Casos de Uso: Descripción funcional detallada e interacciones con sistemas externos. Descripción de la arquitectura lógica y física.",
+"plantilla_solucion": "Describir actores (Proveedor, Funcionario) interactuando con módulos de Identificación y Facturas. Separar en 3 capas (Presentación, Negocio, Datos)."
+},
+{
+"origen": "JCyL 2024",
+"enunciado": "Elabore un diagrama lógico de módulos y actores. Elabore un diagrama de actividad del flujo principal. Proponga una nueva pila tecnológica.",
+"plantilla_solucion": "Diseñar arquitectura basada en componentes o microservicios. Diagramar flujo: Solicitud -> Validación -> Resolución. Proponer un ecosistema moderno (ej. Java Spring Boot o Javascript Node/React)."
+}
+]
+},
+{
+"id": "CIBER_SEG",
+"nombre": "Ciberseguridad y Continuidad de Negocio",
+"conceptos_core": [
+"Plan de Continuidad de Negocio (PCN)",
+"RTO y RPO",
+"MAGERIT (Análisis de Riesgos)",
+"Vulnerabilidades Web (OWASP)",
+"Criptografía (Cifrado y Firma)"
+],
+"leyes_relacionadas": [
+"Esquema Nacional de Seguridad (ENS)",
+"Ley 6/2020 (Servicios electrónicos de confianza)",
+"eIDAS"
+],
+"preguntas": [
+{
+"origen": "JCyL 2024",
+"enunciado": "Determine la categoría de seguridad del sistema. Elabore el análisis de un riesgo. Proporcione una solución criptográfica para envíos gráficos.",
+"plantilla_solucion": "Valorar las 5 dimensiones del ENS. Aplicar fases de MAGERIT (Activo, Amenaza, Impacto, Riesgo y Salvaguarda). Proponer cifrado híbrido combinado con firma electrónica avanzada."
+},
+{
+"origen": "JCyL 2022",
+"enunciado": "Evitar que se produzca SQL Injection mediante JDBC. Enumerar y explicar las fases para la elaboración del plan de continuidad del negocio. Determine el RPO y el RTO.",
+"plantilla_solucion": "Usar clase PreparedStatement de JDBC. Listar fases: BIA, Risk Assessment, Estrategia, Implementación, Pruebas. Calcular el RTO dividiendo impacto máximo del sistema entre coste de inactividad por hora."
+},
+{
+"origen": "Salamanca 2023",
+"enunciado": "Propuesta de al menos cinco medidas para identificar o evitar vulnerabilidades.",
+"plantilla_solucion": "Proponer WAF (Web Application Firewall), auditorías OWASP periódicas, saneamiento de entradas de usuario, HTTPS obligatorio y política de contraseñas robustas."
+}
+]
+},
+{
+"id": "SIST_ALM_CPD",
+"nombre": "Sistemas de Almacenamiento y Eficiencia de CPD",
+"conceptos_core": [
+"Storage Tiering (Almacenamiento por niveles)",
+"Estrategia de Copias de Seguridad (Backup 3-2-1)",
+"PUE (Power Usage Effectiveness)",
+"DCIE (Data Center Infrastructure Efficiency)"
+],
+"leyes_relacionadas": [
+"ENI (Política de Gestión de Documentos Electrónicos)",
+"RD 311/2022 (ENS - Dimensión de Disponibilidad)"
+],
+"preguntas": [
+{
+"origen": "JCyL 2024",
+"enunciado": "Diseñe un sistema de almacenamiento para 1TB al mes con retención a 5 años. Calcule el PUE y el DCIE del CPD.",
+"plantilla_solucion": "Dividir en Tier 1 (SSD) para acceso frecuente, Tier 2 (SATA/SAS) para esporádico y Tier 3 (Cinta/Cloud) para el histórico. Calcular PUE como Energía Total / Energía TI y proponer mejoras (pasillos fríos/calientes)."
+},
+{
+"origen": "JCyL 2022",
+"enunciado": "Qué infraestructura y estrategia de copias de seguridad diseñaría para responder con la rapidez, seguridad y periodicidad adecuadas.",
+"plantilla_solucion": "Justificar la regla 3-2-1 de backups. Proponer copias incrementales diarias y completas semanales, almacenadas en disco y derivadas a cinta externa para cumplir con el RPO límite calculado."
+}
+]
+},
+{
+"id": "DEVOPS_NUEVAS_TEC",
+"nombre": "DevOps y Tecnologías Emergentes",
+"conceptos_core": [
+"Pipeline CI/CD",
+"Inteligencia Artificial (Machine Learning / Deep Learning)",
+"Blockchain y Automatización"
+],
+"leyes_relacionadas": [
+"Ley 40/2015 (Actuación Administrativa Automatizada)"
+],
+"preguntas": [
+{
+"origen": "JCyL 2024",
+"enunciado": "Describa brevemente las fases del pipeline de CI/CD e identifique los roles involucrados en cada fase.",
+"plantilla_solucion": "Describir fases: Integración (Devs suben código/Git), Construcción, Pruebas automáticas (QA), Despliegue (Ops). Mapear herramientas asociadas."
+},
+{
+"origen": "Salamanca 2023",
+"enunciado": "Identifique dos puntos del sistema donde aplicar Inteligencia Artificial u otras tecnologías.",
+"plantilla_solucion": "Aplicar OCR inteligente y Deep Learning para la lectura y contabilización de facturas, y utilizar algoritmos de Machine Learning para detección de fraudes y validación automatizada de proveedores."
+}
+]
+}
+]
+}
