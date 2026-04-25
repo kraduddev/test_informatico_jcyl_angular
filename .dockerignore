@@ -3,6 +3,6 @@
 .DS_Store
 .idea
 *.md
-dockerfile
-Dockerfile
+quiz-angular/dockerfile
+quiz-angular/dockerfile
 
